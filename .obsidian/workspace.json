@@ -11,26 +11,14 @@
             "id": "c340a9f76319bdc4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "AGENTS.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
-            }
-          }
-        ]
-      },
-      {
-        "id": "1d2d23ee70c5e738",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "192ddde20aa37244",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "グラフビュー"
+              "title": "AGENTS"
             }
           }
         ]
@@ -111,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AGENTS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "AGENTS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,6 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "AGENTS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,14 +185,26 @@
       "daily-notes:今日のデイリーノートを開く": false,
       "templates:テンプレートを挿入": false,
       "command-palette:コマンドパレットを開く": false,
-      "bases:新規ベースを作成": false
+      "bases:新規ベースを作成": false,
+      "obsidian-git:Open Git source control": false,
+      "marp-slides:Show Slide Preview": false
     }
   },
   "active": "c340a9f76319bdc4",
   "lastOpenFiles": [
+    "index.md",
+    "log/daily",
+    "log/weekly",
+    "log",
+    "wiki/research",
+    "wiki/entities",
+    "wiki/concepts",
+    "wiki/sources",
+    "raw/meeting",
+    "raw/temp",
+    "raw/papers",
+    "AGENTS.md",
     "CLAUDE.md",
-    "wiki",
-    "ようこそ.md",
-    "raw"
+    "ようこそ.md"
   ]
 }
