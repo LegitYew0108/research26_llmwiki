@@ -4,7 +4,7 @@ type: index
 tags: [index]
 sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-09-29
+updated: 2026-10-01
 ---
 
 # 目次
@@ -34,6 +34,8 @@ updated: 2026-09-29
 ## 概念・手法のページ
 
 - [角度判定と参照角度](wiki/concepts/angle_testing.md)
+- [参照角度によるKS₁・KS₂の確率解析](wiki/concepts/reference_angle_probability.md)
+- [KSの射影配置と部分空間分割](wiki/concepts/projection_configuration_ks.md)
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 研究メモ
@@ -43,3 +45,4 @@ updated: 2026-09-29
 ## 日次ログ一覧
 
 - [2026-09-29](log/daily/daily_20260929.md)
+- [2026-10-01](log/daily/daily_20261001.md)

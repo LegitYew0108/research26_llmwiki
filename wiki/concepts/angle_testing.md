@@ -4,7 +4,7 @@ type: concept
 tags: [angle-testing, random-projection, KS1, KS2]
 sources:
   - ../../raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-09-29
+updated: 2026-10-01
 ---
 
 # 角度判定と参照角度
@@ -24,6 +24,10 @@ updated: 2026-09-29
 $S_{sym}$ は各方向と反対方向を対にして配置する。$S_{pol}$ はcross-polytope（座標軸の正負方向を頂点とする多面体）を回転して組み合わせる。後者は参照角度を小さくする配置を複数試行から選べるが、一般の場合の最適配置が既知というわけではない。[出典：§5、Algorithm 1–2](../../raw/papers/kernel_function_for_angle_testing.pdf#page=5)
 
 $d$ 次元を $L$ 個の部分空間へ分け、各部分空間に $m$ 個を配置すると、組合せとして $m^L$ 個の射影方向を表現できる。実際に保持するのは $mL$ 個の部分ベクトルである。$L$ を増やすと精度向上が期待できる一方、KS₂の候補判定にかかる $O(L)$ の時間と記憶容量も増える。[出典：§5・7.2](../../raw/papers/kernel_function_for_angle_testing.pdf#page=6)
+
+## 詳細を読む
+
+判定値の分布と確率保証は[参照角度による確率解析](reference_angle_probability.md)、配置の目的関数・構成手順・計算量は[射影配置と部分空間分割](projection_configuration_ks.md)にまとめる。
 
 ## 関連ページ
 
