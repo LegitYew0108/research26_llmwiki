@@ -11,14 +11,12 @@
             "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "lab/meeting/research_plan_retrieval_augmented_ACT.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/papers/zhao_2023_act.pdf"
               },
-              "icon": "lucide-file",
-              "title": "research_plan_retrieval_augmented_ACT"
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
             }
           }
         ]
@@ -200,13 +198,13 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "27ea49b3ebd7f7e5",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
-    "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
+    "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "lab/meeting",
     "wiki/concepts/imitation_and_reinforcement_learning.md",
-    "raw/temp/zhao_2023_act.pdf",
+    "raw/papers/zhao_2023_act.pdf",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
     "raw/temp/web_spinningup_rl_algorithms_20261003.md",
     "raw/temp/web_huggingface_rl_framework_20261003.md",
@@ -219,7 +217,6 @@
     "raw/temp/luo_2024_hil_serl.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
-    "raw/temp/haarnoja_2018_sac.pdf",
     "index.md",
     "AGENTS.md",
     "log/daily/daily_20261003.md",
