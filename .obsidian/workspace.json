@@ -11,12 +11,14 @@
             "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/temp/zhao_2023_act.pdf"
+                "file": "wiki/concepts/imitation_and_reinforcement_learning.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "imitation_and_reinforcement_learning"
             }
           }
         ]
@@ -200,12 +202,12 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "raw/temp/zhao_2023_act.pdf",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
     "wiki/concepts/imitation_and_reinforcement_learning.md",
     "raw/temp/web_spinningup_rl_algorithms_20261003.md",
     "raw/temp/web_huggingface_rl_framework_20261003.md",
     "raw/temp/web_mit_imitation_learning_20261003.md",
-    "raw/temp/zhao_2023_act.pdf",
     "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "raw/temp/ball_2023_rlpd.pdf",
     "wiki/concepts/angle_testing.md",
