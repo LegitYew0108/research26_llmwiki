@@ -11,11 +11,13 @@
             "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "wiki/sources/zhao_2023_act.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
+              "icon": "lucide-file",
               "title": "zhao_2023_act"
             }
           }
@@ -198,15 +200,15 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/action_chunking_and_temporal_ensembling.md",
     "wiki/sources/zhao_2023_act.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "lab/meeting",
     "wiki/concepts/imitation_and_reinforcement_learning.md",
-    "raw/papers/zhao_2023_act.pdf",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
     "raw/temp/web_spinningup_rl_algorithms_20261003.md",
     "raw/temp/web_huggingface_rl_framework_20261003.md",
