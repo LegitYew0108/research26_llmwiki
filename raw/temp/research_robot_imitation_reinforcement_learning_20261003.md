@@ -5,7 +5,7 @@ tags: [research, robotics, imitation-learning, reinforcement-learning, offline-r
 sources:
   - raw/temp/osa_2018_imitation_learning_survey.pdf
   - raw/temp/ross_2011_dagger.pdf
-  - raw/temp/zhao_2023_act.pdf
+  - raw/papers/zhao_2023_act.pdf
   - raw/temp/chi_2023_diffusion_policy.pdf
   - raw/temp/kober_2013_robot_rl_survey.pdf
   - raw/temp/tang_2024_real_world_robot_rl_survey.pdf
@@ -43,7 +43,7 @@ PDFは公開元から取得した一次資料で、本ページは選択用の�
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | 模倣学習の全体像       | An Algorithmic Perspective on Imitation Learning — Osa et al.（2018）                                                                | Behavioral CloningとInverse Reinforcement Learningを整理するサーベイ。まず目次・Introduction・第5章を読み、必要に応じて各手法に進む。              | [PDF](osa_2018_imitation_learning_survey.pdf) / [公開元](https://arxiv.org/abs/1811.06711)   |
 | 模倣学習の基礎        | A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning — Ross, Gordon, Bagnell（2011）             | 学習した方策の行動が次の観測分布を変える問題を扱うDAggerの原論文。学習者の訪問状態へのexpertのラベル付けとデータ集約を読む。ロボット専用論文ではない。                              | [PDF](ross_2011_dagger.pdf) / [公開元](https://proceedings.mlr.press/v15/ross11a.html)       |
-| 実機での模倣学習       | Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware — Zhao et al.（2023）                                             | ALOHAによる双腕遠隔操作データ収集とAction Chunking with Transformers（ACT）を扱う。行動列の予測とtemporal ensemblingに着目する。                 | [PDF](zhao_2023_act.pdf) / [公開元](https://arxiv.org/abs/2304.13705)                        |
+| 実機での模倣学習       | Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware — Zhao et al.（2023）                                             | ALOHAによる双腕遠隔操作データ収集とAction Chunking with Transformers（ACT）を扱う。行動列の予測とtemporal ensemblingに着目する。                 | [PDF](../papers/zhao_2023_act.pdf) / [公開元](https://arxiv.org/abs/2304.13705)                        |
 | 実機での模倣学習       | Diffusion Policy: Visuomotor Policy Learning via Action Diffusion — Chi et al.（2023）                                               | 観測を条件とするdiffusion modelで行動列を生成する手法。多峰性のある行動分布とreceding horizon controlに着目する。保存PDFは2024年の拡張版v5。                 | [PDF](chi_2023_diffusion_policy.pdf) / [公開元](https://arxiv.org/abs/2303.04137)            |
 | ロボットRLの基礎      | Reinforcement Learning in Robotics: A Survey — Kober, Bagnell, Peters（2013）                                                        | ロボットへのRL適用を、model-based / model-free、value function / policy searchなどの観点で整理するサーベイ。2013年の文献として読む。               | [PDF](kober_2013_robot_rl_survey.pdf) / [公開元](https://doi.org/10.1177/0278364913495721)   |
 | 実機RLの全体像       | Deep Reinforcement Learning for Robotics: A Survey of Real-World Successes — Tang et al.（2024）                                     | Deep RLの実世界ロボットでの成功事例と成立要因を整理するサーベイ。Koberらの基礎的な整理を、Deep RL時代の実機事例で補うために選定。                                     | [PDF](tang_2024_real_world_robot_rl_survey.pdf) / [公開元](https://arxiv.org/abs/2408.03539) |
@@ -78,7 +78,7 @@ PDFは公開元から取得した一次資料で、本ページは選択用の�
 | --- | --- | ---: | --- |
 | [osa_2018_imitation_learning_survey.pdf](osa_2018_imitation_learning_survey.pdf) | 版番号表示なし | 5461618 | [PDF公開元](https://arxiv.org/pdf/1811.06711) |
 | [ross_2011_dagger.pdf](ross_2011_dagger.pdf) | 版番号表示なし | 1174501 | [PDF公開元](https://proceedings.mlr.press/v15/ross11a/ross11a.pdf) |
-| [zhao_2023_act.pdf](zhao_2023_act.pdf) | arXiv:2304.13705v1 | 5353485 | [PDF公開元](https://arxiv.org/pdf/2304.13705) |
+| [zhao_2023_act.pdf](../papers/zhao_2023_act.pdf) | arXiv:2304.13705v1 | 5353485 | [PDF公開元](https://arxiv.org/pdf/2304.13705) |
 | [chi_2023_diffusion_policy.pdf](chi_2023_diffusion_policy.pdf) | arXiv:2303.04137v5 | 6192199 | [PDF公開元](https://arxiv.org/pdf/2303.04137) |
 | [kober_2013_robot_rl_survey.pdf](kober_2013_robot_rl_survey.pdf) | 版番号表示なし | 1438064 | [PDF公開元](https://publications.ri.cmu.edu/storage/publications/pub_files/2013/7/Kober_IJRR_2013.pdf) |
 | [tang_2024_real_world_robot_rl_survey.pdf](tang_2024_real_world_robot_rl_survey.pdf) | arXiv:2408.03539v3 | 4550170 | [PDF公開元](https://arxiv.org/pdf/2408.03539) |
@@ -106,3 +106,7 @@ a87cb856a5294e71c21474006106fd7cadcff0e986da494535f44b13117c10d0  ball_2023_rlpd
 4a45bc106add1571a0f5e02f295522ce8ae75186943f66c9339a5954a81bac16  luo_2024_serl.pdf
 547a4d5d9440a3f70a773798813db1c8a612f006a6994398bbee2a566daab526  luo_2024_hil_serl.pdf
 ```
+
+## 取り込み状況（2026-10-03）
+
+ACTはユーザーが `raw/papers/` に移動し、ingest済み。[論文要約](../../wiki/sources/zhao_2023_act.md)を参照。上記の取得情報は当初のResearch時点の記録。

@@ -4,6 +4,7 @@ type: index
 tags: [index]
 sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
+  - raw/papers/zhao_2023_act.pdf
 updated: 2026-10-03
 ---
 
@@ -15,9 +16,9 @@ updated: 2026-10-03
 - [調査資料の一時保管](raw/temp/)
 - [ミーティング記録](raw/meeting/)
 
-### Research候補（未ingest）
+### Research候補と取り込み状況
 
-- [ロボットの模倣学習・強化学習：12本の候補と読む順番](raw/temp/research_robot_imitation_reinforcement_learning_20261003.md) — サーベイ、DAgger、ACT、Diffusion Policy、SAC、四足歩行、Offline RL、RLPD、SERL、HIL-SERL。各PDFへのリンクは候補一覧に記載。
+- [ロボットの模倣学習・強化学習：12本の候補と読む順番](raw/temp/research_robot_imitation_reinforcement_learning_20261003.md) — サーベイ、DAgger、ACT、Diffusion Policy、SAC、四足歩行、Offline RL、RLPD、SERL、HIL-SERL。ACTは取り込み済み（下記）。残りは未ingest。各PDFへのリンクは候補一覧に記載。
 
 ### Web記事の参照記録
 
@@ -44,9 +45,13 @@ updated: 2026-10-03
 
 ## 取り込み済みの論文
 
+- [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware（ACT）](wiki/sources/zhao_2023_act.md) — [一次資料](raw/papers/zhao_2023_act.pdf)
+
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [Action ChunkingとTemporal Ensembling](wiki/concepts/action_chunking_and_temporal_ensembling.md)
 
 - [ロボットの模倣学習と強化学習：基本的な仕組みと違い](wiki/concepts/imitation_and_reinforcement_learning.md)
 - [角度判定と参照角度](wiki/concepts/angle_testing.md)

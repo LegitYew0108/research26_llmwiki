@@ -10,7 +10,7 @@ sources:
   - ../../raw/temp/ross_2011_dagger.pdf
   - ../../raw/temp/kober_2013_robot_rl_survey.pdf
   - ../../raw/temp/levine_2020_offline_rl_tutorial.pdf
-  - ../../raw/temp/zhao_2023_act.pdf
+  - ../../raw/papers/zhao_2023_act.pdf
   - ../../raw/temp/chi_2023_diffusion_policy.pdf
   - ../../raw/temp/luo_2024_serl.pdf
   - ../../raw/temp/luo_2024_hil_serl.pdf
@@ -57,7 +57,7 @@ $$
 \|\pi_\theta(o_i)-a_i\|^2.
 $$
 
-$\theta$ は方策モデルのパラメータ。ただし、BCの損失は二乗誤差だけではない。行動の確率分布や行動列を学ぶ構成もあり、Diffusion Policyは観測を条件とするdiffusion modelで行動列を生成する。ACTも行動列を学習する。**BCは単一のネットワーク構造や、一時刻の行動予測だけを指す名前ではない。** [論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Diffusion Policy §3](../../raw/temp/chi_2023_diffusion_policy.pdf)、[ACT §IV](zhao_2023_act.pdf)
+$\theta$ は方策モデルのパラメータ。ただし、BCの損失は二乗誤差だけではない。行動の確率分布や行動列を学ぶ構成もあり、Diffusion Policyは観測を条件とするdiffusion modelで行動列を生成する。ACTも行動列を学習する。**BCは単一のネットワーク構造や、一時刻の行動予測だけを指す名前ではない。** [論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Diffusion Policy §3](../../raw/temp/chi_2023_diffusion_policy.pdf)、[ACT §IV](../../raw/papers/zhao_2023_act.pdf)
 
 ### なぜお手本に合うだけでは失敗するのか
 
@@ -139,7 +139,7 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 ## ロボットでの学習の制約と組み合わせの具体例
 
-ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../raw/temp/luo_2024_serl.pdf)、[ACT §III・IV](zhao_2023_act.pdf)、[DAgger・Introduction](../../raw/temp/ross_2011_dagger.pdf)
+ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../raw/temp/luo_2024_serl.pdf)、[ACT §III・IV](../../raw/papers/zhao_2023_act.pdf)、[DAgger・Introduction](../../raw/temp/ross_2011_dagger.pdf)
 
 模倣学習とRLは組み合わせられる。デモで方策を初期化してからRLで改善する、デモをRLの経験データとして利用する、学習中に人が修正介入する、といった構成がある。ただし、**デモを使っただけではBCを実施したことにはならない**。行動を教師として合わせているのか、報酬に基づく更新のデータとして使っているのかを確認する必要がある。[論文：Osaら §1・5](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[SERL §4.1](../../raw/temp/luo_2024_serl.pdf)、[HIL-SERL・手法](../../raw/temp/luo_2024_hil_serl.pdf)
 
@@ -153,4 +153,8 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 - RLアルゴリズムの分類を読む：[Spinning Up・Kinds of RL Algorithms（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)。基本分類に利用し、2018年時点の人気・性能の記述を現在の評価として扱わない。
 - 実機応用へ進む：[Research候補一覧](../../raw/temp/research_robot_imitation_reinforcement_learning_20261003.md)。
 
-Web記事の閲覧日は2026-10-03。参照記録は `raw/temp/` に保存し、本文には元記事への外部リンクを併記した。論文も現在の `raw/temp/` のPDFを参照しており、本ページの作成は各論文の個別要約を一括ingestするものではない。
+Web記事の閲覧日は2026-10-03。参照記録は `raw/temp/` に保存し、本文には元記事への外部リンクを併記した。ACTは `raw/papers/` の取り込み済みPDFを参照し、その他の論文は `raw/temp/` のPDFを参照している。本ページの作成は各論文の個別要約を一括ingestするものではない。
+
+## ACTの詳しい説明
+
+デモから行動列を学ぶ具体例は[ACT論文の要約](../sources/zhao_2023_act.md)、行動列の実行方法は[Action ChunkingとTemporal Ensembling](action_chunking_and_temporal_ensembling.md)を参照。ACTは画像・関節位置から絶対目標関節位置の列を学習し、推論時には同じ実行時刻に対する複数の予測を統合する。[出典：ACT §IV](../../raw/papers/zhao_2023_act.pdf)
