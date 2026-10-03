@@ -212,8 +212,10 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "1be8791edf6a9c25",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
+    "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/sources/zhao_2023_act.md",
     "wiki/concepts/action_chunking_and_temporal_ensembling.md",
@@ -232,7 +234,6 @@
     "raw/temp/kober_2013_robot_rl_survey.pdf",
     "raw/temp/luo_2024_hil_serl.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
-    "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
     "index.md",
     "AGENTS.md",
     "log/daily/daily_20261003.md",
