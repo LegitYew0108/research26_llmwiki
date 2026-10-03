@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/angle_testing.md",
+                "file": "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "angle_testing"
+              "title": "research_robot_imitation_reinforcement_learning_20261003"
             }
           }
         ]
@@ -202,24 +202,25 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "raw/temp/zhao_2023_act.pdf",
+    "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
+    "raw/temp/ball_2023_rlpd.pdf",
+    "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
+    "wiki/concepts/angle_testing.md",
     "raw/temp/luo_2024_serl.pdf",
     "raw/temp/kober_2013_robot_rl_survey.pdf",
     "raw/temp/luo_2024_hil_serl.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
     "raw/temp/haarnoja_2018_sac.pdf",
-    "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "raw/temp/ross_2011_dagger.pdf",
-    "raw/temp/chi_2023_diffusion_policy.pdf",
-    "raw/temp/zhao_2023_act.pdf",
     "index.md",
     "AGENTS.md",
     "log/daily/daily_20261003.md",
     "wiki/concepts/reference_angle_probability.md",
     "wiki/concepts/projection_configuration_ks.md",
     "wiki/concepts/probabilistic_routing_ks2.md",
-    "wiki/concepts/angle_testing.md",
     "log/daily/daily_20261001.md",
     "log/daily/daily_20260929.md",
     "log/daily.md",
