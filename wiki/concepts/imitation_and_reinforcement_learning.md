@@ -38,19 +38,19 @@ updated: 2026-10-03
 | policy $\pi$ | 入力から行動、または行動の確率分布を決めるもの | 画像などを入力し、次の指令を出すモデル |
 | reward $r_t$ | 目的に対する評価を表す数値 | 成功時の加点、消費エネルギーへの減点など |
 
-用語の出典：[Hugging Face：RL Framework（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](../../raw/temp/web_huggingface_rl_framework_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)。ロボットの例は説明用で、特定の実装仕様ではない。
+用語の出典：[Hugging Face：RL Framework（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](web_huggingface_rl_framework_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)。ロボットの例は説明用で、特定の実装仕様ではない。
 
-stateとobservationは同じとは限らない。カメラに物体が映っていても、速度や隠れた接触状態まで分かるとは限らない。そのような部分観測の問題では、現在の画像だけでなく観測・行動の履歴を方策の入力に使うことがある。また、方策の出力を直接モータのトルクにする必要はなく、関節速度や手先の指令を出して既存のcontrollerに渡す構成もある。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+stateとobservationは同じとは限らない。カメラに物体が映っていても、速度や隠れた接触状態まで分かるとは限らない。そのような部分観測の問題では、現在の画像だけでなく観測・行動の履歴を方策の入力に使うことがある。また、方策の出力を直接モータのトルクにする必要はなく、関節速度や手先の指令を出して既存のcontrollerに渡す構成もある。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](web_mit_imitation_learning_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 ## 模倣学習とは
 
 ### お手本から行動の決め方を学ぶ
 
-demonstrationは、expertがお手本を実行した記録。expertは人間に限らず、既存のcontrollerなどでもよい。代表的なデータは、状態または観測と行動を時系列で並べたものになる。毎回同じ軌道を再生するだけでなく、状況を入力として行動を出す方策を学ぶことが目的である。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：Osaら §1.6・2.1](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
+demonstrationは、expertがお手本を実行した記録。expertは人間に限らず、既存のcontrollerなどでもよい。代表的なデータは、状態または観測と行動を時系列で並べたものになる。毎回同じ軌道を再生するだけでなく、状況を入力として行動を出す方策を学ぶことが目的である。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](web_mit_imitation_learning_20261003.md)）、[論文：Osaら §1.6・2.1](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
 
 ### Behavior Cloning：行動を教師信号にする
 
-BCは、デモに含まれる観測を入力、expertの行動を正解として、教師あり学習で方策を学ぶ。概念的には、データ集合 $D=\{(o_i,a_i)\}$ に対して、予測行動とexpertの行動のずれを小さくする。連続行動を直接予測する単純な例なら、次の二乗誤差を使える。[Web：MIT講義ノート・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
+BCは、デモに含まれる観測を入力、expertの行動を正解として、教師あり学習で方策を学ぶ。概念的には、データ集合 $D=\{(o_i,a_i)\}$ に対して、予測行動とexpertの行動のずれを小さくする。連続行動を直接予測する単純な例なら、次の二乗誤差を使える。[Web：MIT講義ノート・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](web_mit_imitation_learning_20261003.md)）、[論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
 
 $$
 \min_\theta\; \frac{1}{|D|}\sum_{(o_i,a_i)\in D}
@@ -67,13 +67,13 @@ DAggerは、この問題に対し、学習者が訪れる状況についてexper
 
 ### 模倣学習はBCだけではない
 
-Inverse Reinforcement Learning（IRL）は、デモから「どのような報酬・costを重視していたのか」を推定し、それに基づいて方策を求める。デモの行動へ直接合わせるBCとは学習対象が異なる。模倣学習の分類には複数の整理があるが、BCとIRLを区別すると、行動を学ぶ方法と目的を推定する方法の違いをつかみやすい。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：Osaら §2.2・4](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
+Inverse Reinforcement Learning（IRL）は、デモから「どのような報酬・costを重視していたのか」を推定し、それに基づいて方策を求める。デモの行動へ直接合わせるBCとは学習対象が異なる。模倣学習の分類には複数の整理があるが、BCとIRLを区別すると、行動を学ぶ方法と目的を推定する方法の違いをつかみやすい。[Web：MIT講義ノート（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](web_mit_imitation_learning_20261003.md)）、[論文：Osaら §2.2・4](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
 
 ## 強化学習とは
 
 ### 行動の結果を報酬で評価する
 
-RLでは、agentが行動し、環境が変化し、報酬と新たな観測を得る。この経験から、長期的に報酬を得られる方策を学ぶ。報酬は「この状態ではこの操作が正解」という行動ラベルではなく、結果を評価する数値なので、成功につながる行動を学習側が見つける必要がある。[Web：Hugging Face・RL Process（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](../../raw/temp/web_huggingface_rl_framework_20261003.md)）、[論文：Koberら §2](../../raw/temp/kober_2013_robot_rl_survey.pdf)
+RLでは、agentが行動し、環境が変化し、報酬と新たな観測を得る。この経験から、長期的に報酬を得られる方策を学ぶ。報酬は「この状態ではこの操作が正解」という行動ラベルではなく、結果を評価する数値なので、成功につながる行動を学習側が見つける必要がある。[Web：Hugging Face・RL Process（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](web_huggingface_rl_framework_20261003.md)）、[論文：Koberら §2](../../raw/temp/kober_2013_robot_rl_survey.pdf)
 
 ```mermaid
 flowchart LR
@@ -83,7 +83,7 @@ flowchart LR
     L -->|方策を更新| P
 ```
 
-図はオンラインRLの概念図で、毎時刻必ず方策を更新するという意味ではない。[図の根拠：Hugging Face・RL Process（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](../../raw/temp/web_huggingface_rl_framework_20261003.md)）、[論文：Offline RL tutorial・Figure 1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+図はオンラインRLの概念図で、毎時刻必ず方策を更新するという意味ではない。[図の根拠：Hugging Face・RL Process（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)（[参照記録](web_huggingface_rl_framework_20261003.md)）、[論文：Offline RL tutorial・Figure 1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 ### 目標は今すぐの報酬ではなく、将来までの報酬
 
@@ -101,9 +101,9 @@ $\tau$ は一連の状態・行動からなるtrajectory、$T$ はその長さ�
 
 ### 何を学ぶアルゴリズムなのか
 
-RLの方法は一つではない。方策を直接改善する方法、行動後の将来の報酬を見積もる価値関数を学ぶ方法、その両方を学ぶactor-criticなどがある。$Q^\pi(s,a)$ は「状態 $s$ で行動 $a$ を取り、その後は方策 $\pi$ に従うと、どれくらいのreturnが期待できるか」を表す。Q値は即時の報酬や行動の正解ラベルとは異なる。[Web：Spinning Up・What to Learn（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)（[参照記録](../../raw/temp/web_spinningup_rl_algorithms_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+RLの方法は一つではない。方策を直接改善する方法、行動後の将来の報酬を見積もる価値関数を学ぶ方法、その両方を学ぶactor-criticなどがある。$Q^\pi(s,a)$ は「状態 $s$ で行動 $a$ を取り、その後は方策 $\pi$ に従うと、どれくらいのreturnが期待できるか」を表す。Q値は即時の報酬や行動の正解ラベルとは異なる。[Web：Spinning Up・What to Learn（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)（[参照記録](web_spinningup_rl_algorithms_20261003.md)）、[論文：Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-model-based RLは、環境の変化などを予測するmodelを利用し、model-free RLはそのようなmodelを利用せず学習する。この「model」は環境の遷移等の予測modelを指すので、**model-freeでも方策や価値関数にニューラルネットワークを使える**。Deep RLはRLに深層ニューラルネットワークを使うもので、RLそのものが必ずDeep Learningを必要とするわけではない。[Web：Spinning Up・Model-Free vs Model-Based（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)（[参照記録](../../raw/temp/web_spinningup_rl_algorithms_20261003.md)）、[論文：Offline RL tutorial §1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+model-based RLは、環境の変化などを予測するmodelを利用し、model-free RLはそのようなmodelを利用せず学習する。この「model」は環境の遷移等の予測modelを指すので、**model-freeでも方策や価値関数にニューラルネットワークを使える**。Deep RLはRLに深層ニューラルネットワークを使うもので、RLそのものが必ずDeep Learningを必要とするわけではない。[Web：Spinning Up・Model-Free vs Model-Based（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)（[参照記録](web_spinningup_rl_algorithms_20261003.md)）、[論文：Offline RL tutorial §1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 ### 実機で学ぶとは限らない
 
@@ -131,7 +131,7 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 完全に状態を観測でき、各状態でexpertの行動 $\pi_E(s)$ を得られるという仮定の下で、例えば $r_E(s,a)=-\|a-\pi_E(s)\|^2$ と置ける。これを使って $\max_\pi\mathbb{E}_{\tau\sim\pi}[\sum_t\gamma^t r_E(s_t,a_t)]$ を解くなら、expertに似た行動を目的とするRLとして模倣を定式化している。これは「損失の負号を報酬にする」という数学的な対応であり、模倣学習の全手法がこの報酬を使うという意味ではない。[根拠となる定義：Osaら §2.2・3・4](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-一方、通常のBCは固定されたexpertのデータ上で、予測行動と記録された行動の損失を小さくする。入力となる状態は学習中の方策が変わっても変わらない。逐次的なRLでは、自分の行動が次の状態を変え、その後の報酬にも影響する。このため、**損失の符号を変えて「報酬」と呼ぶだけでは、学習対象の状態分布と将来の扱いが同じにならない。** [Web：MIT・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：DAgger §2](../../raw/temp/ross_2011_dagger.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+一方、通常のBCは固定されたexpertのデータ上で、予測行動と記録された行動の損失を小さくする。入力となる状態は学習中の方策が変わっても変わらない。逐次的なRLでは、自分の行動が次の状態を変え、その後の報酬にも影響する。このため、**損失の符号を変えて「報酬」と呼ぶだけでは、学習対象の状態分布と将来の扱いが同じにならない。** [Web：MIT・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](web_mit_imitation_learning_20261003.md)）、[論文：DAgger §2](../../raw/temp/ross_2011_dagger.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 また、手元にあるのがデモだけなら、自分が新しく訪れた状態でexpertが何をするかは一般に分からず、上の $r_E(s,a)$ をそのまま評価できない。追加のexpertラベルを求める方法や、デモから学んだmodelで補う方法では、それぞれ条件と推定誤差を考える必要がある。DAggerは学習者が訪れる状態へのexpertラベルを集める具体例である。[論文：DAgger §3](../../raw/temp/ross_2011_dagger.pdf)
 

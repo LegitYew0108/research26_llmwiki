@@ -24,9 +24,9 @@ updated: 2026-10-03
 
 ### Web記事の参照記録
 
-- [MIT：Imitation Learning](raw/temp/web_mit_imitation_learning_20261003.md)
-- [Hugging Face：RL Framework](raw/temp/web_huggingface_rl_framework_20261003.md)
-- [Spinning Up：Kinds of RL Algorithms](raw/temp/web_spinningup_rl_algorithms_20261003.md)
+- [MIT：Imitation Learning](web_mit_imitation_learning_20261003.md)
+- [Hugging Face：RL Framework](web_huggingface_rl_framework_20261003.md)
+- [Spinning Up：Kinds of RL Algorithms](web_spinningup_rl_algorithms_20261003.md)
 
 ## Wiki
 
