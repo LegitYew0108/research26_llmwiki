@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a1554e2b5c59f6dd",
+        "id": "53821f267340e4ab",
         "type": "tabs",
         "children": [
           {
-            "id": "c340a9f76319bdc4",
+            "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,13 +169,23 @@
               "icon": "lucide-list",
               "title": "アウトライン"
             }
+          },
+          {
+            "id": "0e70bb31ff3f5332",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 378.67578125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,9 +200,21 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "c340a9f76319bdc4",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "無題のフォルダ",
+    "wiki/concepts/reference_angle_probability.md",
+    "wiki/concepts/projection_configuration_ks.md",
+    "wiki/concepts/probabilistic_routing_ks2.md",
+    "wiki/concepts/angle_testing.md",
+    "log/daily/daily_20261001.md",
+    "log/daily/daily_20260929.md",
     "index.md",
+    "log/daily.md",
+    "AGENTS.md",
+    "wiki/sources/kernel_function_for_angle_testing.md",
+    "wiki/research/ks2_for_robot_rl.md",
+    "wiki/research.md",
     "log/daily",
     "log/weekly",
     "log",
@@ -203,7 +225,6 @@
     "raw/meeting",
     "raw/temp",
     "raw/papers",
-    "AGENTS.md",
     "CLAUDE.md",
     "ようこそ.md"
   ]
