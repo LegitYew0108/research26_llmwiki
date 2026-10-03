@@ -4,7 +4,7 @@ type: source
 tags: [ANNS, HNSW, angle-testing, random-projection, KS1, KS2]
 sources:
   - ../../raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-10-01
+updated: 2026-10-03
 ---
 
 # Probabilistic Kernel Function for Fast Angle Testing
@@ -125,6 +125,6 @@ KS₂はデータベクトル自体だけでなく、訪問ノードから隣接
 
 ## 卒研との接点・読む順序
 
-本論文が評価するのはベクトル検索であり、ロボット制御や強化学習の実験はない。応用案は[研究メモ](../research/ks2_for_robot_rl.md)に仮説として分けて記録する。[出典：§7・付録D](../../raw/papers/kernel_function_for_angle_testing.pdf#page=8)
+本論文が評価するのはベクトル検索であり、ロボット制御や強化学習の実験はない。[出典：§7・付録D](../../raw/papers/kernel_function_for_angle_testing.pdf#page=8)
 
 理解は[角度判定と参照角度](../concepts/angle_testing.md) → [参照角度による確率解析](../concepts/reference_angle_probability.md) → [射影配置と部分空間分割](../concepts/projection_configuration_ks.md) → [確率的ルーティングとKS₂](../concepts/probabilistic_routing_ks2.md)の順に進めるとよい。原論文は§3–6を対応させて読み、付録A・Bで理論、付録C.4・Dでアルゴリズムと実験を確認する。

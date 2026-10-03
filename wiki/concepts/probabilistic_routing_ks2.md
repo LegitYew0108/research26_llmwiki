@@ -4,7 +4,7 @@ type: concept
 tags: [ANNS, HNSW, probabilistic-routing, KS2]
 sources:
   - ../../raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-10-01
+updated: 2026-10-03
 ---
 
 # 確率的ルーティングとKS₂テスト
@@ -80,4 +80,3 @@ PEOsと比べたKS₂の特徴は、参照角度を明示的に利用し、テ�
 - [参照角度による確率解析](reference_angle_probability.md)
 - [射影配置と部分空間分割](projection_configuration_ks.md)
 - [論文要約と実験条件](../sources/kernel_function_for_angle_testing.md)
-- [ロボット強化学習への応用仮説](../research/ks2_for_robot_rl.md)

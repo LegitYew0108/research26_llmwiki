@@ -4,7 +4,7 @@ type: index
 tags: [index]
 sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-10-01
+updated: 2026-10-03
 ---
 
 # 目次
@@ -20,7 +20,6 @@ updated: 2026-10-01
 - [論文ごとの要約](wiki/sources/)
 - [概念・手法](wiki/concepts/)
 - [研究者・研究室・データセット](wiki/entities/)
-- [自身の研究状況・動向](wiki/research/)
 
 ## 進捗記録
 
@@ -38,11 +37,8 @@ updated: 2026-10-01
 - [KSの射影配置と部分空間分割](wiki/concepts/projection_configuration_ks.md)
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
-## 研究メモ
-
-- [KS₂のロボット強化学習への応用検討（未検証）](wiki/research/ks2_for_robot_rl.md)
-
 ## 日次ログ一覧
 
 - [2026-09-29](log/daily/daily_20260929.md)
 - [2026-10-01](log/daily/daily_20261001.md)
+- [2026-10-03](log/daily/daily_20261003.md)
