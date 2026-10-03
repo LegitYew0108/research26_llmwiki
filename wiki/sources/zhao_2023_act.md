@@ -45,14 +45,14 @@ ALOHAは2台のleader armを人が動かし、2台のfollower armが関節空間
 
 実機6タスクとMuJoCoのシミュレーション2タスクで評価。実機デモは各タスク50本、Thread Velcroのみ100本。1本8–14秒、50Hzで記録し、デモの合計は約10–20分だが、リセット・操作失敗を含む収集の実時間は約30–60分。シミュレーションはscripted / humanそれぞれ50本の成功デモを使う。[出典：§V-A・B](../../raw/papers/zhao_2023_act.pdf)
 
-| 実機タスク | 最終成功率（ACT） |
-| --- | ---: |
-| Slide Ziploc：袋のsliderを操作して開ける | 88% |
-| Slot Battery：電池を挿入する | 96% |
-| Open Cup：半透明容器の蓋を開ける | 84% |
-| Thread Velcro：面ファスナーの端をloopへ通す | 20% |
-| Prep Tape：テープを切り、受け渡して箱に掛ける | 64% |
-| Put On Shoe：靴を履かせてstrapを留める | 92% |
+| 実機タスク                          | 最終成功率（ACT） |
+| ------------------------------ | ---------: |
+| Slide Ziploc：袋のsliderを操作して開ける  |        88% |
+| Slot Battery：電池を挿入する           |        96% |
+| Open Cup：半透明容器の蓋を開ける           |        84% |
+| Thread Velcro：面ファスナーの端をloopへ通す |        20% |
+| Prep Tape：テープを切り、受け渡して箱に掛ける    |        64% |
+| Put On Shoe：靴を履かせてstrapを留める    |        92% |
 
 実機は1 seed・25試行。最初の2タスクではBC-ConvMLP、BeT、RT-1、VINNと比較し、4手法とも最終成功率は0%。残る4タスクはBeTとの比較で、その最終成功率も0%。これは本論文のデータ・調整・評価条件における結果である。Table IIのcaptionと本文は「remaining 3」と記すが、表に載るのは4タスクである。[出典：§V-C・Tables I–II](../../raw/papers/zhao_2023_act.pdf)
 
