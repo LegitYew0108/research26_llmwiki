@@ -15,6 +15,10 @@ updated: 2026-10-03
 - [調査資料の一時保管](raw/temp/)
 - [ミーティング記録](raw/meeting/)
 
+### Research候補（未ingest）
+
+- [ロボットの模倣学習・強化学習：12本の候補と読む順番](raw/temp/research_robot_imitation_reinforcement_learning_20261003.md) — サーベイ、DAgger、ACT、Diffusion Policy、SAC、四足歩行、Offline RL、RLPD、SERL、HIL-SERL。各PDFへのリンクは候補一覧に記載。
+
 ## Wiki
 
 - [論文ごとの要約](wiki/sources/)
