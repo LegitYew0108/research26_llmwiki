@@ -200,8 +200,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "27ea49b3ebd7f7e5",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "wiki/concepts/imitation_and_reinforcement_learning.md",
+    "raw/temp/web_spinningup_rl_algorithms_20261003.md",
+    "raw/temp/web_huggingface_rl_framework_20261003.md",
+    "raw/temp/web_mit_imitation_learning_20261003.md",
     "raw/temp/zhao_2023_act.pdf",
     "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "raw/temp/ball_2023_rlpd.pdf",
@@ -214,7 +218,6 @@
     "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
     "raw/temp/haarnoja_2018_sac.pdf",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
-    "raw/temp/ross_2011_dagger.pdf",
     "index.md",
     "AGENTS.md",
     "log/daily/daily_20261003.md",
