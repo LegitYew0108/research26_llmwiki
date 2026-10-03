@@ -125,7 +125,19 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 報酬を学習して与える実機RLの具体例は、[SERL §4.2](../../raw/temp/luo_2024_serl.pdf)。デモ収集と観測の制約は[Osaら §2・5](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、実機RLの制約は[Koberら §3](../../raw/temp/kober_2013_robot_rl_survey.pdf)を参照。
 
-## ロボットでは何が難しく、どう組み合わされるのか
+## 「expertとの差を報酬にしたRL」と考えられるか
+
+**模倣の目的を報酬として表すことはできるが、通常のBCの学習と、その報酬を使う逐次的なRLの学習は区別する。** 以下はBCの損失とRLの目的関数を用いた説明上の定式化であり、独自の研究提案ではない。[定式化の根拠：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+
+完全に状態を観測でき、各状態でexpertの行動 $\pi_E(s)$ を得られるという仮定の下で、例えば $r_E(s,a)=-\|a-\pi_E(s)\|^2$ と置ける。これを使って $\max_\pi\mathbb{E}_{\tau\sim\pi}[\sum_t\gamma^t r_E(s_t,a_t)]$ を解くなら、expertに似た行動を目的とするRLとして模倣を定式化している。これは「損失の負号を報酬にする」という数学的な対応であり、模倣学習の全手法がこの報酬を使うという意味ではない。[根拠となる定義：Osaら §2.2・3・4](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+
+一方、通常のBCは固定されたexpertのデータ上で、予測行動と記録された行動の損失を小さくする。入力となる状態は学習中の方策が変わっても変わらない。逐次的なRLでは、自分の行動が次の状態を変え、その後の報酬にも影響する。このため、**損失の符号を変えて「報酬」と呼ぶだけでは、学習対象の状態分布と将来の扱いが同じにならない。** [Web：MIT・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../raw/temp/web_mit_imitation_learning_20261003.md)）、[論文：DAgger §2](../../raw/temp/ross_2011_dagger.pdf)、[Offline RL tutorial §2.1](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+
+また、手元にあるのがデモだけなら、自分が新しく訪れた状態でexpertが何をするかは一般に分からず、上の $r_E(s,a)$ をそのまま評価できない。追加のexpertラベルを求める方法や、デモから学んだmodelで補う方法では、それぞれ条件と推定誤差を考える必要がある。DAggerは学習者が訪れる状態へのexpertラベルを集める具体例である。[論文：DAgger §3](../../raw/temp/ross_2011_dagger.pdf)
+
+この説明から整理すると、「模倣学習」はお手本から振る舞いを学ぶ目的・情報源の側面、「RL」は報酬に基づく逐次的な意思決定の側面として捉えられ、両者は重なり得る。BCは教師あり学習で直接方策を学ぶ代表例、IRLはデモから報酬・costを推定する代表例である。[論文：Osaら §2.2・5.1](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
+
+## ロボットでの学習の制約と組み合わせの具体例
 
 ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../raw/temp/luo_2024_serl.pdf)、[ACT §III・IV](../../raw/temp/zhao_2023_act.pdf)、[DAgger・Introduction](../../raw/temp/ross_2011_dagger.pdf)
 
