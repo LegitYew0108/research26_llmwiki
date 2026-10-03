@@ -18,6 +18,8 @@ updated: 2026-10-03
 
 ### Research候補と取り込み状況
 
+- VAEの参照論文（個別ingestは未実施）：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders（v3）](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念の説明記事](wiki/concepts/variational_autoencoder.md)から原文にもリンク。
+
 - [ロボットの模倣学習・強化学習：12本の候補と読む順番](raw/temp/research_robot_imitation_reinforcement_learning_20261003.md) — サーベイ、DAgger、ACT、Diffusion Policy、SAC、四足歩行、Offline RL、RLPD、SERL、HIL-SERL。ACTは取り込み済み（下記）。残りは未ingest。各PDFへのリンクは候補一覧に記載。
 
 ### Web記事の参照記録
@@ -50,6 +52,8 @@ updated: 2026-10-03
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [VAE（Variational Autoencoder）：仕組みと学習の目的](wiki/concepts/variational_autoencoder.md)
 
 - [Action ChunkingとTemporal Ensembling](wiki/concepts/action_chunking_and_temporal_ensembling.md)
 

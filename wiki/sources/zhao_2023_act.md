@@ -35,6 +35,8 @@ ALOHAは2台のleader armを人が動かし、2台のfollower armが関節空間
 4. 再構成損失と、潜在分布を標準正規分布へ近づけるKL項の和で学習する。
 5. 推論時はCVAE encoderを使わず、$z=0$ に固定する。行動列を毎時刻予測し、同じ実行時刻に対応する複数の予測をtemporal ensemblingで統合する。
 
+VAEの基本構成と学習目的は[VAE（Variational Autoencoder）](../concepts/variational_autoencoder.md)を参照。
+
 以上は§IV-B・C、Algorithms 1–2に基づく。生成モデルとして学習していても、この推論手順では $z$ をサンプリングせず、観測に対する出力は決定的になる。[出典](../../raw/papers/zhao_2023_act.pdf)
 
 画像をResNet18で特徴化し、Transformer encoderでカメラ特徴・関節情報・潜在変数を統合する。Transformer decoderは固定の位置埋め込みをqueryとして、未来の行動列を生成する。**CVAE encoderと、方策内部のTransformer encoderは役割が異なる**。推論時に残るのは後者を含むCVAE decoderである。[出典：§IV-C・Appendix C](../../raw/papers/zhao_2023_act.pdf)
