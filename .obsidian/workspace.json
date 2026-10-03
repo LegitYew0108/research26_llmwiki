@@ -200,18 +200,18 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
-    "無題のフォルダ",
+    "index.md",
+    "AGENTS.md",
+    "mind",
     "wiki/concepts/reference_angle_probability.md",
     "wiki/concepts/projection_configuration_ks.md",
     "wiki/concepts/probabilistic_routing_ks2.md",
     "wiki/concepts/angle_testing.md",
     "log/daily/daily_20261001.md",
     "log/daily/daily_20260929.md",
-    "index.md",
     "log/daily.md",
-    "AGENTS.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "wiki/research/ks2_for_robot_rl.md",
     "wiki/research.md",
@@ -224,7 +224,6 @@
     "wiki/sources",
     "raw/meeting",
     "raw/temp",
-    "raw/papers",
     "CLAUDE.md",
     "ようこそ.md"
   ]
