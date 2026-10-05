@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mind/IL/IL-Imitation Learning(模倣学習).md",
+                "file": "mind/IL/BC-Behavior Cloning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IL-Imitation Learning(模倣学習)"
+              "title": "BC-Behavior Cloning"
             }
           },
           {
@@ -230,10 +230,10 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "wiki/concepts/imitation_and_reinforcement_learning.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
+    "wiki/concepts/imitation_and_reinforcement_learning.md",
     "mind/IL",
-    "mind/IL/Behavior Cloning.md",
+    "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/variational_autoencoder.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "raw/web/web_huggingface_rl_framework_20261003.md",
