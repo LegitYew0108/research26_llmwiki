@@ -9,3 +9,5 @@
 # 代表的手法
 - Behavior Cloning(BC)
 - Dataset Aggregation(DAgger)
+- Generative Adversarial Imitation Learning(GAIL)
+- Adversarial Inverse Reinforcement Learning(AIRL)
