@@ -11,12 +11,14 @@
             "id": "1be8791edf6a9c25",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "mind/Transformer/Attention(ざっくり).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "Attention(ざっくり)"
             }
           },
           {
@@ -214,6 +216,9 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "raw/papers/zhao_2023_act.pdf",
+    "mind/Transformer/Attention(ざっくり).md",
+    "mind/Transformer",
     "log/daily/daily_20261005.md",
     "wiki/concepts/behavior_cloning.md",
     "wiki/sources/pomerleau_1988_alvinn.md",
@@ -232,13 +237,11 @@
     "wiki/sources/zhao_2023_act.md",
     "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
     "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
-    "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/action_chunking_and_temporal_ensembling.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
     "lab/meeting",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
     "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
-    "raw/temp/ball_2023_rlpd.pdf",
     "wiki/concepts/angle_testing.md",
     "index.md",
     "AGENTS.md",
@@ -247,8 +250,6 @@
     "wiki/concepts/projection_configuration_ks.md",
     "wiki/concepts/probabilistic_routing_ks2.md",
     "log/daily/daily_20261001.md",
-    "log/daily/daily_20260929.md",
-    "log/daily.md",
-    "wiki/research/ks2_for_robot_rl.md"
+    "log/daily/daily_20260929.md"
   ]
 }
