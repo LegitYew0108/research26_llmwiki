@@ -7,4 +7,4 @@ Q: Query 求めている情報
 K: Key 持っているデータ
 V: Value 渡す情報
 
-Attentionはこれを学習することによって、
+Attentionはこれを学習することによって、どこに着目するかけｔ
