@@ -3,6 +3,7 @@ title: "ロボットの模倣学習と強化学習：基本的な仕組みと違
 type: concept
 tags: [robotics, robot-learning, imitation-learning, reinforcement-learning, behavior-cloning, policy, reward, offline-rl]
 sources:
+  - ../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
   - ../../raw/temp/web_mit_imitation_learning_20261003.md
   - ../../raw/temp/web_huggingface_rl_framework_20261003.md
   - ../../raw/temp/web_spinningup_rl_algorithms_20261003.md
@@ -15,7 +16,7 @@ sources:
   - ../../raw/temp/luo_2024_serl.pdf
   - ../../raw/temp/luo_2024_hil_serl.pdf
   - ../../raw/temp/lee_2020_quadrupedal_locomotion.pdf
-updated: 2026-10-03
+updated: 2026-10-05
 ---
 
 # ロボットの模倣学習と強化学習：基本的な仕組みと違い
@@ -158,3 +159,7 @@ Web記事の閲覧日は2026-10-03。参照記録は `raw/temp/` に保存し、
 ## ACTの詳しい説明
 
 デモから行動列を学ぶ具体例は[ACT論文の要約](../sources/zhao_2023_act.md)、行動列の実行方法は[Action ChunkingとTemporal Ensembling](action_chunking_and_temporal_ensembling.md)を参照。ACTは画像・関節位置から絶対目標関節位置の列を学習し、推論時には同じ実行時刻に対する複数の予測を統合する。[出典：ACT §IV](../../raw/papers/zhao_2023_act.pdf)
+
+## BCとALVINNの関連資料
+
+[BCの概念ページ](behavior_cloning.md)では、教師あり学習の目的と実行時の分布シフトを整理した。[ALVINNの論文要約](../sources/pomerleau_1988_alvinn.md)は、人工道路画像から旋回方向を学んで実車へ適用した例を扱う。このNIPS 1988版では、人間の運転デモによる適応的学習と回復例の収集は将来構想として述べられている。[出典：ALVINN、pp.307–308・311](../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
