@@ -5,7 +5,7 @@ tags: [index]
 sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
-updated: 2026-10-03
+updated: 2026-10-05
 ---
 
 # 目次
@@ -64,6 +64,8 @@ updated: 2026-10-03
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-05](log/daily/daily_20261005.md)
 
 - [2026-09-29](log/daily/daily_20260929.md)
 - [2026-10-01](log/daily/daily_20261001.md)

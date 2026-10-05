@@ -1,3 +1,14 @@
+---
+title: "Behavior Cloning：自分の理解"
+type: mind
+tags: [mind, imitation-learning, behavior-cloning, distribution-shift, compounding-error]
+sources:
+  - ../../raw/temp/osa_2018_imitation_learning_survey.pdf
+  - ../../raw/temp/ross_2011_dagger.pdf
+  - ../../raw/papers/zhao_2023_act.pdf
+updated: 2026-10-05
+---
+
 # 概要
 Behavior Cloningは、ILにおける基本的な手法。
 専門家`Expert`の動作を完全に再現することを目標とする。
@@ -35,3 +46,12 @@ BCの代表的な弱点
 一方で、模倣学習では、前の出力した行動によって、未来の入力が変化。
 
 モデルによる行動が次の入力を生み出すループとなっているので、教師データに無いものが現れたときに異なる行動となってしまう。
+
+## 関連ページ・出典
+
+- [Imitation Learning：自分の理解](<IL-Imitation Learning(模倣学習).md>)
+- [模倣学習と強化学習の基礎](../../wiki/concepts/imitation_and_reinforcement_learning.md)
+- [ACTの論文要約](../../wiki/sources/zhao_2023_act.md)
+- [模倣学習のサーベイ：§2.2・3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
+- [DAgger：§1–3（分布シフトと誤差の累積）](../../raw/temp/ross_2011_dagger.pdf)
+- [ACT：§IV（行動列の学習とL1 loss）](../../raw/papers/zhao_2023_act.pdf)

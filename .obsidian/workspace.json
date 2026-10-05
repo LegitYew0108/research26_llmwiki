@@ -230,6 +230,7 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "log/daily/daily_20261005.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "wiki/concepts/imitation_and_reinforcement_learning.md",
     "mind/IL",
@@ -264,7 +265,6 @@
     "log/daily.md",
     "wiki/research/ks2_for_robot_rl.md",
     "wiki/research.md",
-    "CLAUDE.md",
-    "ようこそ.md"
+    "CLAUDE.md"
   ]
 }
