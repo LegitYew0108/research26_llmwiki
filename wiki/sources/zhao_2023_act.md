@@ -4,7 +4,7 @@ type: source
 tags: [robotics, imitation-learning, behavior-cloning, ACT, ALOHA, action-chunking, transformer, CVAE]
 sources:
   - ../../raw/papers/zhao_2023_act.pdf
-updated: 2026-10-03
+updated: 2026-10-08
 ---
 
 # Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware
@@ -85,3 +85,5 @@ ALOHAのparallel-jaw gripperでは多指操作や大きな力を要する操作�
 
 - [Action ChunkingとTemporal Ensembling](../concepts/action_chunking_and_temporal_ensembling.md)
 - [ロボットの模倣学習と強化学習](../concepts/imitation_and_reinforcement_learning.md)
+
+- [CVAE：条件付き生成とACTでの使い方](../concepts/conditional_variational_autoencoder.md)

@@ -6,7 +6,7 @@ sources:
   - ../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
   - ../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf
   - ../../raw/papers/zhao_2023_act.pdf
-updated: 2026-10-03
+updated: 2026-10-08
 ---
 
 # VAE（Variational Autoencoder）
@@ -102,3 +102,5 @@ $$\epsilon\sim\mathcal N(0,I),\qquad z=\mu_\phi(x)+\sigma_\phi(x)\odot\epsilon.$
 
 - [ACT：Action ChunkingとTemporal Ensembling](action_chunking_and_temporal_ensembling.md)
 - [ロボットの模倣学習と強化学習](imitation_and_reinforcement_learning.md)
+
+- [CVAE：条件付き生成とACTでの使い方](conditional_variational_autoencoder.md)

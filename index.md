@@ -5,6 +5,7 @@ tags: [index]
 sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
+  - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 updated: 2026-10-08
 ---
@@ -19,7 +20,7 @@ updated: 2026-10-08
 
 ### Research候補と取り込み状況
 
-- [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。新規論文は未ingest。
+- [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。CVAE論文は取り込み済み。
 
 - VAEの参照論文（個別ingestは未実施）：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders（v3）](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念の説明記事](wiki/concepts/variational_autoencoder.md)から原文にもリンク。
 
@@ -50,6 +51,8 @@ updated: 2026-10-08
 
 ## 取り込み済みの論文
 
+- [Learning Structured Output Representation using Deep Conditional Generative Models（CVAE）](wiki/sources/sohn_2015_cvae.md) — [一次資料](raw/papers/sohn_2015_cvae.pdf)
+
 - [ALVINN: An Autonomous Land Vehicle in a Neural Network（NIPS 1988）](wiki/sources/pomerleau_1988_alvinn.md) — [一次資料](raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
 
 - [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware（ACT）](wiki/sources/zhao_2023_act.md) — [一次資料](raw/papers/zhao_2023_act.pdf)
@@ -57,6 +60,8 @@ updated: 2026-10-08
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [CVAE：条件付き生成とACTでの使い方](wiki/concepts/conditional_variational_autoencoder.md)
 
 - [Behavior Cloning：学習方法と分布シフト](wiki/concepts/behavior_cloning.md)
 
