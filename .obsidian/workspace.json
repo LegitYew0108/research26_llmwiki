@@ -212,13 +212,14 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "1be8791edf6a9c25",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
+    "wiki/concepts/variational_autoencoder.md",
     "wiki/sources/zhao_2023_act.md",
     "log/daily/daily_20261008.md",
     "raw/temp/research_cvae_for_act_20261008.md",
-    "raw/temp/sohn_2015_cvae.pdf",
-    "wiki/concepts/variational_autoencoder.md",
+    "raw/papers/sohn_2015_cvae.pdf",
     "raw/web/web_spinningup_rl_algorithms_20261003.md",
     "raw/web/web_mit_imitation_learning_20261003.md",
     "raw/web/web_huggingface_rl_framework_20261003.md",
@@ -233,7 +234,6 @@
     "log/daily/daily_20261005.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "raw/web",
-    "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
     "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/action_chunking_and_temporal_ensembling.md",
@@ -248,7 +248,6 @@
     "log/daily/daily_20261003.md",
     "wiki/concepts/reference_angle_probability.md",
     "wiki/concepts/projection_configuration_ks.md",
-    "wiki/concepts/probabilistic_routing_ks2.md",
-    "log/daily/daily_20261001.md"
+    "wiki/concepts/probabilistic_routing_ks2.md"
   ]
 }
