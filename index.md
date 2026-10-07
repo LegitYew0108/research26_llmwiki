@@ -6,7 +6,7 @@ sources:
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-05
+updated: 2026-10-08
 ---
 
 # 目次
@@ -18,6 +18,8 @@ updated: 2026-10-05
 - [ミーティング記録](raw/meeting/)
 
 ### Research候補と取り込み状況
+
+- [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。新規論文は未ingest。
 
 - VAEの参照論文（個別ingestは未実施）：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders（v3）](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念の説明記事](wiki/concepts/variational_autoencoder.md)から原文にもリンク。
 
@@ -69,6 +71,8 @@ updated: 2026-10-05
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-08](log/daily/daily_20261008.md)
 
 - [2026-10-05](log/daily/daily_20261005.md)
 
