@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "raw/web/web_spinningup_rl_algorithms_20261003.md",
+                "file": "wiki/sources/zhao_2023_act.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "web_spinningup_rl_algorithms_20261003"
+              "title": "zhao_2023_act"
             }
           },
           {
@@ -212,11 +212,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "wiki/concepts/variational_autoencoder.md",
+    "raw/web/web_spinningup_rl_algorithms_20261003.md",
     "raw/web/web_mit_imitation_learning_20261003.md",
     "raw/web/web_huggingface_rl_framework_20261003.md",
-    "wiki/concepts/variational_autoencoder.md",
     "wiki/sources/pomerleau_1988_alvinn.md",
     "wiki/concepts/behavior_cloning.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
@@ -227,7 +228,6 @@
     "mind/IL",
     "log/daily/daily_20261005.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
-    "raw/web/web_spinningup_rl_algorithms_20261003.md",
     "raw/web",
     "wiki/sources/zhao_2023_act.md",
     "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
