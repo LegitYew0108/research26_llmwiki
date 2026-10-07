@@ -214,6 +214,9 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "log/daily/daily_20261008.md",
+    "raw/temp/research_cvae_for_act_20261008.md",
+    "raw/temp/sohn_2015_cvae.pdf",
     "wiki/concepts/variational_autoencoder.md",
     "raw/web/web_spinningup_rl_algorithms_20261003.md",
     "raw/web/web_mit_imitation_learning_20261003.md",
@@ -239,7 +242,6 @@
     "lab/meeting",
     "wiki/concepts/imitation_and_reinforcement_learning.md",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
-    "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "wiki/concepts/angle_testing.md",
     "index.md",
     "AGENTS.md",
@@ -247,8 +249,6 @@
     "wiki/concepts/reference_angle_probability.md",
     "wiki/concepts/projection_configuration_ks.md",
     "wiki/concepts/probabilistic_routing_ks2.md",
-    "log/daily/daily_20261001.md",
-    "log/daily/daily_20260929.md",
-    "log/daily.md"
+    "log/daily/daily_20261001.md"
   ]
 }
