@@ -11,12 +11,14 @@
             "id": "1be8791edf6a9c25",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "mind/Questionnaire/無題のファイル.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "無題のファイル"
             }
           }
         ]
@@ -81,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "897a041c9db369f7",
@@ -202,8 +203,8 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "mind/IL/BC-Behavior Cloning.md",
     "raw/papers/zhao_2023_act.pdf",
+    "mind/IL/BC-Behavior Cloning.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "mind/Questionnaire/無題のファイル.md",
