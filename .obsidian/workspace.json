@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mind/Questionnaire/無題のファイル.md",
+                "file": "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "無題のファイル"
+              "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
             }
           }
         ]
@@ -201,13 +201,52 @@
       "marp-slides:Show Slide Preview": false
     }
   },
+  "floating": {
+    "id": "c514b1534f04526c",
+    "type": "floating",
+    "children": [
+      {
+        "id": "995a609e73976fb9",
+        "type": "window",
+        "children": [
+          {
+            "id": "e8c2db051f34f9e8",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "dbe5744cf6eb4638",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "raw/papers/zhao_2023_act.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "zhao_2023_act"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 16,
+        "y": 10,
+        "width": 1576,
+        "height": 1040,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
     "raw/papers/zhao_2023_act.pdf",
+    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+    "mind/paper",
+    "mind/IL/IL-Imitation Learning(模倣学習).md",
+    "mind/Questionnaire/マニピュレーションって？.md",
     "mind/IL/BC-Behavior Cloning.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
-    "mind/IL/IL-Imitation Learning(模倣学習).md",
-    "mind/Questionnaire/無題のファイル.md",
     "mind/Questionnaire/VLA.md",
     "mind/Transformer/Attention(ざっくり).md",
     "mind/Questionnaire",
@@ -234,9 +273,7 @@
     "raw/web",
     "wiki/sources/zhao_2023_act.md",
     "raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf",
-    "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "raw/temp/research_robot_imitation_reinforcement_learning_20261003.md",
-    "index.md",
-    "AGENTS.md"
+    "index.md"
   ]
 }
