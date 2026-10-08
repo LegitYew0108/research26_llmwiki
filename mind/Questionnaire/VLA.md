@@ -1,0 +1,2 @@
+vla
+vision-language-actionの略で、Visionから行動を出力するモデルらしい？
