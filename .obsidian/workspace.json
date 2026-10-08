@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+                "file": "lab/meeting/research_plan_retrieval_augmented_ACT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+              "title": "research_plan_retrieval_augmented_ACT"
             }
           }
         ],
@@ -255,8 +255,8 @@
   },
   "active": "ad3bb22b81c2c348",
   "lastOpenFiles": [
-    "raw/papers/zhao_2023_act.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+    "raw/papers/zhao_2023_act.pdf",
     "mind/Questionnaire/マニピュレーションって？.md",
     "raw/papers/kernel_function_for_angle_testing.pdf",
     "mind/paper",
