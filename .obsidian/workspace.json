@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+                "file": "mind/Questionnaire/マニピュレーションって？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+              "title": "マニピュレーションって？"
             }
           }
         ]
@@ -240,8 +240,8 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "raw/papers/zhao_2023_act.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+    "raw/papers/zhao_2023_act.pdf",
     "mind/paper",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "mind/Questionnaire/マニピュレーションって？.md",
