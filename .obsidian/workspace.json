@@ -253,10 +253,11 @@
   },
   "active": "ad3bb22b81c2c348",
   "lastOpenFiles": [
+    "raw/temp/luo_2024_hil_serl.pdf",
+    "wiki/sources/buamanee_2024_biact.md",
     "index.md",
     "wiki/sources/zhao_2023_act.md",
     "wiki/concepts/bilateral_control_based_imitation_learning.md",
-    "wiki/sources/buamanee_2024_biact.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
     "raw/papers/2401.17698v1.pdf",
     "raw/papers/2507.03285v3.pdf",
@@ -287,7 +288,6 @@
     "wiki/concepts/action_chunking_and_temporal_ensembling.md",
     "mind/Transformer",
     "log/daily/daily_20261005.md",
-    "wiki/sources/pomerleau_1988_alvinn.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf"
   ]
 }
