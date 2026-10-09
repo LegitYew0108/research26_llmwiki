@@ -3,6 +3,7 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/papers/2401.17698v1.pdf
   - raw/papers/2507.03285v3.pdf
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
@@ -52,6 +53,8 @@ updated: 2026-10-09
 
 ## 取り込み済みの論文
 
+- [Bi-ACT：Bilateral ControlとACTの統合](wiki/sources/buamanee_2024_biact.md) — [一次資料](raw/papers/2401.17698v1.pdf)
+
 - [Memory Mosaics at scale（v2）](wiki/sources/zhang_2025_memory_mosaics_at_scale.md) — [一次資料](raw/papers/2507.03285v3.pdf)
 
 - [Learning Structured Output Representation using Deep Conditional Generative Models（CVAE）](wiki/sources/sohn_2015_cvae.md) — [一次資料](raw/papers/sohn_2015_cvae.pdf)
@@ -63,6 +66,8 @@ updated: 2026-10-09
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [Bilateral Controlに基づく模倣学習](wiki/concepts/bilateral_control_based_imitation_learning.md)
 
 - [Associative MemoryとKernel Regression](wiki/concepts/associative_memory_and_kernel_regression.md)
 

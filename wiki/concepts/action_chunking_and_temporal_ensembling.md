@@ -4,7 +4,7 @@ type: concept
 tags: [robotics, imitation-learning, ACT, action-chunking, temporal-ensembling, closed-loop-control]
 sources:
   - ../../raw/papers/zhao_2023_act.pdf
-updated: 2026-10-03
+updated: 2026-10-09
 ---
 
 # Action ChunkingとTemporal Ensembling
@@ -41,3 +41,5 @@ temporal ensemblingは学習を追加せず推論時の計算を増やす。論�
 
 - [ACT論文の要約：モデル・データ・実験条件](../sources/zhao_2023_act.md)
 - [ロボットの模倣学習と強化学習](imitation_and_reinforcement_learning.md)
+
+- [Bi-ACT：bilateral controlと行動列予測](../sources/buamanee_2024_biact.md)
