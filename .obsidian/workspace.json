@@ -35,8 +35,7 @@
               "title": "zhang_2025_memory_mosaics_at_scale"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -253,15 +252,15 @@
       }
     ]
   },
-  "active": "dbe5744cf6eb4638",
+  "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
+    "raw/papers/zhao_2023_act.pdf",
     "wiki/research.md",
     "log/daily/daily_20261009.md",
     "wiki/concepts/associative_memory_and_kernel_regression.md",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "raw/papers/2507.03285v3.pdf",
-    "raw/papers/zhao_2023_act.pdf",
     "lab/research_policy/1008計画.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
     "lab/research_policy",
@@ -289,7 +288,6 @@
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "wiki/concepts/variational_autoencoder.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
-    "raw/web/web_huggingface_rl_framework_20261003.md",
-    "raw/web/web_mit_imitation_learning_20261003.md"
+    "raw/web/web_huggingface_rl_framework_20261003.md"
   ]
 }
