@@ -3,11 +3,12 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/papers/2507.03285v3.pdf
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-08
+updated: 2026-10-09
 ---
 
 # 目次
@@ -51,6 +52,8 @@ updated: 2026-10-08
 
 ## 取り込み済みの論文
 
+- [Memory Mosaics at scale（v2）](wiki/sources/zhang_2025_memory_mosaics_at_scale.md) — [一次資料](raw/papers/2507.03285v3.pdf)
+
 - [Learning Structured Output Representation using Deep Conditional Generative Models（CVAE）](wiki/sources/sohn_2015_cvae.md) — [一次資料](raw/papers/sohn_2015_cvae.pdf)
 
 - [ALVINN: An Autonomous Land Vehicle in a Neural Network（NIPS 1988）](wiki/sources/pomerleau_1988_alvinn.md) — [一次資料](raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
@@ -60,6 +63,8 @@ updated: 2026-10-08
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [Associative MemoryとKernel Regression](wiki/concepts/associative_memory_and_kernel_regression.md)
 
 - [CVAE：条件付き生成とACTでの使い方](wiki/concepts/conditional_variational_autoencoder.md)
 
@@ -76,6 +81,8 @@ updated: 2026-10-08
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-09](log/daily/daily_20261009.md)
 
 - [2026-10-08](log/daily/daily_20261008.md)
 
