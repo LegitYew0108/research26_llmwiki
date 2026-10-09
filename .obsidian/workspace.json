@@ -248,12 +248,12 @@
         "y": 10,
         "width": 1024,
         "height": 800,
-        "maximize": false,
+        "maximize": true,
         "zoom": 0
       }
     ]
   },
-  "active": "dbe5744cf6eb4638",
+  "active": "ad3bb22b81c2c348",
   "lastOpenFiles": [
     "raw/papers/zhao_2023_act.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
