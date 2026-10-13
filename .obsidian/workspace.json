@@ -25,12 +25,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+                "file": "lab/research_policy/1013計画.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware"
+              "title": "1013計画"
             }
           }
         ],
@@ -216,8 +216,9 @@
   },
   "active": "ad3bb22b81c2c348",
   "lastOpenFiles": [
-    "raw/papers/zhao_2023_act.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
+    "lab/research_policy/1013計画.md",
+    "raw/papers/zhao_2023_act.pdf",
     "mind/Transformer/Attention(ざっくり).md",
     "raw/papers/sohn_2015_cvae.pdf",
     "wiki/sources/buamanee_2024_biact.md",
