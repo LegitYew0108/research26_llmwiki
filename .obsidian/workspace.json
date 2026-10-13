@@ -214,47 +214,10 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "floating": {
-    "id": "c514b1534f04526c",
-    "type": "floating",
-    "children": [
-      {
-        "id": "995a609e73976fb9",
-        "type": "window",
-        "children": [
-          {
-            "id": "e8c2db051f34f9e8",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "dbe5744cf6eb4638",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "raw/papers/zhao_2023_act.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "zhao_2023_act"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 16,
-        "y": 10,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "dbe5744cf6eb4638",
+  "active": "ad3bb22b81c2c348",
   "lastOpenFiles": [
-    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "raw/papers/zhao_2023_act.pdf",
+    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "mind/Transformer/Attention(ざっくり).md",
     "raw/papers/sohn_2015_cvae.pdf",
     "wiki/sources/buamanee_2024_biact.md",
