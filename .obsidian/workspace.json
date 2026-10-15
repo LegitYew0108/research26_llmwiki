@@ -95,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "897a041c9db369f7",
@@ -198,8 +197,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 378.67578125,
-    "collapsed": true
+    "width": 378.67578125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -217,8 +215,8 @@
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
     "lab/research_policy/スライド計画.md",
-    "lab/research_policy/1013計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
+    "lab/research_policy/1013計画.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/conditional_variational_autoencoder.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
