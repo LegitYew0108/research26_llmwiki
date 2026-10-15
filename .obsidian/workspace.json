@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab/research_policy/1013計画.md",
+                "file": "lab/presentation/research_overview_20261016.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1013計画"
+              "title": "research_overview_20261016"
             }
           },
           {
@@ -31,6 +31,22 @@
               },
               "icon": "lucide-file-text",
               "title": "zhao_2023_act"
+            }
+          }
+        ]
+      },
+      {
+        "id": "194ec6c6e9f4b96b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4fc98d4446c2413",
+            "type": "leaf",
+            "state": {
+              "type": "marp-preview-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Deck Preview"
             }
           }
         ]
@@ -212,14 +228,14 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "e4fc98d4446c2413",
   "lastOpenFiles": [
+    "lab/research_policy/1013計画.md",
     "log/daily/daily_20261016.md",
     "lab/presentation/research_overview_20261016.md",
     "lab/presentation",
     "lab/research_policy/スライド計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
-    "lab/research_policy/1013計画.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/conditional_variational_autoencoder.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
