@@ -212,8 +212,9 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "1be8791edf6a9c25",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "lab/presentation",
     "lab/research_policy/スライド計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "lab/research_policy/1013計画.md",
@@ -248,7 +249,6 @@
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
     "mind/Transformer/Attention(ざっくり).md",
     "mind/Transformer",
-    "mind/IL/IL-Imitation Learning(模倣学習).md",
-    "mind/IL/BC-Behavior Cloning.md"
+    "mind/IL/IL-Imitation Learning(模倣学習).md"
   ]
 }
