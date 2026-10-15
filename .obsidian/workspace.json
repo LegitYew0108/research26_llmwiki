@@ -36,11 +36,11 @@
         ]
       },
       {
-        "id": "194ec6c6e9f4b96b",
+        "id": "f5d011f88e34a6ef",
         "type": "tabs",
         "children": [
           {
-            "id": "e4fc98d4446c2413",
+            "id": "e57a9f94a4c964bd",
             "type": "leaf",
             "state": {
               "type": "marp-preview-view",
@@ -228,7 +228,7 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "e4fc98d4446c2413",
+  "active": "e57a9f94a4c964bd",
   "lastOpenFiles": [
     "lab/research_policy/1013計画.md",
     "log/daily/daily_20261016.md",
