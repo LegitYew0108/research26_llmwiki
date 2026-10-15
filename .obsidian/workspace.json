@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab/research_policy/スライド計画.md",
+                "file": "lab/research_policy/1013計画.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "スライド計画"
+              "title": "1013計画"
             }
           },
           {
@@ -214,8 +214,8 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
+    "lab/research_policy/1013計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/conditional_variational_autoencoder.md",
