@@ -9,7 +9,7 @@ sources:
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-09
+updated: 2026-10-16
 ---
 
 # 目次
@@ -41,6 +41,8 @@ updated: 2026-10-09
 - [研究者・研究室・データセット](wiki/entities/)
 
 ## 研究活動
+
+- [研究概要発表：Marpスライド案（2026-10-16）](lab/presentation/research_overview_20261016.md) — 30分・21枚。検索表現は空欄、追加の実験設計案は未採用として記載。
 
 - [自分の理解・考察](mind/)
 - [研究方針・実験記録](lab/)
@@ -86,6 +88,8 @@ updated: 2026-10-09
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-16](log/daily/daily_20261016.md)
 
 - [2026-10-09](log/daily/daily_20261009.md)
 

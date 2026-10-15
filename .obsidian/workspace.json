@@ -214,6 +214,8 @@
   },
   "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "log/daily/daily_20261016.md",
+    "lab/presentation/research_overview_20261016.md",
     "lab/presentation",
     "lab/research_policy/スライド計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
@@ -247,8 +249,6 @@
     "wiki/sources/pomerleau_1988_alvinn.md",
     "wiki/concepts/behavior_cloning.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
-    "mind/Transformer/Attention(ざっくり).md",
-    "mind/Transformer",
-    "mind/IL/IL-Imitation Learning(模倣学習).md"
+    "mind/Transformer/Attention(ざっくり).md"
   ]
 }

@@ -1,0 +1,375 @@
+---
+marp: true
+theme: default
+size: 16:9
+paginate: true
+title: "近似最近傍探索によるデモ選択を用いたロボット模倣学習"
+type: presentation
+tags: [robotics, imitation-learning, ACT, ANNS, HNSW, KS2, research-plan]
+sources:
+  - ../../raw/papers/zhao_2023_act.pdf
+  - ../../raw/papers/kernel_function_for_angle_testing.pdf
+  - ../../raw/papers/sohn_2015_cvae.pdf
+updated: 2026-10-16
+style: |
+  section { font-family: 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif; font-size: 27px; padding: 48px 64px; color: #203047; }
+  h1 { font-size: 39px; color: #173d67; }
+  h2 { font-size: 32px; color: #173d67; }
+  strong { color: #006b78; }
+  table { font-size: 23px; }
+  .flow { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 32px 0; }
+  .box { border: 2px solid #5284a2; border-radius: 12px; padding: 18px; text-align: center; background: #eef6fa; }
+  .arrow { color: #5284a2; font-size: 34px; }
+  .blank { border: 2px dashed #8294a5; border-radius: 10px; min-height: 72px; margin: 14px 0; padding: 12px; }
+  .small { font-size: 21px; }
+  .cite { position: absolute; bottom: 34px; left: 64px; right: 80px; font-size: 15px; color: #526477; }
+---
+
+<!-- _class: lead -->
+# 近似最近傍探索によるデモ選択を用いた<br>ロボット模倣学習
+
+**研究概要・実験計画**
+
+少数のデモに「関連するデモ」を追加し、ACTの学習を改善できるか？
+
+<div class="flow"><div class="box">既存のデモ</div><div class="arrow">→</div><div class="box">類似区間を検索</div><div class="arrow">→</div><div class="box">ACTを学習</div></div>
+
+<div class="small">発表者：＿＿＿＿　／　所属：＿＿＿＿　／　発表日：＿＿＿＿</div>
+
+<!-- 発表30分、質疑は別。約1分。研究は計画段階で、成功率改善・高速化はまだ実証していない。方針の根拠は ../research_policy/1013計画.md と会話中のユーザー指定。 -->
+
+---
+
+# 何をするロボットを対象にするか
+
+**マニピュレーション：物体をつかみ、動かし、組み合わせる操作**
+
+| 対象タスク | ロボットが行うこと |
+| --- | --- |
+| Transfer Cube | 一方の腕から他方の腕へcubeを受け渡す |
+| Bimanual Insertion | 双腕で部品を保持し、挿入する |
+
+<div class="flow"><div class="box">物体・腕の配置を観測</div><div class="arrow">→</div><div class="box">動作を決定</div><div class="arrow">→</div><div class="box">物体を操作</div></div>
+
+<div class="cite">出典：[ACT §V・Fig.6](../../raw/papers/zhao_2023_act.pdf)。本研究の対象タスクはユーザー指定。</div>
+
+<!-- 約1分。実装後はここに各タスクのシミュレーション画像を入れるとよい。現時点では画像を捏造せず、操作の意味を説明する。 -->
+
+---
+
+# 模倣学習：デモから動作を学ぶ
+
+人や既存controllerによるデモを、方策の教師データとして使う。
+
+<div class="flow"><div class="box">デモを収集<br>観測と正解行動</div><div class="arrow">→</div><div class="box">方策を学習</div><div class="arrow">→</div><div class="box">新しい配置で<br>自律実行</div></div>
+
+- **観測**：カメラ画像、ロボットの関節位置など
+- **行動**：ロボットへ与える目標関節位置など
+- 本研究では、行動列を学ぶ **ACT** を用いる
+
+<div class="cite">出典：[ACT §III–IV](../../raw/papers/zhao_2023_act.pdf)。本研究では報酬による強化学習の更新は扱わない。</div>
+
+<!-- 約1分30秒。デモの収集と、学習後の自律実行を区別する。ALOHAは遠隔操作ハードウェア、ACTは学習手法。 -->
+
+---
+
+# 本研究の問題：どのデモを追加するか
+
+対象タスクのデモは少数。別タスクも含む既存デモを活用したい。
+
+<div class="flow"><div class="box">対象タスク<br>少数デモ</div><div class="arrow">＋</div><div class="box">既存デモ<br>同じロボット・複数タスク</div><div class="arrow">→</div><div class="box">何を選んで<br>追加するか？</div></div>
+
+**問い：無作為に追加するより、関連する区間を選ぶ方が有効か？**
+
+- 学習効果：タスク成功率が改善するか
+- 検索効率：選択のための検索を高速にできるか
+
+<!-- 約1分30秒。これは研究上の問いで、全データ追加が必ず悪化するという主張ではない。研究方針は ../research_policy/1013計画.md。 -->
+
+---
+
+# Behavior Cloningの基本
+
+**デモの観測に対して、正解に近い行動を出すように学習する。**
+
+<div class="flow"><div class="box">観測 o</div><div class="arrow">→</div><div class="box">方策 π</div><div class="arrow">→</div><div class="box">予測行動</div></div>
+
+$$\min_\theta \sum_{(o,a^*)\in D}\ell\bigl(\pi_\theta(o),a^*\bigr)$$
+
+- 学習データ：観測と正解行動の組
+- 一時刻の行動を予測する構成は、BCの一例
+- ACTもデモから教師ありで行動を学ぶ枠組みに位置づけられる
+
+<div class="cite">出典：[ACT §II・IV](../../raw/papers/zhao_2023_act.pdf)。式は教師あり学習を説明する一般形。</div>
+
+<!-- 約1分30秒。BCとACTを相反する分類として扱わない。 -->
+
+---
+
+# 実行すると、小さな誤りが次の観測を変える
+
+<div class="flow"><div class="box">行動の小さなずれ</div><div class="arrow">→</div><div class="box">デモと違う状態</div><div class="arrow">→</div><div class="box">さらに予測を誤る</div></div>
+
+- 学習時：記録されたデモの観測から予測する
+- 実行時：自分の行動で、次の観測が変わる
+- 精密操作では、位置のずれが失敗につながり得る
+
+**ACTは、行動列の予測などにより、この問題の軽減を目指す。**
+
+<div class="cite">出典：[ACT §I・IV-A](../../raw/papers/zhao_2023_act.pdf)。誤差が消える保証ではない。</div>
+
+<!-- 約1分30秒。本研究のデータ検索が誤差累積を直接解決するとまでは主張しない。 -->
+
+---
+
+# ACTの全体像
+
+**Action Chunking with Transformers**
+
+<div class="flow"><div class="box">カメラ画像<br>現在の関節位置</div><div class="arrow">→</div><div class="box">ACT</div><div class="arrow">→</div><div class="box">未来 k stepsの<br>目標関節位置</div></div>
+
+3つの構成要素：
+
+1. **Action Chunking**：行動を列として予測
+2. **Temporal Ensembling**：重なる予測を統合
+3. **CVAE**：デモ行動列のばらつきを扱って学習
+
+<div class="cite">出典：[ACT §IV・Fig.4–5](../../raw/papers/zhao_2023_act.pdf)</div>
+
+<!-- 約1分。原論文の双腕構成は14次元の絶対目標関節位置。画像の特徴抽出はResNet18。 -->
+
+---
+
+# Action Chunking：次の一瞬から、行動列へ
+
+$$\text{一時刻の予測：}\quad o_t \longrightarrow \hat a_t$$
+
+$$\text{行動列の予測：}\quad o_t \longrightarrow (\hat a_t,\hat a_{t+1},\ldots,\hat a_{t+k-1})$$
+
+<div class="flow"><div class="box">現在の観測</div><div class="arrow">→</div><div class="box">つかむ → 持ち上げる → 運ぶ<br><span class="small">説明用の模式例</span></div></div>
+
+- 時間的につながる動作をまとめてモデル化
+- 長いchunkが常に有利とは限らない
+
+<div class="cite">出典：[ACT §IV-A・VI-A](../../raw/papers/zhao_2023_act.pdf)。chunkが必ず一つの意味的動作に対応するわけではない。</div>
+
+<!-- 約1分30秒。図の動作名は説明用。chunkは固定長であり、技能境界を自動発見しているわけではない。 -->
+
+---
+
+# Temporal Ensembling：同じ時刻への予測を統合
+
+| 予測を作った時刻 | 時刻 t−2 | 時刻 t−1 | **時刻 t** |
+| --- | --- | --- | --- |
+| t−2 | 予測 | 予測 | **候補①** |
+| t−1 | — | 予測 | **候補②** |
+| t | — | — | **候補③** |
+
+$$a_t=\frac{\sum_i w_i\hat a_t^{(i)}}{\sum_i w_i}$$
+
+**同じ実行時刻 t に対する予測**を重み付き平均する。
+
+毎時刻観測を更新するため、chunk全体を観測なしで実行するわけではない。
+
+<div class="cite">出典：[ACT §IV-A・Fig.5・Algorithm 2](../../raw/papers/zhao_2023_act.pdf)。表はk=3の模式例。</div>
+
+<!-- 約1分30秒。異なる実行時刻の行動を平均しているのではない。重みの詳細は質疑で説明する。 -->
+
+---
+
+# CVAE：学習時と実行時で入力が異なる
+
+| | 学習時 | 実行時 |
+| --- | --- | --- |
+| CVAE encoder | 関節位置＋正解行動列 → zの分布 | 使用しない |
+| 潜在変数 z | 分布からサンプリング | **z = 0** |
+| 方策（CVAE decoder） | 画像＋関節位置＋z → 行動列 | 画像＋関節位置＋z → 行動列 |
+
+学習損失：**行動列の再構成損失 ＋ 重み付きKL項**
+
+画像はResNetで特徴化し、方策内部のTransformerで他の入力と統合する。
+
+<div class="cite">出典：[ACT §IV-B–C・Fig.4](../../raw/papers/zhao_2023_act.pdf)、[CVAE §4](../../raw/papers/sohn_2015_cvae.pdf)</div>
+
+<!-- 約2分。CVAE encoderと方策内部のTransformer encoderを区別する。再構成損失はACT本文ではL1、保存版Algorithm 1にはMSEとの不一致があるため実装確認が必要。zが検索に最適なEmbeddingになる保証はない。 -->
+
+---
+
+# 類似区間の検索を、ベクトルの近傍検索にする
+
+<div class="flow"><div class="box">デモ区間</div><div class="arrow">→</div><div class="box">ベクトル化<br>Embedding等</div><div class="arrow">→</div><div class="box">近いベクトルを検索</div></div>
+
+- 厳密検索：定義した距離で近い順に求める
+- **ANNS**：近似により、速度と検索精度の両立を目指す
+- **HNSW**：グラフをたどって近傍候補を探す手法
+
+ベクトルは索引。学習には、対応する元の観測・行動列を使う。
+
+<div class="cite">検索の背景：[KS §1・6](../../raw/papers/kernel_function_for_angle_testing.pdf)。デモ区間への対応づけは本研究の計画。</div>
+
+<!-- 約1分。ベクトル化を決める問題と、高速検索を決める問題を分ける。 -->
+
+---
+
+# KS₂：距離計算の前に、候補を安く選別する
+
+<div class="flow"><div class="box">HNSWの<br>探索候補</div><div class="arrow">→</div><div class="box">KS₂の<br>確率的テスト</div><div class="arrow">→</div><div class="box">通過した候補の<br>正確な距離計算</div></div>
+
+- 角度が閾値内かを、低コストで判定する仕組み
+- グラフ探索での正確な距離計算を削減
+- 誤判定があるため、**Recallと速度の両方**を評価する
+
+比較の基本：**HNSW vs. HNSW＋KS₂**
+
+<div class="cite">出典：[KS §3・6–7](../../raw/papers/kernel_function_for_angle_testing.pdf)。角度判定を距離によるroutingへ接続する。</div>
+
+<!-- 約1分。KS₁は候補比較、KS₂は閾値判定。今回はKS₂のHNSW組み込みを中心に説明する。ロボットデータでの高速化は未検証。 -->
+
+---
+
+# 提案：検索で選んだデモ区間を、ACTの学習に追加
+
+<div class="flow"><div class="box">対象タスクの<br>少数デモ</div><div class="arrow">→</div><div class="box">区間をクエリに<br>類似検索</div><div class="arrow">←</div><div class="box">同じロボットの<br>複数タスクのデモ</div></div>
+
+<div class="flow"><div class="box">少数デモ ＋ 検索区間</div><div class="arrow">→</div><div class="box">ACTを学習</div><div class="arrow">→</div><div class="box">対象タスクで評価</div></div>
+
+**学習前のデータ選択**として検索を用いる。
+
+<!-- 約2分。方針は ../research_policy/1013計画.md とユーザー指定。検索用ベクトルだけをACTへ入力する方式ではない。デモ区間には正解行動を保持する。 -->
+
+---
+
+# 検索設計：決定済みの範囲と記入欄
+
+**検索単位：ACTの行動列と同じ長さ k のデモ区間**
+
+<div class="small">クエリの構成（何を入力して探すか）</div>
+<div class="blank">&nbsp;</div>
+<div class="small">Embedding・ベクトル表現（画像／関節位置／行動列など）</div>
+<div class="blank">&nbsp;</div>
+<div class="small">距離・類似度／特徴間の重み</div>
+<div class="blank">&nbsp;</div>
+
+<!-- 約2分。空欄はユーザー指定により保持。検索単位を決めてもクエリ入力は自動的には決まらない。学習前の検索なら対象の学習デモに含まれる正解行動列も利用可能。評価データは使用しない。候補案を採用済みとして記入しない。 -->
+
+---
+
+# 仮説①：類似区間の追加は、学習に有効か
+
+**仮説：同じ追加量なら、ランダム追加より検索追加の成功率が高い。**
+
+| 比較 | 確かめたいこと |
+| --- | --- |
+| 少数デモのみ → ランダム追加 | データを追加する効果 |
+| ランダム追加 → 検索追加 | 類似性に基づいて選ぶ効果 |
+
+**近いベクトル ≠ 学習に役立つデモ、の可能性がある。**
+
+成功率が改善しなければ、表現・追加量・タスク間の関係を検討する。
+
+<!-- 約1分30秒。未検証の仮説。似た動きでも物体や目的が違えば有益とは限らない、という設計上の懸念を説明する。 -->
+
+---
+
+# 仮説②：学習効果を保ち、検索を高速化できるか
+
+**仮説：KS₂により検索を高速化し、ACTの成功率を維持できる。**
+
+| 観点 | 比較方法 |
+| --- | --- |
+| 検索精度と速度 | 同程度のRecallでHNSWとHNSW＋KS₂を比較 |
+| 学習への影響 | 検索結果を追加したACTの成功率を比較 |
+
+検索のRecallが同じでも、取得区間や学習結果が同じとは限らない。
+
+<div class="cite">検索比較の考え方：[KS §7](../../raw/papers/kernel_function_for_angle_testing.pdf)。ACTの成功率維持は本研究の未検証仮説。</div>
+
+<!-- 約1分30秒。「維持」の許容差や反復数は今後決定する。差が有意でないだけで同等性を証明したとは扱わない。 -->
+
+---
+
+# 実験環境とデータ構成
+
+**MuJoCoで、対象タスクごとにACTを学習・評価する。**
+
+| データ | 用途 |
+| --- | --- |
+| 対象タスクの少数デモ | 基本の学習データ・検索の手掛かり |
+| 同じロボットの複数タスクのデモ | 検索・追加の候補 |
+| 独立した評価条件 | Transfer Cube／Bimanual Insertionの成功率評価 |
+
+デモ数・候補数・初期配置の分割・タスク構成：**＿＿＿＿**
+
+<div class="cite">シミュレーションの先行例：[ACT §V](../../raw/papers/zhao_2023_act.pdf)。データ構成・件数は本研究で決定する。</div>
+
+<!-- 約1分30秒。評価条件は検索や学習へ混ぜない設計を提案。ロボットの関節・gripper・カメラ・行動の定義が候補データ間で一致することを確認する。データベース規模は未定。 -->
+
+---
+
+# 比較条件：データ選択と検索方式を分ける
+
+| 条件 | ACTの学習データ | 位置づけ |
+| --- | --- | --- |
+| A | 少数デモのみ | 基準 |
+| B | 少数デモ＋ランダム区間 | 1013計画 |
+| C | 少数デモ＋HNSWの検索区間 | 検索追加 |
+| D | 少数デモ＋HNSW＋KS₂の検索区間 | 検索高速化 |
+| E | 少数デモ＋厳密検索の区間 | **追加案・未採用** |
+
+**比較設計案：** B〜Eの追加量と学習更新回数を揃える。
+
+<!-- 約2分。原案は ../research_policy/1013計画.md。Eは表現の効果と近似の影響を分けるための提案。追加量を区間数・有効step数のどちらで揃えるか決める。重複区間やpaddingの扱いも揃える。 -->
+
+---
+
+# 評価：検索の正確さと、学習への有用性
+
+| 指標 | 評価するもの |
+| --- | --- |
+| タスク成功率 | 選んだデータがACTの学習に有用か |
+| Recall@K | 定義した距離の厳密な近傍を再現できたか |
+| 検索レイテンシ | 1クエリの応答にかかる時間 |
+| QPS | 単位時間に処理できるクエリ数 |
+
+**評価設計案：** 複数seed、共通の評価条件、同じCPU・スレッド条件。
+
+前処理・索引構築・全クエリ処理の時間も、計測候補とする。
+
+<div class="cite">Recall–QPSの検索評価：[KS §7](../../raw/papers/kernel_function_for_angle_testing.pdf)。追加の計測・反復条件は未採用の設計案。</div>
+
+<!-- 約2分。Recallの正解集合は固定した表現・距離の厳密top-K。seed数、評価試行数、K、レイテンシ集計方法は未定。前処理込みの時間は、学習前検索の実用性を説明するための提案。 -->
+
+---
+
+# まとめと、次に具体化すること
+
+**目標：関連デモの選択でACTを改善し、その検索を高速化する。**
+
+1. **ACTの基準実験**：Transfer Cube・Bimanual Insertion
+2. **検索設計の具体化**：クエリ・Embedding・距離
+3. **データ選択の検証**：ランダム追加と検索追加を比較
+4. **高速化の検証**：HNSWとHNSW＋KS₂を比較
+
+未解決：検索データの規模・構成、追加量、区間の重複処理。
+
+**現在は計画段階。成功率改善・高速化の結果は未取得。**
+
+<!-- 約1分30秒。上記は発表用の実施順序案で、確定日程ではない。以上で本文30分を目安とする。 -->
+
+---
+
+# 参考文献・計画の参照先
+
+<div class="small">
+
+1. Zhao et al., *Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware*, 2023. [保存PDF](../../raw/papers/zhao_2023_act.pdf)
+2. Lu et al., *Probabilistic Kernel Function for Fast Angle Testing*, 保存版 arXiv:2505.20274v3, 2026. [保存PDF](../../raw/papers/kernel_function_for_angle_testing.pdf)
+3. Sohn et al., *Learning Structured Output Representation using Deep Conditional Generative Models*, 2015. [保存PDF](../../raw/papers/sohn_2015_cvae.pdf)
+
+研究方針：[1013計画](../research_policy/1013計画.md)  
+発表要件：[スライド計画](../research_policy/スライド計画.md)  
+タスク・検索単位・空欄の指定：2026-10-16のユーザー指示。
+
+</div>
+
+<!-- 質疑へ。参考文献は本文の30分に追加して説明しない。 -->
