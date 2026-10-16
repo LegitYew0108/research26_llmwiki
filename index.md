@@ -69,6 +69,8 @@ updated: 2026-10-16
 
 ## 概念・手法のページ
 
+- [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/act_infer_z.md)
+
 - [Bilateral Controlに基づく模倣学習](wiki/concepts/bilateral_control_based_imitation_learning.md)
 
 - [Associative MemoryとKernel Regression](wiki/concepts/associative_memory_and_kernel_regression.md)

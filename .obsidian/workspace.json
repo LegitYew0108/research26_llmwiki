@@ -228,6 +228,7 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "wiki/concepts/act_infer_z.md",
     "wiki/sources/zhao_2023_act.md",
     "lab/presentation/research_overview_20261016.md",
     "lab/research_policy/1013計画.md",
@@ -262,7 +263,6 @@
     "raw/web/web_huggingface_rl_framework_20261003.md",
     "wiki/sources/pomerleau_1988_alvinn.md",
     "wiki/concepts/behavior_cloning.md",
-    "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
-    "mind/Transformer/Attention(ざっくり).md"
+    "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf"
   ]
 }
