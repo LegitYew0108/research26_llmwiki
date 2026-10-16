@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab/research_policy/1013計画.md",
+                "file": "mind/IL/BC-Behavior Cloning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1013計画"
+              "title": "BC-Behavior Cloning"
             }
           }
         ]
@@ -219,15 +219,18 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "mind/IL/IL-Imitation Learning(模倣学習).md",
+    "mind/IL/BC-Behavior Cloning.md",
+    "lab/research_policy/スライド計画.md",
+    "lab/research_policy/1013計画.md",
+    "lab/research_policy/1008計画.md",
     "lab/presentation/research_overview_20261016.md",
     "AGENTS.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/act_infer_z.md",
     "wiki/sources/zhao_2023_act.md",
-    "lab/research_policy/1013計画.md",
     "log/daily/daily_20261016.md",
     "lab/presentation",
-    "lab/research_policy/スライド計画.md",
     "wiki/sources/kernel_function_for_angle_testing.md",
     "wiki/concepts/conditional_variational_autoencoder.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
@@ -242,7 +245,6 @@
     "mind/Questionnaire/VLA.md",
     "mind/Questionnaire",
     "log/daily/daily_20261009.md",
-    "lab/research_policy/1008計画.md",
     "lab/research_policy",
     "wiki/sources/sohn_2015_cvae.md",
     "wiki/concepts/variational_autoencoder.md",
@@ -252,8 +254,6 @@
     "raw/papers/sohn_2015_cvae.pdf",
     "raw/web/web_spinningup_rl_algorithms_20261003.md",
     "raw/web/web_mit_imitation_learning_20261003.md",
-    "raw/web/web_huggingface_rl_framework_20261003.md",
-    "wiki/sources/pomerleau_1988_alvinn.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf"
   ]
 }
