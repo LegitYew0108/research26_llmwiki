@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "lab/presentation/research_overview_20261016.md",
+                "file": "lab/research_policy/1013計画.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "research_overview_20261016"
+              "title": "1013計画"
             }
           }
         ]
@@ -217,13 +217,13 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "4d2f5e72e2369c33",
+  "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "lab/presentation/research_overview_20261016.md",
     "AGENTS.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/act_infer_z.md",
     "wiki/sources/zhao_2023_act.md",
-    "lab/presentation/research_overview_20261016.md",
     "lab/research_policy/1013計画.md",
     "log/daily/daily_20261016.md",
     "lab/presentation",
