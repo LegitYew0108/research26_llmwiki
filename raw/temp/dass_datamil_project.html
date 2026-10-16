@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="by Shivin Dass, Alaa Khaddaj, Logan Engstrom, Aleksander Madry, Andrew Ilyas, Roberto Martín-Martín">
+  <meta property="og:title" content="DataMIL: Selecting Data for Robot Imitation Learning with Datamodels"/>
+  <meta property="og:description" content="DataMIL: Selecting Data for Robot Imitation Learning with Datamodels"/>
+  <meta property="og:url" content="https://robin-lab.cs.utexas.edu/datamodels4imitation/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/banner.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="DataMIL: Selecting Data for Robot Imitation Learning with Datamodels">
+  <meta name="twitter:description" content="DataMIL: Selecting Data for Robot Imitation Learning with Datamodels">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="https://robin-lab.cs.utexas.edu/datamodels4imitation/static/images/fig1_overall.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Imitation Learning, Data Curation, Large Robot Datasets">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Datamodels for Imitation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title"></h1> -->
+            <h1 class="title is-1 publication-title"><span style="color:#1e5790; font-weight: 900;">DataMIL<img src="static/images/mill.png" style="height: 1em;"></span></h1>
+            <h2 class="subtitle is-2 publication-subtitle">Selecting Data for Robot Imitation Learning with Datamodels</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://shivindass.github.io/" target="_blank">Shivin Dass</a><sup>*,1</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=BA1kFjMAAAAJ&hl=en" target="_blank">Alaa Khaddaj</a><sup>*,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://loganengstrom.com/" target="_blank">Logan Engstrom</a><sup>2</sup>,</span>
+              <br>
+              <span class="author-block">
+                <a href="http://madry.mit.edu/" target="_blank">Aleksander Mądry</a><sup>2</sup>,</span>
+              <span class="author-block">
+                  <a href="https://andrewilyas.com/" target="_blank">Andrew Ilyas</a><sup>†,3</sup>,</span>
+              <span class="author-block">
+                <a href="https://robertomartinmartin.com/" target="_blank">Roberto Martín-Martín</a><sup>†,1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup><font size="-0.4">*</font></sup>
+                <font size="-0.4">Equal Contribution</font>,
+                <sup><font size="-0.4">†</font></sup>
+                <font size="-0.4">Equal Advising</font>
+              </span>
+            </div> 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>The University of Texas at Austin, <sup>2</sup>MIT, <sup>3</sup>Stanford University
+                <!-- <br>Conferance name and year -->
+              </span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2505.09603" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/UT-Austin-RobIn/datamil" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  </a> -->
+                <!-- </span> -->
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">TL;DR</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Robotics has amassed ever larger and more diverse datasets to train generalist robot policies via imitation.
+            However, while imitation learning (IL) is a powerful paradigm for training robots to perform complex tasks, the performance of IL algorithms is highly sensitive on the data it's trained on. 
+            In this work, we introduce DataMIL, a novel data selection method that leverages datamodels to select high-quality task-aware datasets for IL. 
+            DataMIL estimates how each training sample influences the policy performance on a given task and selects samples that leads to the maximum improvement, thus enabling end-to-end policy-aware data seleciton. 
+            We demonstrate the effectiveness of DataMIL on 60+ simulation and real world tasks, most notably selecting relevant data from Open X-Embodiment datasets, showing significant improvements in performance compared to existing data selection methods, 
+            even for novel embodiments, not present in the prior data. 
+          </p>
+        </div>
+        <!-- Your image here -->
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <video poster="" id="tree" autoplay controls muted loop height="60%">
+              <source src="static/videos/overview.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">What are <span style="color:#1e5790; font-weight: 900;">datamodels</span>?</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p> 
+            Datamodels is a framework which tries to answer the question -- 
+            <i>how would the output of a model change if we had trained on a different dataset?</i>
+            In other words, datamodels provide a way to directly measure how the presence/absence of each training sample in the training
+            of our model would affect its output without actually training the model on the new dataset.
+            While there are several ways of estimating datamodels, we focus on <i>regression</i> and <i>metagradient-based</i> datamodels,
+            which assign a scaler influence score to each training sample based on how much it affects the model's output. These scores can 
+            then be used to select the most relevant samples or filter out the most harmful ones for a given task.
+          </p>
+        </div>
+        <!-- Your image here -->
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <video poster="" id="tree" autoplay controls muted loop height="60%">
+              <source src="static/videos/datamodels.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">DataMIL: <span style="color:#1e5790; font-weight: 900;">DataM</span>odels for <span style="color:#1e5790; font-weight: 900;">I</span>mitation <span style="color:#1e5790; font-weight: 900;">L</span>earning</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="columns is-centered">
+          <div class="content has-text-justified">
+            <p>
+              Datamodels have found several applications in the fields of NLP and computer vision,
+              but need several key modifications before they can be applied to robotics.
+              DataMIL (Datamodels for Imitation Learning) provides a recipe to adapt datamodels for the robotics datasets,
+              providing a tractable optimization objective in place of costly rollouts and several modifications to reduce the noise in estimation,
+              improving the quality of the selected data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="columns is-centered">
+          <div class="column is-one-third">
+            <img src="static/images/proxy_metric.png" alt="proxy_metric" width="70%"/>
+            <h5 class="title is-5" style="text-align: center;">1. Proxy Metric</h5><br>
+            <p>Validation loss over a few target task demos as proxy for costly rollouts</p><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/clustering.png" alt="clustering" width="70%">
+            <h5 class="title is-5" style="text-align: center;">2. Clustering</h5><br>
+            <p>Temporal clustering to reduce estimation noise</p><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/co_train.png" alt="co_train" width="70%">
+            <h5 class="title is-5" style="text-align: center;">3. Co-Training with Target</h5><br>
+            <p>Minimizing distribution shift by co-training with target data</p><br>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">Summary: Data Selection with DataMIL</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+        <div class="content has-text-justified">
+          <p>
+            Data selection with DataMIL is a two step process:
+            <ol>
+              <li><span style="color:#1e5790; font-weight: 900;">Estimate datamodels.</span> We first cluster the training samples into trajectories or sub-trajectories and estimate datamodels on them with our proposed target metric as the proxy</li>
+              <li><span style="color:#1e5790; font-weight: 900;">Select data for policy training.</span> The datamodels provide a scaler score (influence) to each training sample which indicates how positively or negatively they influence our target
+                metric (which in our case is the validation loss over a few target task demos). Using these scores, we can select the top x% of the samples to train our policy on.</li>
+              </li>
+            </ol>
+          Finally, we employ a co-training recipe and train our final policy by uniformly sampling from the selected and the target task dataset.
+          </p>
+        </div>
+        <!-- Your image here -->
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/fig1_overall.png" alt="overall" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;"><span style="color:#1e5790; font-weight: 900;">OXE</span> Results</h2>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths is-centered has-text-centered">
+       
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <video poster="" id="tree" autoplay controls muted loop height="60%">
+              <source src="static/videos/task_vid.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            We evaluate DaMIL on over 60 tasks spanning both simulation and real-world settings. 
+            In the real world, we use the Open X-Embodiment dataset as the prior and test on four target tasks (shown above). 
+            As illustrated in the results below, DaMIL consistently outperforms existing dataset selection methods across tasks with diverse characteristics. 
+            Most notably, it successfully selects relevant data for a completely new embodiment—Tiago—by identifying useful samples from datasets collected with different robots, such as the Google Robot and WidowX. 
+            We also extend our evaluation to a multitask setting, where the target set includes multiple tasks, and show that DaMIL can effectively retrieve data that supports all of them.
+            For a detailed analysis, please refer to the full paper.
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <img src="static/images/dmil_figure.png" alt="AR" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title is-2" style="text-align: center;">What data does DataMIL select?</h2>
+    <div class="columns is-centered ">
+      <div class="column is-four-fifths is-centered has-text-centered">
+
+        <div class="content has-text-justified">
+          <p>
+            We qualitatively find 3 interesting insights about the data selected by DataMIL:
+            <ol>
+              <li><b>Distribution of selected data.</b> Below we show the distribution of datasets selected by DataMIL and some representative baselines
+                on Tiago-Sink and Franka-Pouch tasks. We find that the data selected by DataMIL typically spans several datasets, while similarity based baselines
+                selects most of their data from a single dataset. 
+                We hypothesize that since there is no data that exactly matches the target task, the selected data must not only be relevant but general, so as to enable positive transfer in capabilities and not make the policy overfit to a single type of domain.</li>  
+            </ol>
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/tiago_damil.png" alt="DaMIl" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">DataMIL</h5><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/tiago_action.png" alt="AR" width="74%">
+            <h5 class="title is-5" style="text-align: center;">Action Retrival</h5><br>
+            <h4 class="title is-4" style="text-align: center;">Selected dataset distribution for Tiago-Sink task</h4><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/tiago_br.png" alt="BR" width="87%">
+            <h5 class="title is-5" style="text-align: center;">Behavior Retrival</h5><br>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            <ol start="2">
+              <li><b>Type of embodiment selected.</b> DataMIL is able to select useful data for a completely new embodiment in the Tiago-Sink task. 
+                Even though the datasets selected seem visually quite different, sampled from datasets such as RT-1, BC-Z and Bridge, 
+                they still represent the essence of the target task -- robots operating on a table top from an ego-perspective. For baselines, even when the target
+                embodiment is present in prior data (eg. Franka-Pouch task), the selected data often comes from other embodiments possible due to them putting more weight on the scene
+                and distractors when computing similarity. In contrast, DataMIL is able to select datasets from the correct embodiment if present in the prior dataset.</li>
+            </ol>
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/pouch_damil.png" alt="DaMIl" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">DataMIL</h5><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/pouch_flow.png" alt="AR" width="76%">
+            <h5 class="title is-5" style="text-align: center;">Flow Retrival</h5><br>
+            <h4 class="title is-4" style="text-align: center;">Selected dataset distribution for Franka-Pouch task</h4><br>
+          </div>
+          <div class="column is-one-third">
+            <img src="static/images/qualitative/pouch_br.png" alt="BR" width="91%">
+            <h5 class="title is-5" style="text-align: center;">Behavior Retrival</h5><br>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            <ol start="3">
+              <li><b>Top and bottom samples.</b> Interestingly when we visually inspect the data selected by DataMIL (shown below),
+                we find that the highest and lowest ranked samples typically look alike. This is in line with observation in computer vision
+                where most useful data looks very similar to the most harmful, albiet with different labels. Similarly in robotics,
+                similar states can have very different action distributions, and while some of these actions might help reduce the policy loss on the target data, 
+                the others might lead to a large deviation, making them <i>harmful</i> for final policy learning.</li>
+            </ol>
+          </p>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-one-quarter">
+            <img src="static/images/qualitative/ball_qual.png" alt="Ball" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">Franka-Ball</h5><br>
+          </div>
+          <div class="column is-one-quarter">
+            <img src="static/images/qualitative/pouch_qual.png" alt="Pouch" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">Franka-Pouch</h5><br>
+          </div>
+          <div class="column is-one-quarter">
+            <img src="static/images/qualitative/tiago_qual.png" alt="Tiago" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">Tiago-Sink</h5><br>
+          </div>
+          <div class="column is-one-quarter">
+            <img src="static/images/qualitative/droid_qual.png" alt="Droid" width="90%"/>
+            <h5 class="title is-5" style="text-align: center;">Droid-Multitask</h5><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre>
+      <code>
+        @article{dass2025datamil,
+          title={DataMIL: Selecting Data for Robot Imitation Learning with Datamodels},
+          author={Dass, Shivin and Khaddaj, Alaa and Engstrom, Logan and Madry, Aleksander and Ilyas, Andrew and Mart{\'\i}n-Mart{\'\i}n, Roberto},
+          journal={arXiv preprint arXiv:2505.09603},
+          year={2025}
+        }
+      </code>
+    </pre>
+  </div>
+</section>
+
+</body>
+</html>
