@@ -22,6 +22,8 @@ updated: 2026-10-16
 
 ### Research候補と取り込み状況
 
+- [検索による模倣学習データ選択：既存研究調査（2026-10-17）](raw/temp/research_retrieval_imitation_20261017.md) — Behavior Retrieval、FlowRetrieval、DataMIL、ReMix、VINN。一次資料5件を一時保存、未ingest。
+
 - [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。CVAE論文は取り込み済み。
 
 - VAEの参照論文（個別ingestは未実施）：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders（v3）](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念の説明記事](wiki/concepts/variational_autoencoder.md)から原文にもリンク。
@@ -90,6 +92,8 @@ updated: 2026-10-16
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-17](log/daily/daily_20261017.md)
 
 - [2026-10-16](log/daily/daily_20261016.md)
 
