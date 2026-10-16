@@ -219,6 +219,9 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "index_commit.tmp",
+    "log/daily/daily_20261017.md",
+    "raw/temp/research_retrieval_imitation_20261017.md",
     "raw/temp/pari_vinn_abstract.html",
     "raw/temp/hejna_remix_proceedings.html",
     "raw/temp/dass_datamil_project.html",
@@ -251,9 +254,6 @@
     "mind/paper",
     "mind/Questionnaire/マニピュレーションって？.md",
     "mind/Questionnaire/VLA.md",
-    "mind/Questionnaire",
-    "log/daily/daily_20261009.md",
-    "wiki/sources/sohn_2015_cvae.md",
-    "wiki/concepts/variational_autoencoder.md"
+    "log/daily/daily_20261009.md"
   ]
 }
