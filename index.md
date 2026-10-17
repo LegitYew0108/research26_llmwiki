@@ -9,7 +9,7 @@ sources:
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-16
+updated: 2026-10-17
 ---
 
 # 目次
@@ -70,6 +70,8 @@ updated: 2026-10-16
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/compounding_error.md)
 
 - [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/act_infer_z.md)
 

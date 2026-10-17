@@ -7,7 +7,7 @@ sources:
   - ../../raw/temp/ross_2011_dagger.pdf
   - ../../raw/papers/zhao_2023_act.pdf
   - ../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-05
+updated: 2026-10-17
 ---
 
 # Behavior Cloning：学習方法と分布シフト
@@ -37,6 +37,8 @@ ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する�
 後年のDAggerは、学習者を実行して訪れた状態にexpertが適切な行動をラベル付けし、そのデータを既存データへ追加して学び直す。単に固定データ上の損失を減らすだけでなく、どの状態から学ぶかを変える方法である。[出典：DAgger §3・Algorithm 3.1](../../raw/temp/ross_2011_dagger.pdf)
 
 ## 関連ページ
+
+- [Compounding Error：状態分布のずれと誤りの連鎖](compounding_error.md)
 
 - [ALVINNの論文要約](../sources/pomerleau_1988_alvinn.md)
 - [ACTの論文要約](../sources/zhao_2023_act.md)
