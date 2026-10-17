@@ -11,12 +11,14 @@
             "id": "ed0ae11f3870c41a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "lab/presentation/research_overview_20261016.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "research_overview_20261016"
             }
           }
         ]
@@ -217,6 +219,8 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "lab/research_policy/1013計画.md",
+    "raw/papers/zhao_2023_act.pdf",
     "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/compounding_error.md",
     "AGENTS.md",
@@ -235,9 +239,7 @@
     "log/daily.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "lab/research_policy/スライド計画.md",
-    "lab/research_policy/1013計画.md",
     "lab/research_policy/1008計画.md",
-    "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/act_infer_z.md",
     "wiki/sources/zhao_2023_act.md",
     "lab/presentation",
@@ -251,7 +253,6 @@
     "raw/papers/2401.17698v1.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "mind/Questionnaire/マニピュレーションって？.md",
-    "mind/Questionnaire/VLA.md",
-    "log/daily/daily_20261009.md"
+    "mind/Questionnaire/VLA.md"
   ]
 }
