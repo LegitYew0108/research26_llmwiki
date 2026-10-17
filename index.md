@@ -34,9 +34,9 @@ updated: 2026-10-17
 
 ### Web記事の参照記録
 
-- [MIT：Imitation Learning](web_mit_imitation_learning_20261003.md)
-- [Hugging Face：RL Framework](web_huggingface_rl_framework_20261003.md)
-- [Spinning Up：Kinds of RL Algorithms](web_spinningup_rl_algorithms_20261003.md)
+- [MIT：Imitation Learning](raw/web/web_mit_imitation_learning_20261003.md)
+- [Hugging Face：RL Framework](raw/web/web_huggingface_rl_framework_20261003.md)
+- [Spinning Up：Kinds of RL Algorithms](raw/web/web_spinningup_rl_algorithms_20261003.md)
 
 ## Wiki
 
@@ -52,10 +52,29 @@ updated: 2026-10-17
 - [研究方針・実験記録](lab/)
 - [依頼して保存した研究提案](lab/proposals/)
 
+### 自分の理解・考察の記事
+
+- [Behavior Cloning](<mind/IL/BC-Behavior Cloning.md>)
+- [Imitation Learning](<mind/IL/IL-Imitation Learning(模倣学習).md>)
+- [ACT論文の読書ノート](<mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md>)
+- [Attention（ざっくり）](<mind/Transformer/Attention(ざっくり).md>)
+- [VLAについての疑問](mind/Questionnaire/VLA.md)
+- [マニピュレーションについての疑問](mind/Questionnaire/マニピュレーションって？.md)
+
+### 研究方針・計画の記事
+
+以下はユーザーの記録。日付の異なる計画や案は、最新の採用方針と同一とは限らない。
+
+- [1008計画](lab/research_policy/1008計画.md)
+- [1013計画](lab/research_policy/1013計画.md)
+- [スライド計画](lab/research_policy/スライド計画.md)
+- [検索拡張型ACTの研究計画（案）](lab/meeting/research_plan_retrieval_augmented_ACT.md)
+
 ## 進捗記録
 
 - [日次ログ](log/daily/)
 - [週次ログ](log/weekly/)
+- [2026-10-17 Wiki Lint結果](log/lint/lint_20261017.md)
 
 ## 取り込み済みの論文
 
@@ -65,7 +84,7 @@ updated: 2026-10-17
 
 - [Bi-ACT：Bilateral ControlとACTの統合](wiki/sources/buamanee_2024_biact.md) — [一次資料](raw/papers/2401.17698v1.pdf)
 
-- [Memory Mosaics at scale（v2）](wiki/sources/zhang_2025_memory_mosaics_at_scale.md) — [一次資料](raw/papers/2507.03285v3.pdf)
+- [Memory Mosaics at scale（モデルv2／arXiv v3）](wiki/sources/zhang_2025_memory_mosaics_at_scale.md) — [一次資料](raw/papers/2507.03285v3.pdf)
 
 - [Learning Structured Output Representation using Deep Conditional Generative Models（CVAE）](wiki/sources/sohn_2015_cvae.md) — [一次資料](raw/papers/sohn_2015_cvae.pdf)
 
