@@ -22,22 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "9daaadfa9607c54d",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "4d2f5e72e2369c33",
-            "type": "leaf",
-            "state": {
-              "type": "marp-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Deck Preview"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
