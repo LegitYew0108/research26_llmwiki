@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/sources/du_2023_behavior_retrieval.md",
+                "file": "lab/research_policy/スライド計画.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "du_2023_behavior_retrieval"
+              "title": "スライド計画"
             }
           }
         ]
@@ -201,8 +201,10 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "lab/research_policy/1013計画.md",
+    "wiki/sources/du_2023_behavior_retrieval.md",
     "AGENTS.md",
     "index_commit.tmp",
     "log/daily/daily_20261017.md",
@@ -220,7 +222,6 @@
     "mind/IL/BC-Behavior Cloning.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "lab/research_policy/スライド計画.md",
-    "lab/research_policy/1013計画.md",
     "lab/research_policy/1008計画.md",
     "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/act_infer_z.md",
