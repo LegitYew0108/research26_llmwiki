@@ -24,6 +24,8 @@ updated: 2026-10-17
 
 ### Research候補と取り込み状況
 
+- [FAISS公式資料：検索の基本とHNSW（2026-10-17）](raw/temp/research_faiss_20261017.md) — index一覧・距離・入門の公式HTML3件を一時保存。未ingest。
+
 - [検索による模倣学習データ選択：既存研究調査（2026-10-17）](raw/temp/research_retrieval_imitation_20261017.md) — Behavior Retrieval、FlowRetrieval、DataMIL、ReMix、VINN。一次資料5件を一時保存。Behavior Retrievalはraw/papersに配置されたv2を取り込み済み、残る4件は未ingest。
 
 - [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。CVAE論文は取り込み済み。
