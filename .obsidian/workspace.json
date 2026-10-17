@@ -11,12 +11,14 @@
             "id": "ed0ae11f3870c41a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "wiki/sources/sohn_2015_cvae.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "sohn_2015_cvae"
             }
           }
         ]
@@ -201,9 +203,9 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "raw/papers/zhao_2023_act.pdf",
     "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
-    "raw/papers/zhao_2023_act.pdf",
     "lab/presentation/research_overview_20261016.md",
     "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/compounding_error.md",
