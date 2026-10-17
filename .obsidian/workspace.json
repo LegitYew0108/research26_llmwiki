@@ -11,14 +11,12 @@
             "id": "ed0ae11f3870c41a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "mind/IL/BC-Behavior Cloning.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/papers/zhao_2023_act.pdf"
               },
-              "icon": "lucide-file",
-              "title": "BC-Behavior Cloning"
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
             }
           }
         ]
@@ -219,6 +217,7 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/compounding_error.md",
     "AGENTS.md",
     "index_commit.tmp",
@@ -234,7 +233,6 @@
     "log/daily/daily_20261016.md",
     "lab/presentation/research_overview_20261016.md",
     "log/daily.md",
-    "mind/IL/BC-Behavior Cloning.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "lab/research_policy/スライド計画.md",
     "lab/research_policy/1013計画.md",
