@@ -3,11 +3,12 @@ title: "Behavior Cloning：学習方法と分布シフト"
 type: concept
 tags: [robotics, imitation-learning, behavior-cloning, supervised-learning, distribution-shift, compounding-error]
 sources:
+  - ../../raw/papers/2304.08742v2.pdf
   - ../../raw/temp/osa_2018_imitation_learning_survey.pdf
   - ../../raw/temp/ross_2011_dagger.pdf
   - ../../raw/papers/zhao_2023_act.pdf
   - ../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-05
+updated: 2026-10-17
 ---
 
 # Behavior Cloning：学習方法と分布シフト
@@ -38,8 +39,13 @@ ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する�
 
 ## 関連ページ
 
+- [Retrieval-augmented Imitation Learning](retrieval_augmented_imitation_learning.md)
+- [COLLAGEの論文要約](../sources/kumar_2025_collage.md)
+
 - [ALVINNの論文要約](../sources/pomerleau_1988_alvinn.md)
 - [ACTの論文要約](../sources/zhao_2023_act.md)
 - [ロボットの模倣学習と強化学習](imitation_and_reinforcement_learning.md)
 - [BC：自分の理解](<../../mind/IL/BC-Behavior Cloning.md>)
 - [IL：自分の理解](<../../mind/IL/IL-Imitation Learning(模倣学習).md>)
+
+- [Behavior Retrieval：状態・行動の検索によるBCデータ選択](../sources/du_2023_behavior_retrieval.md)
