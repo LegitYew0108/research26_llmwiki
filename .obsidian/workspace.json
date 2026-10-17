@@ -11,14 +11,12 @@
             "id": "ed0ae11f3870c41a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "wiki/sources/sohn_2015_cvae.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/papers/zhao_2023_act.pdf"
               },
-              "icon": "lucide-file",
-              "title": "sohn_2015_cvae"
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
             }
           }
         ]
@@ -203,6 +201,9 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
+    "raw/papers/sohn_2015_cvae.pdf",
+    "wiki/sources/sohn_2015_cvae.md",
     "raw/papers/zhao_2023_act.pdf",
     "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
@@ -234,9 +235,7 @@
     "wiki/concepts/bilateral_control_based_imitation_learning.md",
     "wiki/concepts/associative_memory_and_kernel_regression.md",
     "raw/papers/2507.03285v3.pdf",
-    "raw/papers/2401.17698v1.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
-    "mind/Questionnaire/マニピュレーションって？.md",
-    "mind/Questionnaire/VLA.md"
+    "mind/Questionnaire/マニピュレーションって？.md"
   ]
 }
