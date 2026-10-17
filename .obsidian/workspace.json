@@ -11,14 +11,12 @@
             "id": "ed0ae11f3870c41a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "lab/presentation/research_overview_20261016.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/papers/zhao_2023_act.pdf"
               },
-              "icon": "lucide-file",
-              "title": "research_overview_20261016"
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
             }
           }
         ]
@@ -219,6 +217,7 @@
   },
   "active": "ed0ae11f3870c41a",
   "lastOpenFiles": [
+    "lab/presentation/research_overview_20261016.md",
     "lab/research_policy/1013計画.md",
     "raw/papers/zhao_2023_act.pdf",
     "mind/IL/BC-Behavior Cloning.md",
@@ -235,7 +234,6 @@
     "CLAUDE.md",
     "index.md",
     "log/daily/daily_20261016.md",
-    "lab/presentation/research_overview_20261016.md",
     "log/daily.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "lab/research_policy/スライド計画.md",
