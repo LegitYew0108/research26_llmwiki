@@ -39,9 +39,6 @@ ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する�
 
 ## 関連ページ
 
-- [Retrieval-augmented Imitation Learning](retrieval_augmented_imitation_learning.md)
-- [COLLAGEの論文要約](../sources/kumar_2025_collage.md)
-
 - [ALVINNの論文要約](../sources/pomerleau_1988_alvinn.md)
 - [ACTの論文要約](../sources/zhao_2023_act.md)
 - [ロボットの模倣学習と強化学習](imitation_and_reinforcement_learning.md)

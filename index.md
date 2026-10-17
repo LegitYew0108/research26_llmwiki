@@ -4,7 +4,6 @@ type: index
 tags: [index]
 sources:
   - raw/papers/2304.08742v2.pdf
-  - raw/papers/2508.01131v2.pdf
   - raw/papers/2401.17698v1.pdf
   - raw/papers/2507.03285v3.pdf
   - raw/papers/kernel_function_for_angle_testing.pdf
@@ -61,7 +60,6 @@ updated: 2026-10-17
 
 - [Behavior Retrieval：少数デモによる既存データ検索とBC](wiki/sources/du_2023_behavior_retrieval.md) — [一次資料（v2）](raw/papers/2304.08742v2.pdf)
 
-- [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/kumar_2025_collage.md) — [一次資料（v2）](raw/papers/2508.01131v2.pdf)
 
 - [Bi-ACT：Bilateral ControlとACTの統合](wiki/sources/buamanee_2024_biact.md) — [一次資料](raw/papers/2401.17698v1.pdf)
 
@@ -78,9 +76,6 @@ updated: 2026-10-17
 ## 概念・手法のページ
 
 - [検索による模倣学習データ選択](wiki/concepts/retrieval_based_imitation_data_selection.md)
-
-- [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval_augmented_imitation_learning.md)
-- [Subsequence DTW：部分軌跡の時間対応を取る検索](wiki/concepts/subsequence_dynamic_time_warping.md)
 
 - [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/act_infer_z.md)
 
