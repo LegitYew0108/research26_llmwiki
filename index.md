@@ -11,7 +11,7 @@ sources:
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-17
+updated: 2026-10-18
 ---
 
 # 目次
@@ -98,6 +98,8 @@ updated: 2026-10-17
 
 ## 概念・手法のページ
 
+- [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/behavior_retrieval_vae_search.md)
+
 - [検索による模倣学習データ選択](wiki/concepts/retrieval_based_imitation_data_selection.md)
 
 - [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval_augmented_imitation_learning.md)
@@ -124,6 +126,8 @@ updated: 2026-10-17
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-18](log/daily/daily_20261018.md)
 
 - [2026-10-17](log/daily/daily_20261017.md)
 
