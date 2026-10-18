@@ -12,7 +12,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
-updated: 2026-10-18
+updated: 2026-10-19
 ---
 
 # 目次
@@ -48,6 +48,8 @@ updated: 2026-10-18
 - [研究者・研究室・データセット](wiki/entities/)
 
 ## 研究活動
+
+- [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/2304.08742v2.pdf)に基づく。
 
 - [研究概要発表：Marpスライド案（2026-10-16）](lab/presentation/research_overview_20261016.md) — 30分・21枚。検索表現は空欄、追加の実験設計案は未採用として記載。
 
