@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "wiki/concepts/conditional_variational_autoencoder.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "conditional_variational_autoencoder"
             }
           }
         ]
@@ -200,8 +200,9 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0e70bb31ff3f5332",
+  "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "index.md",
     "artifacts/sailor/sailor.pptx",
     "artifacts/sailor/slide.png",
     "artifacts/sailor/speaker_notes.md",
@@ -214,7 +215,6 @@
     "artifacts/behavior_retrieval",
     "artifacts",
     "conflict-files-obsidian-git.md",
-    "index.md",
     "wiki/concepts/behavior_cloning.md",
     "log/daily/daily_20261017.md",
     "raw/papers/zhao_2023_act.pdf",
@@ -228,7 +228,6 @@
     "raw/temp/faiss_metrics_20261017.html",
     "raw/temp/faiss_indexes_20261017.html",
     "raw/temp/faiss_getting_started_20261017.html",
-    "raw/papers/2508.01131v2.pdf",
     "log/lint/lint_20261017.md",
     "log/daily/daily_20261018.md",
     "wiki/sources/sohn_2015_cvae.md",
