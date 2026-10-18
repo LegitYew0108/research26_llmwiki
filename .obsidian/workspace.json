@@ -202,6 +202,9 @@
   },
   "active": "0e70bb31ff3f5332",
   "lastOpenFiles": [
+    "artifacts/sailor/sailor.pptx",
+    "artifacts/sailor/slide.png",
+    "artifacts/sailor/speaker_notes.md",
     "raw/temp/nasiriany_2023_sailor.pdf",
     "artifacts/sailor",
     "artifacts/behavior_retrieval/behavior_retrieval.pptx",
@@ -226,7 +229,6 @@
     "raw/temp/faiss_indexes_20261017.html",
     "raw/temp/faiss_getting_started_20261017.html",
     "raw/papers/2508.01131v2.pdf",
-    "raw/papers/2304.08742v2.pdf",
     "log/lint/lint_20261017.md",
     "log/daily/daily_20261018.md",
     "wiki/sources/sohn_2015_cvae.md",
@@ -237,7 +239,6 @@
     "wiki/concepts/compounding_error.md",
     "AGENTS.md",
     "raw/temp/research_retrieval_imitation_20261017.md",
-    "CLAUDE.md",
-    "log/daily/daily_20261016.md"
+    "CLAUDE.md"
   ]
 }
