@@ -25,6 +25,8 @@ updated: 2026-10-19
 
 ### Research候補と取り込み状況
 
+- [SAILOR原論文（PMLR 2023／CoRL 2022）](raw/temp/nasiriany_2023_sailor.pdf) — スライド作成のため全文を確認。一時保管、未ingest。[出版ページ](https://proceedings.mlr.press/v205/nasiriany23a.html)。
+
 - [FAISS公式資料：検索の基本とHNSW（2026-10-17）](raw/temp/research_faiss_20261017.md) — index一覧・距離・入門の公式HTML3件を一時保存。未ingest。
 
 - [検索による模倣学習データ選択：既存研究調査（2026-10-17）](raw/temp/research_retrieval_imitation_20261017.md) — Behavior Retrieval、FlowRetrieval、DataMIL、ReMix、VINN。一次資料5件を一時保存。Behavior Retrievalはraw/papersに配置されたv2を取り込み済み、残る4件は未ingest。
@@ -48,6 +50,8 @@ updated: 2026-10-19
 - [研究者・研究室・データセット](wiki/entities/)
 
 ## 研究活動
+
+- [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/temp/nasiriany_2023_sailor.pdf)に基づく。
 
 - [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/2304.08742v2.pdf)に基づく。
 
