@@ -51,6 +51,8 @@ updated: 2026-10-19
 
 ## 研究活動
 
+- [Behavior RetrievalとSAILOR：タスク別の実験結果比較](artifacts/retrieval_results_comparison.md) — 各原論文内の既存手法比較とSAILORの検索ablation。
+
 - [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/temp/nasiriany_2023_sailor.pdf)に基づく。
 
 - [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/2304.08742v2.pdf)に基づく。
