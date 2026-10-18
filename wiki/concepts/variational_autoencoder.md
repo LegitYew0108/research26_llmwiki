@@ -3,10 +3,11 @@ title: "VAE（Variational Autoencoder）：仕組みと学習の目的"
 type: concept
 tags: [VAE, CVAE, generative-model, latent-variable, variational-inference, ELBO, representation-learning]
 sources:
+  - ../../raw/papers/2304.08742v2.pdf
   - ../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
   - ../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf
   - ../../raw/papers/zhao_2023_act.pdf
-updated: 2026-10-08
+updated: 2026-10-17
 ---
 
 # VAE（Variational Autoencoder）
@@ -104,3 +105,5 @@ $$\epsilon\sim\mathcal N(0,I),\qquad z=\mu_\phi(x)+\sigma_\phi(x)\odot\epsilon.$
 - [ロボットの模倣学習と強化学習](imitation_and_reinforcement_learning.md)
 
 - [CVAE：条件付き生成とACTでの使い方](conditional_variational_autoencoder.md)
+
+- [Behavior Retrieval：状態・行動の検索によるBCデータ選択](../sources/du_2023_behavior_retrieval.md)

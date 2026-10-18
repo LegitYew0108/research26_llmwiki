@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cde083f8f5261d50",
+        "id": "52f387e96daadfe9",
         "type": "tabs",
         "children": [
           {
-            "id": "ed0ae11f3870c41a",
+            "id": "faf83b35fb780155",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "index.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -174,8 +176,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -183,8 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 378.67578125,
-    "collapsed": true
+    "width": 378.67578125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,12 +200,31 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "ed0ae11f3870c41a",
+  "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "index.md",
+    "wiki/concepts/behavior_cloning.md",
+    "log/daily/daily_20261017.md",
+    "raw/papers/zhao_2023_act.pdf",
+    "wiki/sources/kumar_2025_collage.md",
+    "wiki/sources/du_2023_behavior_retrieval.md",
+    "wiki/concepts/subsequence_dynamic_time_warping.md",
+    "wiki/concepts/retrieval_based_imitation_data_selection.md",
+    "wiki/concepts/retrieval_augmented_imitation_learning.md",
+    "wiki/concepts/behavior_retrieval_vae_search.md",
+    "raw/temp/research_faiss_20261017.md",
+    "raw/temp/faiss_metrics_20261017.html",
+    "raw/temp/faiss_indexes_20261017.html",
+    "raw/temp/faiss_getting_started_20261017.html",
+    "raw/papers/2508.01131v2.pdf",
+    "raw/papers/2304.08742v2.pdf",
+    "log/lint/lint_20261017.md",
+    "log/lint",
+    "log/daily/daily_20261018.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
     "raw/papers/sohn_2015_cvae.pdf",
     "wiki/sources/sohn_2015_cvae.md",
-    "raw/papers/zhao_2023_act.pdf",
     "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
     "lab/presentation/research_overview_20261016.md",
@@ -212,30 +232,11 @@
     "wiki/concepts/compounding_error.md",
     "AGENTS.md",
     "index_commit.tmp",
-    "log/daily/daily_20261017.md",
     "raw/temp/research_retrieval_imitation_20261017.md",
-    "raw/temp/pari_vinn_abstract.html",
-    "raw/temp/hejna_remix_proceedings.html",
-    "raw/temp/dass_datamil_project.html",
-    "raw/temp/lin_2024_flowretrieval.html",
-    "raw/temp/du_2023_behavior_retrieval.html",
     "CLAUDE.md",
-    "index.md",
     "log/daily/daily_20261016.md",
     "log/daily.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
-    "lab/research_policy/1008計画.md",
-    "wiki/concepts/act_infer_z.md",
-    "wiki/sources/zhao_2023_act.md",
-    "lab/presentation",
-    "wiki/sources/kernel_function_for_angle_testing.md",
-    "wiki/concepts/conditional_variational_autoencoder.md",
-    "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
-    "wiki/sources/buamanee_2024_biact.md",
-    "wiki/concepts/bilateral_control_based_imitation_learning.md",
-    "wiki/concepts/associative_memory_and_kernel_regression.md",
-    "raw/papers/2507.03285v3.pdf",
-    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
-    "mind/Questionnaire/マニピュレーションって？.md"
+    "lab/research_policy/1008計画.md"
   ]
 }
