@@ -5,7 +5,7 @@ const root='C:/Users/legit/Documents/Univ/research26_llmwiki';
 const skill='C:/Users/legit/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations';
 const p=Presentation.create({slideSize:{width:1280,height:720}});
 const s=p.slides.add(); s.background.fill='#FFFFFF';
-function text(t,x,y,w,h,size,color='#172D42',bold=false){const a=s.shapes.add({geometry:'textbox',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});a.text=t;a.text.style={fontFamily:'Yu Gothic',fontSize:size,color,bold};return a;}
+function text(t,x,y,w,h,size,color='#172D42',bold=false){const a=s.shapes.add({geometry:'textbox',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});a.text=t;a.text.style={typeface:'Yu Gothic',fontSize:size,color,bold};return a;}
 text('Behavior Retrieval',60,35,1150,65,48,'#172D42',true);
 text('少数デモを手がかりにした学習データ選択',62,108,1150,55,32,'#172D42',true);
 text('既存の状態・行動',65,196,350,44,27,'#172D42',true);
@@ -23,3 +23,4 @@ await (await PresentationFile.exportPptx(p)).save(root+'/.build_behavior/candida
 const png=await p.export({slide:s,format:'png',scale:1.5});await fs.writeFile(root+'/artifacts/behavior_retrieval/slide.png',new Uint8Array(await png.arrayBuffer()));
 const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);
 console.log(await finalizePresentation({workspaceDir:root,candidatePath:root+'/.build_behavior/candidate.pptx',finalPath:root+'/artifacts/behavior_retrieval/behavior_retrieval.pptx',pythonExecutable:'C:/Users/legit/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit'],explicitTotalSlideCount:1,fontPolicy:{basis:'design',families:['Yu Gothic']},verifyArtifactToolImport:true,receiptPath:root+'/.build_behavior/validation.json'}));
+

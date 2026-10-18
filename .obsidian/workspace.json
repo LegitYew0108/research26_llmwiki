@@ -202,6 +202,10 @@
   },
   "active": "0e70bb31ff3f5332",
   "lastOpenFiles": [
+    "raw/temp/nasiriany_2023_sailor.pdf",
+    "artifacts/sailor",
+    "artifacts/behavior_retrieval/behavior_retrieval.pptx",
+    "log/daily/daily_20261019.md",
     "artifacts/behavior_retrieval/slide.png",
     "artifacts/behavior_retrieval/speaker_notes.md",
     "artifacts/behavior_retrieval",
@@ -224,9 +228,7 @@
     "raw/papers/2508.01131v2.pdf",
     "raw/papers/2304.08742v2.pdf",
     "log/lint/lint_20261017.md",
-    "log/lint",
     "log/daily/daily_20261018.md",
-    "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
     "wiki/sources/sohn_2015_cvae.md",
     "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
@@ -236,7 +238,6 @@
     "AGENTS.md",
     "raw/temp/research_retrieval_imitation_20261017.md",
     "CLAUDE.md",
-    "log/daily/daily_20261016.md",
-    "log/daily.md"
+    "log/daily/daily_20261016.md"
   ]
 }
