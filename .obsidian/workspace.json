@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "zhao_2023_act"
             }
+          },
+          {
+            "id": "aaaebec1be41f082",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/papers/zhao_2023_act.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -201,12 +214,13 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "ed0ae11f3870c41a",
+  "active": "aaaebec1be41f082",
   "lastOpenFiles": [
+    "wiki/sources/zhao_2023_act.md",
+    "raw/papers/zhao_2023_act.pdf",
     "wiki/sources/du_2023_behavior_retrieval.md",
     "log/daily/daily_20261018.md",
     "wiki/concepts/behavior_retrieval_vae_search.md",
-    "wiki/sources/zhao_2023_act.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
     "lab/meeting/research_plan_retrieval_augmented_ACT.md",
     "lab/research_policy/1013計画.md",
@@ -228,7 +242,6 @@
     "mind/IL/BC-Behavior Cloning.md",
     "mind/IL/IL-Imitation Learning(模倣学習).md",
     "lab/research_policy/1008計画.md",
-    "raw/papers/zhao_2023_act.pdf",
     "wiki/concepts/act_infer_z.md",
     "lab/presentation",
     "wiki/sources/kernel_function_for_angle_testing.md",
@@ -237,7 +250,6 @@
     "wiki/concepts/bilateral_control_based_imitation_learning.md",
     "wiki/concepts/associative_memory_and_kernel_regression.md",
     "raw/papers/2507.03285v3.pdf",
-    "raw/papers/2401.17698v1.pdf",
-    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md"
+    "raw/papers/2401.17698v1.pdf"
   ]
 }
