@@ -1,0 +1,25 @@
+import fs from 'node:fs/promises';
+import {pathToFileURL} from 'node:url';
+import {Presentation,PresentationFile} from '@oai/artifact-tool';
+const root='C:/Users/legit/Documents/Univ/research26_llmwiki';
+const skill='C:/Users/legit/.codex/plugins/cache/openai-primary-runtime/presentations/26.1015.12040/skills/presentations';
+const p=Presentation.create({slideSize:{width:1280,height:720}});
+const s=p.slides.add(); s.background.fill='#FFFFFF';
+function text(t,x,y,w,h,size,color='#172D42',bold=false){const a=s.shapes.add({geometry:'textbox',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});a.text=t;a.text.style={fontFamily:'Yu Gothic',fontSize:size,color,bold};return a;}
+text('Behavior Retrieval',60,35,1150,65,48,'#172D42',true);
+text('少数デモを手がかりにした学習データ選択',62,108,1150,55,32,'#172D42',true);
+text('既存の状態・行動',65,196,350,44,27,'#172D42',true);
+text('少数の対象デモ',645,196,370,44,27,'#008C95',true);
+const b=await fs.readFile(root+'/.build_behavior/figure2.png');
+s.images.add({blob:b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength),contentType:'image/png',alt:'原論文Fig.2：既存データで表現を学習し、対象デモとの類似度でデータを選択してBehavior Cloningを行う',fit:'contain',position:{left:62,top:248,width:1155,height:370}});
+text('VAEによる埋め込み',62,610,450,42,27,'#172D42',true);
+text('L2距離・閾値選択',545,610,340,42,27,'#008C95',true);
+text('デモ＋検索結果でBC',917,610,330,42,26,'#172D42',true);
+text('Du et al., 2023  Fig. 2 / §III',62,676,1150,25,16,'#66727C');
+const notes=`Behavior Retrievalは、少数の対象タスクのデモを手がかりに、大量の既存データから学習に使うデータを選ぶ模倣学習の手法です。\n図の左では、既存の状態と行動の組を使ってVAEを学習し、比較用のベクトルを作ります。検索用の表現は状態・行動の潜在表現に元の行動も連結するため、見た目が似ていても操作方向が違うデータを区別できます。\n中央では、対象デモも同じ表現に変換します。既存データの各組について、デモ内で最も近い組とのL2距離を求め、正規化した類似度が閾値を超えるものを選びます。別のタスクの軌道でも、共通する把持場面などを取り出せます。\n右では、対象デモと検索結果から同数ずつサンプルし、Behavior Cloningで方策を学習します。検索は学習データの選択に使い、実行時には学習済み方策が行動します。\n今回の研究との接点は、中央のベクトル間の距離比較です。原論文はバッチで距離を計算しており、グラフ型ANNによる高速化の有効性は示していません。また、この手法自体は報酬最大化による強化学習ではなく、模倣学習です。\n補足：unlabeledはタスクラベルがないという意味で、行動の記録は必要です。閾値選択はtop-k検索とは異なります。\n出典：../../raw/papers/2304.08742v2.pdf（Fig.2、§III-A〜E、Algorithm 1、Appendix A-G）。図は原論文Fig.2を抜粋。`;
+s.speakerNotes.text=notes;
+await fs.writeFile(root+'/artifacts/behavior_retrieval/speaker_notes.md',`---\ntitle: Behavior Retrieval 発表メモ\ntype: presentation-notes\ntags: [behavior-retrieval, imitation-learning, presentation]\nsources:\n  - ../../raw/papers/2304.08742v2.pdf\nupdated: 2026-10-19\n---\n\n# 発表原稿（約2分）\n\n${notes}\n`);
+await (await PresentationFile.exportPptx(p)).save(root+'/.build_behavior/candidate.pptx');
+const png=await p.export({slide:s,format:'png',scale:1.5});await fs.writeFile(root+'/artifacts/behavior_retrieval/slide.png',new Uint8Array(await png.arrayBuffer()));
+const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);
+console.log(await finalizePresentation({workspaceDir:root,candidatePath:root+'/.build_behavior/candidate.pptx',finalPath:root+'/artifacts/behavior_retrieval/behavior_retrieval.pptx',pythonExecutable:'C:/Users/legit/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit'],explicitTotalSlideCount:1,fontPolicy:{basis:'design',families:['Yu Gothic']},verifyArtifactToolImport:true,receiptPath:root+'/.build_behavior/validation.json'}));

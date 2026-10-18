@@ -200,8 +200,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "faf83b35fb780155",
+  "active": "0e70bb31ff3f5332",
   "lastOpenFiles": [
+    "artifacts/behavior_retrieval/slide.png",
+    "artifacts/behavior_retrieval/speaker_notes.md",
+    "artifacts/behavior_retrieval",
+    "artifacts",
     "conflict-files-obsidian-git.md",
     "index.md",
     "wiki/concepts/behavior_cloning.md",
@@ -223,7 +227,6 @@
     "log/lint",
     "log/daily/daily_20261018.md",
     "raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf",
-    "raw/papers/sohn_2015_cvae.pdf",
     "wiki/sources/sohn_2015_cvae.md",
     "lab/research_policy/1013計画.md",
     "lab/research_policy/スライド計画.md",
@@ -231,12 +234,9 @@
     "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/compounding_error.md",
     "AGENTS.md",
-    "index_commit.tmp",
     "raw/temp/research_retrieval_imitation_20261017.md",
     "CLAUDE.md",
     "log/daily/daily_20261016.md",
-    "log/daily.md",
-    "mind/IL/IL-Imitation Learning(模倣学習).md",
-    "lab/research_policy/1008計画.md"
+    "log/daily.md"
   ]
 }
