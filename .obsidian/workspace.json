@@ -200,6 +200,8 @@
   },
   "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "log/daily/daily_20261020.md",
+    "raw/temp/research_mobile_aloha_datasets_20261020.md",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
     "raw/temp/lerobot_aloha_mobile_wash_pan_card.md",
     "raw/temp/lerobot_aloha_mobile_shrimp_card.md",
@@ -235,8 +237,6 @@
     "wiki/sources/du_2023_behavior_retrieval.md",
     "wiki/concepts/subsequence_dynamic_time_warping.md",
     "wiki/concepts/retrieval_based_imitation_data_selection.md",
-    "wiki/concepts/retrieval_augmented_imitation_learning.md",
-    "wiki/concepts/behavior_retrieval_vae_search.md",
-    "raw/temp/research_faiss_20261017.md"
+    "wiki/concepts/retrieval_augmented_imitation_learning.md"
   ]
 }
