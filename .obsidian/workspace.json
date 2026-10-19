@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/conditional_variational_autoencoder.md",
+                "file": "wiki/sources/pomerleau_1988_alvinn.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "conditional_variational_autoencoder"
+              "title": "pomerleau_1988_alvinn"
             }
           }
         ]
@@ -202,6 +202,8 @@
   },
   "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
+    "wiki/concepts/conditional_variational_autoencoder.md",
     "artifacts/retrieval_results_comparison.md",
     "index.md",
     "artifacts/sailor/sailor.pptx",
@@ -237,8 +239,6 @@
     "lab/presentation/research_overview_20261016.md",
     "mind/IL/BC-Behavior Cloning.md",
     "wiki/concepts/compounding_error.md",
-    "AGENTS.md",
-    "raw/temp/research_retrieval_imitation_20261017.md",
-    "CLAUDE.md"
+    "AGENTS.md"
   ]
 }
