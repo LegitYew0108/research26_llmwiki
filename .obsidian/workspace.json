@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/papers/2304.08742v2.pdf"
+                "file": "raw/temp/nasiriany_2023_sailor.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "2304.08742v2"
+              "title": "nasiriany_2023_sailor"
             }
           }
         ]
@@ -200,9 +200,14 @@
   },
   "active": "faf83b35fb780155",
   "lastOpenFiles": [
-    "raw/papers/2401.17698v1.pdf",
-    "raw/papers/2304.08742v2.pdf",
+    "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "raw/papers/zhao_2023_act.pdf",
+    "raw/papers/sohn_2015_cvae.pdf",
+    "raw/papers/kernel_function_for_angle_testing.pdf",
+    "raw/papers/2508.01131v2.pdf",
+    "raw/papers/2507.03285v3.pdf",
+    "raw/papers/2304.08742v2.pdf",
+    "raw/papers/2401.17698v1.pdf",
     "log/daily/daily_20261020.md",
     "raw/temp/research_mobile_aloha_datasets_20261020.md",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
@@ -215,19 +220,14 @@
     "raw/temp/mobile_aloha_constants.py",
     "raw/temp/mobile_aloha_project.html",
     "raw/temp/mobile_aloha_record_episodes.py",
-    "raw/temp/mobile_aloha_real_env.py",
     "wiki/sources/zhao_2023_act.md",
     "wiki/sources/pomerleau_1988_alvinn.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
     "wiki/concepts/conditional_variational_autoencoder.md",
     "artifacts/retrieval_results_comparison.md",
     "index.md",
-    "artifacts/sailor/sailor.pptx",
     "artifacts/sailor/slide.png",
     "artifacts/sailor/speaker_notes.md",
-    "raw/temp/nasiriany_2023_sailor.pdf",
-    "artifacts/sailor",
-    "artifacts/behavior_retrieval/behavior_retrieval.pptx",
     "log/daily/daily_20261019.md",
     "artifacts/behavior_retrieval/slide.png",
     "artifacts/behavior_retrieval/speaker_notes.md",
