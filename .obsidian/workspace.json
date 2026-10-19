@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "raw/papers/2304.08742v2.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "title": "2304.08742v2"
             }
           }
         ]
@@ -200,6 +200,9 @@
   },
   "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "raw/papers/2401.17698v1.pdf",
+    "raw/papers/2304.08742v2.pdf",
+    "raw/papers/zhao_2023_act.pdf",
     "log/daily/daily_20261020.md",
     "raw/temp/research_mobile_aloha_datasets_20261020.md",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
@@ -228,15 +231,12 @@
     "log/daily/daily_20261019.md",
     "artifacts/behavior_retrieval/slide.png",
     "artifacts/behavior_retrieval/speaker_notes.md",
-    "artifacts/behavior_retrieval",
-    "artifacts",
     "conflict-files-obsidian-git.md",
     "wiki/concepts/behavior_cloning.md",
     "log/daily/daily_20261017.md",
     "wiki/sources/kumar_2025_collage.md",
     "wiki/sources/du_2023_behavior_retrieval.md",
     "wiki/concepts/subsequence_dynamic_time_warping.md",
-    "wiki/concepts/retrieval_based_imitation_data_selection.md",
-    "wiki/concepts/retrieval_augmented_imitation_learning.md"
+    "wiki/concepts/retrieval_based_imitation_data_selection.md"
   ]
 }
