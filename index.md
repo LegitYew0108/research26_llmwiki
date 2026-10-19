@@ -12,7 +12,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 
 # 目次
@@ -24,6 +24,8 @@ updated: 2026-10-19
 - [ミーティング記録](raw/meeting/)
 
 ### Research候補と取り込み状況
+
+- [Mobile ALOHAの観測・動作データセット候補（2026-10-20）](raw/temp/research_mobile_aloha_datasets_20261020.md) — 6タスク、HDF5・LeRobot・RLDSの比較。原文11件は調査記事内に一覧。未ingest。
 
 - [SAILOR原論文（PMLR 2023／CoRL 2022）](raw/temp/nasiriany_2023_sailor.pdf) — スライド作成のため全文を確認。一時保管、未ingest。[出版ページ](https://proceedings.mlr.press/v205/nasiriany23a.html)。
 
@@ -136,6 +138,8 @@ updated: 2026-10-19
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-20](log/daily/daily_20261020.md)
 
 - [2026-10-18](log/daily/daily_20261018.md)
 
