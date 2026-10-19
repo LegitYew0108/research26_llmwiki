@@ -108,7 +108,7 @@ updated: 2026-10-19
 ## 概念・手法のページ
 
 - [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/compounding_error.md)
-- [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/behavior_retrieval_vae_search.md)
+- [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/behavior_retrieval_vae_search.md) — batchの抽出、分布の推定、状態・行動の復元、損失計算、重み更新を順に説明。
 
 - [検索による模倣学習データ選択](wiki/concepts/retrieval_based_imitation_data_selection.md)
 

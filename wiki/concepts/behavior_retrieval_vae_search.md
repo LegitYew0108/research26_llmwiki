@@ -5,7 +5,7 @@ tags: [VAE, representation-learning, retrieval, imitation-learning, behavior-clo
 sources:
   - ../../raw/papers/2304.08742v2.pdf
   - ../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
-updated: 2026-10-18
+updated: 2026-10-19
 ---
 
 # Behavior RetrievalのVAE：基礎から検索手順まで
@@ -55,6 +55,30 @@ $$J_{VAE}=-\mathbb E_{q_\phi(z_{sa}|s,a)}[\log p_\theta(s,a|z_{sa})]+\beta D_{KL
 付録の構成は潜在128次元、固定Gaussian prior、β = 0.0001である。状態・行動を圧縮した z_sa に、さらに元の行動 a を連結し、検索用ベクトル e = [z_sa,a] とする。似た状態で異なる行動をするデータを区別するためである。[出典：§III-C、Appendix A-C](../../raw/papers/2304.08742v2.pdf)
 
 注意：VAEが分布を出すことと、検索が具体的なベクトルの距離を使うことは別の話である。ここで確認した本文・付録だけでは、検索時の z_sa が平均なのかサンプルなのかを確定せず、eの生成は論文の記法に合わせて記す。実装は未確認。[確認範囲：§III-C、Appendix A-C・G](../../raw/papers/2304.08742v2.pdf)
+
+## VAE学習を1回の更新に分けて考える
+
+**入力した状態と行動そのものが、復元の正解になる。** 記録済みの行動もencoderへ入力する。状態から行動だけを予測する方策の学習は、検索後の別段階である。[出典：§III-C・E、Algorithm 1](../../raw/papers/2304.08742v2.pdf)
+
+1. 大量の既存データ D_prior から、記録済みの状態・行動 (s,a) をbatchで取り出す。対象タスクの少数デモ D_t は、このVAE学習の教師として使うのではなく、後の検索で使う。[出典：Algorithm 1](../../raw/papers/2304.08742v2.pdf)
+2. encoderへ (s,a) を入力し、潜在変数の分布を得る。Gaussian VAEの基本形では平均 μ と標準偏差 σ を出し、z_sa = μ + σ ⊙ ε でサンプリングする。[出典：§III-C、式(1)](../../raw/papers/2304.08742v2.pdf)、[VAE原論文§2–3](../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+3. decoderへ z_sa を渡し、元の状態と行動の両方を復元する。画像を含む設定では画像も復元対象で、低次元の状態・行動も復元する。[出典：Appendix A-C](../../raw/papers/2304.08742v2.pdf)
+4. 元の入力を復元できたかを評価する再構成損失と、潜在分布を固定Gaussian priorへ近づけるKL項を計算する。損失は「再構成損失 + β × KL項」。KL項は対象デモへ近づける項ではない。[出典：§III-C、式(1)、Appendix A-C](../../raw/papers/2304.08742v2.pdf)
+5. 損失から勾配を計算し、encoderとdecoderの両方の重みを更新する。別のbatchでも繰り返す。サンプリングを通してencoderへ勾配を伝える仕組みがreparameterization trickである。[出典：Algorithm 1](../../raw/papers/2304.08742v2.pdf)、[VAE原論文§2.4、Algorithm 1](../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+
+```text
+既存の記録 (状態s, 行動a) ──────────────────┐
+          ↓ encoder                       │ 復元の正解
+       潜在分布 → z_sa                      │
+                    ↓ decoder             │
+              (復元したs, 復元したa) ← 比較 ┘
+                    ↓ 再構成損失 + β × KL項
+             encoderとdecoderを更新
+```
+
+図は上記学習を簡略化したもの。説明用の架空例なら「物体に手を伸ばしている画像と、そのときの右向きの操作」を圧縮し、そこから同じ画像と操作を復元する練習に相当する。新たにロボットを動かして正解を集める手順ではない。[手順の出典：§III-C、Algorithm 1](../../raw/papers/2304.08742v2.pdf)
+
+学習後は同じencoderで既存データと対象デモを表現し、e = [z_sa,a] の距離で検索する。decoderは復元を通してencoderを学習させる役割があり、検索時の距離計算には使わない。復元できる表現を類似性の比較に使う設計だが、タスク上の有用性と距離が必ず一致する保証はない。[出典：§III-C–D・V](../../raw/papers/2304.08742v2.pdf)
 
 ## 3. 何をクエリにするのか
 
