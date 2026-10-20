@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/temp/nasiriany_2023_sailor.pdf"
+                "file": "raw/papers/zhao_2023_act.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "nasiriany_2023_sailor"
+              "title": "zhao_2023_act"
             }
           }
         ]
@@ -200,6 +200,7 @@
   },
   "active": "faf83b35fb780155",
   "lastOpenFiles": [
+    "raw/temp/nasiriany_2023_sailor.pdf",
     "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
     "raw/papers/zhao_2023_act.pdf",
     "raw/papers/sohn_2015_cvae.pdf",
@@ -219,7 +220,6 @@
     "raw/temp/tfds_aloha_mobile.md",
     "raw/temp/mobile_aloha_constants.py",
     "raw/temp/mobile_aloha_project.html",
-    "raw/temp/mobile_aloha_record_episodes.py",
     "wiki/sources/zhao_2023_act.md",
     "wiki/sources/pomerleau_1988_alvinn.md",
     "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
