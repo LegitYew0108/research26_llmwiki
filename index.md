@@ -12,7 +12,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
-updated: 2026-10-20
+updated: 2026-10-21
 ---
 
 # 目次
@@ -117,6 +117,7 @@ updated: 2026-10-20
 - [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval_augmented_imitation_learning.md)
 - [Subsequence DTW：部分軌跡の時間対応を取る検索](wiki/concepts/subsequence_dynamic_time_warping.md)
 
+- [ACTのCVAE：KL項と正解情報への依存](wiki/concepts/act_cvae_kl_regularization.md)
 - [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/act_infer_z.md)
 
 - [Bilateral Controlに基づく模倣学習](wiki/concepts/bilateral_control_based_imitation_learning.md)
@@ -138,6 +139,8 @@ updated: 2026-10-20
 - [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
 
 ## 日次ログ一覧
+
+- [2026-10-21](log/daily/daily_20261021.md)
 
 - [2026-10-20](log/daily/daily_20261020.md)
 
