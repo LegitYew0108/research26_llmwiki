@@ -4,11 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "52f387e96daadfe9",
+        "id": "53821f267340e4ab",
         "type": "tabs",
         "children": [
           {
-            "id": "faf83b35fb780155",
+            "id": "1be8791edf6a9c25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/sources/zhao_2023_act.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "zhao_2023_act"
+            }
+          },
+          {
+            "id": "04158bba9a23cd68",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "raw/papers/zhao_2023_act.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "zhao_2023_act"
+            }
+          },
+          {
+            "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -19,7 +45,8 @@
               "title": "zhao_2023_act"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,7 +210,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 378.67578125
+    "width": 378.67578125,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,45 +226,45 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "faf83b35fb780155",
+  "active": "04158bba9a23cd68",
   "lastOpenFiles": [
-    "raw/temp/nasiriany_2023_sailor.pdf",
-    "raw/temp/tang_2024_real_world_robot_rl_survey.pdf",
-    "raw/papers/zhao_2023_act.pdf",
-    "raw/papers/sohn_2015_cvae.pdf",
-    "raw/papers/kernel_function_for_angle_testing.pdf",
-    "raw/papers/2508.01131v2.pdf",
-    "raw/papers/2507.03285v3.pdf",
-    "raw/papers/2304.08742v2.pdf",
-    "raw/papers/2401.17698v1.pdf",
-    "log/daily/daily_20261020.md",
+    "wiki/sources/kumar_2025_collage.md",
+    "wiki/sources/du_2023_behavior_retrieval.md",
+    "wiki/concepts/subsequence_dynamic_time_warping.md",
+    "wiki/concepts/retrieval_based_imitation_data_selection.md",
+    "wiki/concepts/retrieval_augmented_imitation_learning.md",
+    "wiki/concepts/compounding_error.md",
+    "wiki/concepts/behavior_retrieval_vae_search.md",
+    "wiki/concepts/act_cvae_kl_regularization.md",
+    "raw/temp/tfds_aloha_mobile.md",
+    "raw/temp/research_retrieval_imitation_20261017.md",
     "raw/temp/research_mobile_aloha_datasets_20261020.md",
+    "raw/temp/research_faiss_20261017.md",
+    "raw/temp/pari_vinn_abstract.html",
+    "raw/temp/nasiriany_2023_sailor.pdf",
+    "raw/temp/mobile_aloha_record_episodes.py",
+    "raw/temp/mobile_aloha_real_env.py",
+    "raw/temp/mobile_aloha_project.html",
+    "raw/temp/mobile_aloha_constants.py",
+    "raw/temp/lin_2024_flowretrieval.html",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
     "raw/temp/lerobot_aloha_mobile_wash_pan_card.md",
     "raw/temp/lerobot_aloha_mobile_shrimp_card.md",
     "raw/temp/lerobot_aloha_mobile_elevator_card.md",
     "raw/temp/lerobot_aloha_mobile_chair_card.md",
     "raw/temp/lerobot_aloha_mobile_cabinet_card.md",
-    "raw/temp/tfds_aloha_mobile.md",
-    "raw/temp/mobile_aloha_constants.py",
-    "raw/temp/mobile_aloha_project.html",
-    "wiki/sources/zhao_2023_act.md",
-    "wiki/sources/pomerleau_1988_alvinn.md",
-    "wiki/sources/zhang_2025_memory_mosaics_at_scale.md",
-    "wiki/concepts/conditional_variational_autoencoder.md",
-    "artifacts/retrieval_results_comparison.md",
-    "index.md",
-    "artifacts/sailor/slide.png",
-    "artifacts/sailor/speaker_notes.md",
+    "raw/temp/hejna_remix_proceedings.html",
+    "raw/temp/faiss_metrics_20261017.html",
+    "raw/temp/faiss_indexes_20261017.html",
+    "log/lint/lint_20261017.md",
+    "log/daily/daily_20261021.md",
+    "log/daily/daily_20261020.md",
     "log/daily/daily_20261019.md",
-    "artifacts/behavior_retrieval/slide.png",
-    "artifacts/behavior_retrieval/speaker_notes.md",
-    "conflict-files-obsidian-git.md",
-    "wiki/concepts/behavior_cloning.md",
+    "log/daily/daily_20261018.md",
     "log/daily/daily_20261017.md",
-    "wiki/sources/kumar_2025_collage.md",
-    "wiki/sources/du_2023_behavior_retrieval.md",
-    "wiki/concepts/subsequence_dynamic_time_warping.md",
-    "wiki/concepts/retrieval_based_imitation_data_selection.md"
+    "artifacts/sailor/speaker_notes.md",
+    "artifacts/sailor/slide.png",
+    "artifacts/retrieval_results_comparison.md",
+    "artifacts/behavior_retrieval/slide.png"
   ]
 }
