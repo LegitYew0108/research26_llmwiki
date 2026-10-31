@@ -6,7 +6,7 @@ sources:
   - ../../raw/temp/osa_2018_imitation_learning_survey.pdf
   - ../../raw/temp/ross_2011_dagger.pdf
   - ../../raw/papers/zhao_2023_act.pdf
-  - ../../raw/temp/chi_2023_diffusion_policy.pdf
+  - ../../raw/papers/chi_2023_diffusion_policy.pdf
   - ../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../raw/temp/luo_2024_serl.pdf
   - ../../raw/temp/luo_2024_hil_serl.pdf
@@ -24,7 +24,7 @@ updated: 2026-10-31
 | Osa et al., An Algorithmic Perspective on Imitation Learning（2018） | BCとIRLの違い、デモの表現、学習の分類。[§2–5](../../raw/temp/osa_2018_imitation_learning_survey.pdf) |
 | Ross et al., DAgger（2011） | 学習者の行動が訪問状態を変えること、expertによる追加ラベルとデータ集約。[§1–3](../../raw/temp/ross_2011_dagger.pdf) |
 | Zhao et al., ACT（2023） | 双腕テレオペ、action chunk、CVAE、temporal ensembling。[§III–IV](../../raw/papers/zhao_2023_act.pdf)／[既存要約](../sources/zhao_2023_act.md) |
-| Chi et al., Diffusion Policy（2023初稿、保存版v5） | 観測を条件とするdiffusion modelによる行動列生成とreceding horizon control。[§3](../../raw/temp/chi_2023_diffusion_policy.pdf) |
+| Chi et al., Diffusion Policy（2023初稿、保存版v5） | 観測を条件とするdiffusion modelによる行動列生成とreceding horizon control。[§3](../../raw/papers/chi_2023_diffusion_policy.pdf)／[取り込み済み要約](../sources/chi_2023_diffusion_policy.md) |
 
 まず[BC](behavior_cloning.md)と[Compounding Error](compounding_error.md)を確認し、ACTとDiffusion Policyの行動列予測を読むと、単一時刻の回帰と系列出力の関係を整理できる。この順序は上記資料に基づく編集上の判断。
 
@@ -39,3 +39,6 @@ SERLとHIL-SERLは、デモ利用や人間介入と実機manipulationのRLを理
 - [模倣学習と強化学習の基本](imitation_and_reinforcement_learning.md)
 - [検索による模倣学習データ選択の関連研究](imitation_data_selection_related_work.md)
 - [ACTのためのCVAE学習ガイド](cvae_for_act_reading_guide.md)
+
+- [SERL論文要約：デモを併用する実機RLの構成と結果](../sources/luo_2024_serl.md)
+- [デモを併用する実機RL：学習とデータの流れ](demonstration_augmented_robot_rl.md)

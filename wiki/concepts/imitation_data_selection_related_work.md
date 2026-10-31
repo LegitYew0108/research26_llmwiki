@@ -39,3 +39,5 @@ updated: 2026-10-31
 
 - [検索による模倣学習データ選択](retrieval_based_imitation_data_selection.md)
 - [Behavior Retrievalの要約](../sources/du_2023_behavior_retrieval.md)
+
+- [Diffusion Policy：ノイズから行動列を生成するBC](diffusion_policy.md)

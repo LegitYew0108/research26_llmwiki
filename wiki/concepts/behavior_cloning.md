@@ -8,7 +8,7 @@ sources:
   - ../../raw/temp/ross_2011_dagger.pdf
   - ../../raw/papers/zhao_2023_act.pdf
   - ../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
-updated: 2026-10-17
+updated: 2026-10-31
 ---
 
 # Behavior Cloning：学習方法と分布シフト
@@ -50,3 +50,5 @@ ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する�
 - [IL：自分の理解](<../../mind/IL/IL-Imitation Learning(模倣学習).md>)
 
 - [Behavior Retrieval：状態・行動の検索によるBCデータ選択](../sources/du_2023_behavior_retrieval.md)
+
+- [Diffusion Policy：ノイズから行動列を生成するBC](diffusion_policy.md)

@@ -3,6 +3,7 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/temp/luo_2024_serl.pdf
   - raw/temp/nasiriany_2023_sailor.pdf
   - raw/papers/2304.08742v2.pdf
   - raw/papers/2508.01131v2.pdf
@@ -10,6 +11,7 @@ sources:
   - raw/papers/2507.03285v3.pdf
   - raw/papers/kernel_function_for_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
+  - raw/papers/chi_2023_diffusion_policy.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
@@ -87,6 +89,10 @@ updated: 2026-10-31
 
 ## 取り込み済みの論文
 
+- [SERL：Sample-Efficient Robotic Reinforcement Learning](wiki/sources/luo_2024_serl.md) — [一次資料（arXiv v4）](raw/temp/luo_2024_serl.pdf)
+
+- [Diffusion Policy：Action Diffusionによる模倣学習（保存版v5）](wiki/sources/chi_2023_diffusion_policy.md) — [一次資料](raw/papers/chi_2023_diffusion_policy.pdf)
+
 - [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/nasiriany_2023_sailor.md) — [一次資料](raw/temp/nasiriany_2023_sailor.pdf)
 
 - [Behavior Retrieval：少数デモによる既存データ検索とBC](wiki/sources/du_2023_behavior_retrieval.md) — [一次資料（v2）](raw/papers/2304.08742v2.pdf)
@@ -106,6 +112,10 @@ updated: 2026-10-31
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/demonstration_augmented_robot_rl.md)
+
+- [Diffusion Policy：ノイズ予測から行動列を生成する仕組み](wiki/concepts/diffusion_policy.md)
 
 - [Skill-based Imitation Learning：skill表現と階層方策](wiki/concepts/skill_based_imitation_learning.md)
 

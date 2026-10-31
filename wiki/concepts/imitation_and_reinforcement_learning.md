@@ -12,7 +12,7 @@ sources:
   - ../../raw/temp/kober_2013_robot_rl_survey.pdf
   - ../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../raw/papers/zhao_2023_act.pdf
-  - ../../raw/temp/chi_2023_diffusion_policy.pdf
+  - ../../raw/papers/chi_2023_diffusion_policy.pdf
   - ../../raw/temp/luo_2024_serl.pdf
   - ../../raw/temp/luo_2024_hil_serl.pdf
 updated: 2026-10-31
@@ -57,7 +57,7 @@ $$
 \|\pi_\theta(o_i)-a_i\|^2.
 $$
 
-$\theta$ は方策モデルのパラメータ。ただし、BCの損失は二乗誤差だけではない。行動の確率分布や行動列を学ぶ構成もあり、Diffusion Policyは観測を条件とするdiffusion modelで行動列を生成する。ACTも行動列を学習する。**BCは単一のネットワーク構造や、一時刻の行動予測だけを指す名前ではない。** [論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Diffusion Policy §3](../../raw/temp/chi_2023_diffusion_policy.pdf)、[ACT §IV](../../raw/papers/zhao_2023_act.pdf)
+$\theta$ は方策モデルのパラメータ。ただし、BCの損失は二乗誤差だけではない。行動の確率分布や行動列を学ぶ構成もあり、Diffusion Policyは観測を条件とするdiffusion modelで行動列を生成する。ACTも行動列を学習する。**BCは単一のネットワーク構造や、一時刻の行動予測だけを指す名前ではない。** [論文：Osaら §3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Diffusion Policy §3](../../raw/papers/chi_2023_diffusion_policy.pdf)、[ACT §IV](../../raw/papers/zhao_2023_act.pdf)
 
 ### なぜお手本に合うだけでは失敗するのか
 
@@ -162,3 +162,8 @@ Web記事の閲覧日は2026-10-03。参照記録は `raw/temp/` に保存し、
 ## BCとALVINNの関連資料
 
 [BCの概念ページ](behavior_cloning.md)では、教師あり学習の目的と実行時の分布シフトを整理した。[ALVINNの論文要約](../sources/pomerleau_1988_alvinn.md)は、人工道路画像から旋回方向を学んで実車へ適用した例を扱う。このNIPS 1988版では、人間の運転デモによる適応的学習と回復例の収集は将来構想として述べられている。[出典：ALVINN、pp.307–308・311](../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
+
+- [SERL論文要約：デモを併用する実機RLの構成と結果](../sources/luo_2024_serl.md)
+- [デモを併用する実機RL：学習とデータの流れ](demonstration_augmented_robot_rl.md)
+
+- [Diffusion Policy：ノイズ予測から行動列を生成する仕組み](diffusion_policy.md)
