@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/temp/ross_2011_dagger.pdf"
+                "file": "raw/temp/osa_2018_imitation_learning_survey.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "ross_2011_dagger"
+              "title": "osa_2018_imitation_learning_survey"
             }
           }
         ]
@@ -201,6 +201,7 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "raw/temp/ross_2011_dagger.pdf",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
@@ -222,7 +223,6 @@
     "wiki/sources/reinforcement_learning",
     "wiki/sources/imitation_learning/buamanee_2024_biact.md",
     "wiki/sources/generative_models/sohn_2015_cvae.md",
-    "wiki/sources/generative_models",
     "wiki/sources/retrieval/nasiriany_2023_sailor.md",
     "wiki/sources/retrieval/du_2023_behavior_retrieval.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
