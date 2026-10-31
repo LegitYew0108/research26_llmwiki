@@ -228,6 +228,8 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "log/daily/daily_20261031.md",
+    "log/lint/lint_20261031.md",
     "wiki/sources/kumar_2025_collage.md",
     "wiki/sources/du_2023_behavior_retrieval.md",
     "wiki/concepts/subsequence_dynamic_time_warping.md",
@@ -262,9 +264,7 @@
     "log/daily/daily_20261019.md",
     "log/daily/daily_20261018.md",
     "log/daily/daily_20261017.md",
-    "artifacts/sailor/speaker_notes.md",
     "artifacts/sailor/slide.png",
-    "artifacts/retrieval_results_comparison.md",
     "artifacts/behavior_retrieval/slide.png"
   ]
 }
