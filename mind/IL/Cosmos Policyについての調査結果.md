@@ -17,12 +17,12 @@ Researchとして候補資料を保存。2026-10-31に保存PDFを[論文要約]
 **Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning** — Moo Jin Kimほか、NVIDIA・Stanford、ICLR 2026。
 
 - [arXiv書誌ページ](https://arxiv.org/abs/2601.16163)：初回公開2026-01-22。
-- [保存PDF（arXiv v1、22ページ）](../papers/kim_2026_cosmos_policy.pdf)
+- [保存PDF（arXiv v1、22ページ）](kim_2026_cosmos_policy.pdf)
 - [ICLR版PDF](https://openreview.net/pdf?id=wPEIStHxYH)
 
-Cosmos-Predict2をロボットのデモで単一段階のpost-trainingにより適応する。行動・未来状態・価値をlatent framesとして扱い、動画モデルのアーキテクチャを変更せず、方策・world model・value functionを統合する。直接の行動生成に加え、候補の未来状態と価値を用いたmodel-based planningを行う。[出典：論文Abstract・Fig. 1](../papers/kim_2026_cosmos_policy.pdf)
+Cosmos-Predict2をロボットのデモで単一段階のpost-trainingにより適応する。行動・未来状態・価値をlatent framesとして扱い、動画モデルのアーキテクチャを変更せず、方策・world model・value functionを統合する。直接の行動生成に加え、候補の未来状態と価値を用いたmodel-based planningを行う。[出典：論文Abstract・Fig. 1](kim_2026_cosmos_policy.pdf)
 
-論文報告の平均成功率はLIBERO 98.5%、RoboCasa 67.1%。実機ではALOHAの双腕操作を評価している。これらは当該論文の評価条件での結果であり、現時点の全手法に対する順位を示すものではない。[出典：論文Abstract](../papers/kim_2026_cosmos_policy.pdf)、[公式ページ保存版](nvidia_cosmos_policy_project_20261031.html)
+論文報告の平均成功率はLIBERO 98.5%、RoboCasa 67.1%。実機ではALOHAの双腕操作を評価している。これらは当該論文の評価条件での結果であり、現時点の全手法に対する順位を示すものではない。[出典：論文Abstract](kim_2026_cosmos_policy.pdf)、[公式ページ保存版](nvidia_cosmos_policy_project_20261031.html)
 
 ## 開発者による一次情報
 

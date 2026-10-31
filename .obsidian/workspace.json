@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/temp/pi_2025_pistar06.pdf"
+                "file": "raw/temp/osa_2018_imitation_learning_survey.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "pi_2025_pistar06"
+              "title": "osa_2018_imitation_learning_survey"
             }
           }
         ]
@@ -201,23 +201,28 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "raw/temp/pi_2026_pi07.pdf",
-    "mind/IL/robot_arm_sota_research_20261031.md",
+    "wiki/sources/imitation_learning/guo_2026_loopwam.md",
+    "raw/papers/guo_2026_loopwam.pdf",
+    "wiki/concepts/imitation_learning/pi_recap_and_pi07.md",
+    "wiki/sources/imitation_learning/pi_2026_pi07.md",
+    "wiki/sources/reinforcement_learning/pi_2025_pistar06.md",
+    "raw/papers/pi_2026_pi07.pdf",
+    "raw/papers/pi_2025_pistar06.pdf",
     "raw/temp/pi_2025_pistar06.pdf",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
-    "raw/temp/cosmos_policy_research_20261031.md",
+    "mind/IL/BC-Behavior Cloning.md",
+    "mind/IL/Cosmos Policyについての調査結果.md",
+    "raw/temp/pi_2026_pi07.pdf",
+    "mind/IL/robot_arm_sota_research_20261031.md",
     "raw/temp/guo_2026_loopwam.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/kober_2013_robot_rl_survey.pdf",
     "wiki/concepts/imitation_learning/robot_policy_evaluation_metrics.md",
     "raw/temp/ross_2011_dagger.pdf",
-    "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "wiki/concepts/imitation_learning/robot_learning_motivation.md",
-    "raw/papers/kim_2026_cosmos_policy.pdf",
     "wiki/concepts/imitation_learning/cosmos_policy.md",
     "wiki/sources/imitation_learning/kim_2026_cosmos_policy.md",
     "wiki/sources/reinforcement_learning/luo_2024_hil_serl.md",
-    "raw/papers/luo_2024_hil_serl.pdf",
     "index.md",
     "wiki/sources/imitation_learning/chi_2023_diffusion_policy.md",
     "wiki/sources/retrieval/kumar_2025_collage.md",
@@ -232,10 +237,6 @@
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
     "wiki/concepts/memory/associative_memory_and_kernel_regression.md",
     "wiki/concepts/vector_search/faiss_vector_search.md",
-    "wiki/concepts/imitation_learning/diffusion_policy.md",
-    "wiki/concepts/vector_search/probabilistic_routing_ks2.md",
-    "wiki/concepts/imitation_learning/behavior_cloning.md",
-    "wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]

@@ -18,7 +18,7 @@ updated: 2026-10-31
 
 ## SOTAの読み方
 
-タスク成功率は、対象タスク、ロボット、初期条件、既知／未知条件、学習データ、時間制限、介入の有無が異なると直接比較できない。成功率は指定条件で完了した割合であり、位置誤差の精度や実世界のあらゆる作業への対応能力とは別。以下の数値は異なる評価条件の代表例であり、手法全体の順位表ではない。[比較条件の具体例：HIL-SERL §4・6](luo_2024_hil_serl.pdf)、[Cosmos Policy §5・Appendix A.3](kim_2026_cosmos_policy.pdf)、[LoopWAM §4](guo_2026_loopwam.pdf)
+タスク成功率は、対象タスク、ロボット、初期条件、既知／未知条件、学習データ、時間制限、介入の有無が異なると直接比較できない。成功率は指定条件で完了した割合であり、位置誤差の精度や実世界のあらゆる作業への対応能力とは別。以下の数値は異なる評価条件の代表例であり、手法全体の順位表ではない。[比較条件の具体例：HIL-SERL §4・6](luo_2024_hil_serl.pdf)、[Cosmos Policy §5・Appendix A.3](kim_2026_cosmos_policy.pdf)、[LoopWAM §4](../../raw/papers/guo_2026_loopwam.pdf)
 
 | 方向 | 研究と確認結果 | 留保 |
 | --- | --- | --- |
@@ -27,9 +27,9 @@ updated: 2026-10-31
 | 汎用モデルの器用さと汎化 | π0.7（2026-04-16）：単一モデルが、洗濯物・エスプレッソ・箱組立などの既知作業で専門方策と同程度の性能。多様な衣類・箱組立ではthroughputも上回ると報告 | 主に著者独自評価。task-specific post-trainingなしは、対象作業の訓練データを使っていないという意味ではない。未知作業の実験とは分ける。 |
 | シミュレーションの高成功率 | Cosmos Policy（2026-01）：LIBERO 98.5%、RoboCasa 67.1%。実機ALOHAは93.6/100の達成度スコア | 論文報告時のSOTA。2026-10-31の全後続研究中の首位を保証しない。RoboCasaとRoboCasa365も同一評価ではない。 |
 
-出典：[HIL-SERL Table 1・§6](luo_2024_hil_serl.pdf)、[LoopWAM §4.2・Tables 1–3](guo_2026_loopwam.pdf)、[公式ランキング](https://robochallenge.ai/challenges)、[π0.7 §IX-A・Fig.6](../../raw/papers/pi_2026_pi07.pdf)、[Cosmos Policy Tables 1–3](kim_2026_cosmos_policy.pdf)。
+出典：[HIL-SERL Table 1・§6](luo_2024_hil_serl.pdf)、[LoopWAM §4.2・Tables 1–3](../../raw/papers/guo_2026_loopwam.pdf)、[公式ランキング](https://robochallenge.ai/challenges)、[π0.7 §IX-A・Fig.6](../../raw/papers/pi_2026_pi07.pdf)、[Cosmos Policy Tables 1–3](kim_2026_cosmos_policy.pdf)。
 
-LoopWAMは成功・不完全・失敗のrolloutを取り込むWorld-Action Model。失敗行動をそのまま模倣せず、失敗も未来観測の学習には使う。実機で3回の収集・学習を経て23.67%から43.33%へ改善した。報酬を扱うことだけを理由に、手順を一般的なactor-critic RLと同一視しない。[LoopWAM §3–4](guo_2026_loopwam.pdf)
+LoopWAMは成功・不完全・失敗のrolloutを取り込むWorld-Action Model。失敗行動をそのまま模倣せず、失敗も未来観測の学習には使う。実機で3回の収集・学習を経て23.67%から43.33%へ改善した。報酬を扱うことだけを理由に、手順を一般的なactor-critic RLと同一視しない。[LoopWAM §3–4](../../raw/papers/guo_2026_loopwam.pdf)
 
 π*0.6 / RECAP（2025）は、デモ・自律試行・人の修正を使ってVLAを改善する先行例。成功率とともに1時間あたりの成功作業数を評価し、難しい衣類・エスプレッソ作業で大きな改善を報告。π0.7での比較対象となる専門方策も含む。[RECAP §V-C・Figs.7–10](../../raw/papers/pi_2025_pistar06.pdf)、[π0.7 Fig.6](../../raw/papers/pi_2026_pi07.pdf)
 
@@ -49,7 +49,7 @@ LoopWAMは成功・不完全・失敗のrolloutを取り込むWorld-Action Model
 
 ## 保存資料と参照URL
 
-- [LoopWAM PDF](guo_2026_loopwam.pdf)：https://arxiv.org/pdf/2610.18873v1
+- [LoopWAM PDF](../../raw/papers/guo_2026_loopwam.pdf)：https://arxiv.org/pdf/2610.18873v1
 - [π0.7 PDF](../../raw/papers/pi_2026_pi07.pdf)：https://www.pi.website/download/pi07.pdf
 - [π*0.6 PDF](../../raw/papers/pi_2025_pistar06.pdf)：https://www.pi.website/download/pistar06.pdf
 - [RoboChallenge公式](https://robochallenge.ai/challenges)：Web検索でランキング掲載を確認。HTMLダウンロードは403のため未保存。

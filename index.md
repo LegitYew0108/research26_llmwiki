@@ -5,6 +5,7 @@ tags: [index]
 sources:
   - raw/papers/pi_2025_pistar06.pdf
   - raw/papers/pi_2026_pi07.pdf
+  - raw/papers/guo_2026_loopwam.pdf
   - raw/papers/luo_2024_hil_serl.pdf
   - raw/papers/luo_2024_serl.pdf
   - raw/papers/nasiriany_2023_sailor.pdf
@@ -27,8 +28,8 @@ updated: 2026-10-31
 
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
-- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](mind/IL/robot_arm_sota_research_20261031.md) — LoopWAMはtemp。π0.7・π*0.6は正式保存先へ移して取り込み済み。
-- [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
+- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](mind/IL/robot_arm_sota_research_20261031.md) — LoopWAMは[取り込み済み](wiki/sources/imitation_learning/guo_2026_loopwam.md)。π0.7・π*0.6も正式保存先へ移して取り込み済み。
+- [Cosmos Policy：論文・公式一次情報の調査記録](Cosmos%20Policyについての調査結果.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
 - [ミーティング記録](raw/meeting/)
 
 ### 模倣学習に関連する資料の整理
@@ -110,6 +111,8 @@ updated: 2026-10-31
 ### 模倣学習・方策
 
 - [π0.7：多様なpromptで操る汎用VLA](wiki/sources/imitation_learning/pi_2026_pi07.md)
+
+- [LoopWAM：実行時の成功・失敗から改善するWorld-Action Model](wiki/sources/imitation_learning/guo_2026_loopwam.md)
 
 - [Cosmos Policy：動画モデルの追加学習によるロボット制御とplanning](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)
 

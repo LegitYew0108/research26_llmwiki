@@ -5,6 +5,7 @@ tags: [robotics, evaluation, benchmark, success-rate, generalization]
 sources:
   - ../../../raw/papers/pi_2025_pistar06.pdf
   - ../../../raw/papers/pi_2026_pi07.pdf
+  - ../../../raw/papers/guo_2026_loopwam.pdf
   - ../../../raw/papers/luo_2024_hil_serl.pdf
   - ../../../raw/papers/kim_2026_cosmos_policy.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
@@ -43,7 +44,13 @@ RECAPは1時間あたりの成功作業数をthroughputとして評価し、成�
 
 100回中100回の成功は、将来の失敗率が0である保証ではない。学習曲線に人の介入で得た成功を含む場合、最終方策の評価結果と分ける。また、学習時間と初期デモ収集・準備を含めた総工数も分ける。[HIL-SERL §4・6・Fig.5・Table 1](../../../raw/papers/luo_2024_hil_serl.pdf)
 
+## LoopWAMに見る集計値と個別条件
+
+LoopWAMのTable30-V2では全体成功率43.33%とscore 56.80を別々に報告する。全体で掲載比較中の首位でも、ARX5の成功率は55.71%でVLA-DM0.5の58.57%を下回る。RoboCasa365でも全体49.5%に対して未知複合タスクは14.9%であり、全体値と汎化条件別の値を分けて読む。[LoopWAM Tables 1・3](../../../raw/papers/guo_2026_loopwam.pdf)
+
 ## 関連ページ
+
+- [LoopWAM](../../sources/imitation_learning/guo_2026_loopwam.md)
 
 - [ロボット学習の動機](robot_learning_motivation.md)
 - [HIL-SERL](../../sources/reinforcement_learning/luo_2024_hil_serl.md)
