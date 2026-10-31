@@ -6,7 +6,6 @@ sources:
   - ../../../raw/temp/osa_2018_imitation_learning_survey.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
-  - ../../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../../raw/papers/luo_2024_serl.pdf
   - ../../../raw/papers/luo_2024_hil_serl.pdf
 updated: 2026-10-31
@@ -28,7 +27,7 @@ updated: 2026-10-31
 
 ## デモを使うRLとの区別
 
-固定データから報酬を基準に方策を学ぶoffline RLは、expert行動を直接教師信号にするBCと目的が異なる。データが固定されていることだけではBCかRLかを判別できない。[Offline RL tutorial §2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+デモを使っていても、報酬に基づく学習を行う場合はBCと同じ手順ではない。HIL-SERLは初期デモと人の介入をRLに組み込む隣接例である。[HIL-SERL §III](../../../raw/papers/luo_2024_hil_serl.pdf)
 
 SERLとHIL-SERLは、デモ利用や人間介入と実機manipulationのRLを理解する隣接資料として残す。デモを使うこと自体を、学習全体がBCである根拠にはしない。[SERL §4](../../../raw/papers/luo_2024_serl.pdf)、[HIL-SERL 手法・実験](../../../raw/papers/luo_2024_hil_serl.pdf)
 
