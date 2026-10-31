@@ -107,6 +107,8 @@ model-based RLは、環境の変化などを予測するmodelを利用し、mode
 
 ### 実機で学ぶとは限らない
 
+オンラインRLは学習中に環境から新しい経験を集め、offline RLは追加のオンライン収集をせず固定データから学習する。後者も報酬を用いるので、固定データでの学習という条件だけではBCと同じにならない。[Offline RL tutorial §2.1–2.2](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+
 
 off-policyとofflineも別の区別である。off-policyは、学習対象の方策とは異なる方策で収集した経験も利用できるという性質。off-policyの方法でもオンラインで新たな経験を集めることはできる。offlineは、学習中に追加収集しないというデータ利用の設定であり、通常のoff-policy手法がそのまま固定データだけでうまく学べるとは限らない。[論文：Offline RL tutorial §1・2](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 

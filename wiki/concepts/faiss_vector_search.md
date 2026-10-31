@@ -6,6 +6,8 @@ sources:
   - ../../raw/temp/faiss_indexes_20261017.html
   - ../../raw/temp/faiss_metrics_20261017.html
   - ../../raw/temp/faiss_getting_started_20261017.html
+  - ../../raw/papers/2304.08742v2.pdf
+  - ../../raw/papers/kernel_function_for_angle_testing.pdf
 updated: 2026-10-31
 ---
 
