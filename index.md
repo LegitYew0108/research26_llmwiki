@@ -3,7 +3,7 @@ title: 目次
 type: index
 tags: [index]
 sources:
-  - raw/temp/luo_2024_serl.pdf
+  - raw/papers/luo_2024_serl.pdf
   - raw/temp/nasiriany_2023_sailor.pdf
   - raw/papers/2304.08742v2.pdf
   - raw/papers/2508.01131v2.pdf

@@ -13,7 +13,7 @@ sources:
   - ../../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
-  - ../../../raw/temp/luo_2024_serl.pdf
+  - ../../../raw/papers/luo_2024_serl.pdf
   - ../../../raw/temp/luo_2024_hil_serl.pdf
 updated: 2026-10-31
 ---
@@ -124,7 +124,7 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 | 学習中の追加収集 | 固定データだけでも学習できる | onlineでは収集し、offlineでは収集しない |
 | 主な難しさ | デモの収集・品質・状況の網羅性、実行時の分布シフト | 探索、報酬設計、credit assignment、データ効率。offlineでは分布シフトも問題 |
 
-報酬を学習して与える実機RLの具体例は、[SERL §4.2](../../../raw/temp/luo_2024_serl.pdf)。デモ収集と観測の制約は[Osaら §2・5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、実機RLの制約は[Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)を参照。
+報酬を学習して与える実機RLの具体例は、[SERL §4.2](../../../raw/papers/luo_2024_serl.pdf)。デモ収集と観測の制約は[Osaら §2・5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、実機RLの制約は[Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)を参照。
 
 ## 「expertとの差を報酬にしたRL」と考えられるか
 
@@ -140,9 +140,9 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 ## ロボットでの学習の制約と組み合わせの具体例
 
-ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../../raw/temp/luo_2024_serl.pdf)、[ACT §III・IV](../../../raw/papers/zhao_2023_act.pdf)、[DAgger・Introduction](../../../raw/temp/ross_2011_dagger.pdf)
+ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../../raw/papers/luo_2024_serl.pdf)、[ACT §III・IV](../../../raw/papers/zhao_2023_act.pdf)、[DAgger・Introduction](../../../raw/temp/ross_2011_dagger.pdf)
 
-模倣学習とRLは組み合わせられる。デモで方策を初期化してからRLで改善する、デモをRLの経験データとして利用する、学習中に人が修正介入する、といった構成がある。ただし、**デモを使っただけではBCを実施したことにはならない**。行動を教師として合わせているのか、報酬に基づく更新のデータとして使っているのかを確認する必要がある。[論文：Osaら §1・5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[SERL §4.1](../../../raw/temp/luo_2024_serl.pdf)、[HIL-SERL・手法](../../../raw/temp/luo_2024_hil_serl.pdf)
+模倣学習とRLは組み合わせられる。デモで方策を初期化してからRLで改善する、デモをRLの経験データとして利用する、学習中に人が修正介入する、といった構成がある。ただし、**デモを使っただけではBCを実施したことにはならない**。行動を教師として合わせているのか、報酬に基づく更新のデータとして使っているのかを確認する必要がある。[論文：Osaら §1・5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[SERL §4.1](../../../raw/papers/luo_2024_serl.pdf)、[HIL-SERL・手法](../../../raw/temp/luo_2024_hil_serl.pdf)
 
 
 ## 次に読む資料
