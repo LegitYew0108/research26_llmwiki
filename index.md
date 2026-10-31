@@ -152,6 +152,7 @@ updated: 2026-10-31
 - [π*0.6からπ0.7へ：経験による改善と多様な条件付け](wiki/concepts/imitation_learning/pi_recap_and_pi07.md)
 
 - [ロボット方策の評価指標とSOTAの読み方](wiki/concepts/imitation_learning/robot_policy_evaluation_metrics.md)
+- [高成功率ロボット方策のデータ効率を比較する](wiki/concepts/imitation_learning/robot_policy_data_efficiency.md)
 
 - [ロボットの動作に機械学習を使う動機](wiki/concepts/imitation_learning/robot_learning_motivation.md)
 
