@@ -11,30 +11,15 @@
             "id": "1be8791edf6a9c25",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "wiki/sources/zhao_2023_act.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "zhao_2023_act"
-            }
-          },
-          {
-            "id": "27ea49b3ebd7f7e5",
-            "type": "leaf",
-            "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf"
+                "file": "raw/temp/ross_2011_dagger.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "kingma_2013_auto_encoding_variational_bayes"
+              "title": "ross_2011_dagger"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -214,8 +199,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0bb1aae2cd8c6dfc",
+  "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "raw/temp/osa_2018_imitation_learning_survey.pdf",
+    "raw/temp/levine_2020_offline_rl_tutorial.pdf",
+    "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
+    "wiki/concepts/imitation_learning/robot_learning_motivation.md",
     "raw/papers/kim_2026_cosmos_policy.pdf",
     "wiki/concepts/imitation_learning/cosmos_policy.md",
     "wiki/sources/imitation_learning/kim_2026_cosmos_policy.md",
@@ -236,12 +225,9 @@
     "wiki/sources/generative_models",
     "wiki/sources/retrieval/nasiriany_2023_sailor.md",
     "wiki/sources/retrieval/du_2023_behavior_retrieval.md",
-    "wiki/sources/retrieval",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
-    "wiki/sources/vector_search",
     "wiki/sources/imitation_learning/zhao_2023_act.md",
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
-    "wiki/sources/imitation_learning",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
     "wiki/concepts/memory/associative_memory_and_kernel_regression.md",
     "wiki/concepts/vector_search/faiss_vector_search.md",
@@ -251,7 +237,6 @@
     "wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md",
     "wiki/concepts/generative_models/variational_autoencoder.md",
     "wiki/concepts/generative_models/cvae_for_act_reading_guide.md",
-    "wiki/concepts/generative_models/conditional_variational_autoencoder.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
