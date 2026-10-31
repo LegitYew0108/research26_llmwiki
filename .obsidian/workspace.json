@@ -25,12 +25,14 @@
             "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/temp/ross_2011_dagger.pdf"
+                "file": "wiki/concepts/retrieval_augmented_imitation_learning.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ross_2011_dagger"
+              "icon": "lucide-file",
+              "title": "retrieval_augmented_imitation_learning"
             }
           }
         ],
@@ -216,14 +218,24 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "wiki/concepts/retrieval_based_imitation_data_selection.md",
+    "wiki/concepts/robot_arm_imitation_learning_reading_guide.md",
+    "wiki/concepts/skill_based_imitation_learning.md",
+    "wiki/concepts/subsequence_dynamic_time_warping.md",
+    "wiki/concepts/variational_autoencoder.md",
+    "wiki/sources/nasiriany_2023_sailor.md",
+    "raw/temp/ross_2011_dagger.pdf",
+    "wiki/concepts/demonstration_augmented_robot_rl.md",
+    "wiki/sources/luo_2024_serl.md",
+    "wiki/concepts/diffusion_policy.md",
+    "wiki/sources/chi_2023_diffusion_policy.md",
+    "raw/papers/chi_2023_diffusion_policy.pdf",
     "raw/temp/luo_2024_serl.pdf",
     "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "raw/temp/chi_2023_diffusion_policy.pdf",
-    "raw/temp/ross_2011_dagger.pdf",
     "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
     "wiki/entities/mobile_aloha_dataset.md",
     "raw/temp/tfds_aloha_mobile_snapshot.txt",
-    "wiki/concepts/robot_arm_imitation_learning_reading_guide.md",
     "wiki/concepts/imitation_data_selection_related_work.md",
     "wiki/concepts/faiss_vector_search.md",
     "wiki/concepts/cvae_for_act_reading_guide.md",
@@ -238,20 +250,10 @@
     "log/lint/lint_20261031.md",
     "wiki/sources/kumar_2025_collage.md",
     "wiki/sources/du_2023_behavior_retrieval.md",
-    "wiki/concepts/subsequence_dynamic_time_warping.md",
-    "wiki/concepts/retrieval_based_imitation_data_selection.md",
     "wiki/concepts/retrieval_augmented_imitation_learning.md",
     "wiki/concepts/compounding_error.md",
-    "wiki/concepts/behavior_retrieval_vae_search.md",
-    "wiki/concepts/act_cvae_kl_regularization.md",
-    "raw/temp/tfds_aloha_mobile.md",
-    "raw/temp/research_retrieval_imitation_20261017.md",
     "raw/temp/pari_vinn_abstract.html",
     "raw/temp/nasiriany_2023_sailor.pdf",
-    "raw/temp/mobile_aloha_record_episodes.py",
-    "raw/temp/mobile_aloha_real_env.py",
-    "raw/temp/lerobot_aloha_mobile_wash_pan_card.md",
-    "raw/temp/lerobot_aloha_mobile_elevator_card.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
