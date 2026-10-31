@@ -25,12 +25,14 @@
             "id": "04158bba9a23cd68",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "icon": "lucide-file",
+              "title": "lerobot_aloha_mobile_wipe_wine_card"
             }
           },
           {
@@ -228,6 +230,12 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "raw/temp/lerobot_aloha_mobile_shrimp_card.md",
+    "raw/temp/research_mobile_aloha_datasets_20261020.md",
+    "raw/temp/research_cvae_for_act_20261008.md",
+    "raw/temp/research_faiss_20261017.md",
+    "raw/temp/lerobot_aloha_mobile_cabinet_card.md",
+    "raw/papers/zhao_2023_act.pdf",
     "log/daily/daily_20261031.md",
     "log/lint/lint_20261031.md",
     "wiki/sources/kumar_2025_collage.md",
@@ -240,8 +248,6 @@
     "wiki/concepts/act_cvae_kl_regularization.md",
     "raw/temp/tfds_aloha_mobile.md",
     "raw/temp/research_retrieval_imitation_20261017.md",
-    "raw/temp/research_mobile_aloha_datasets_20261020.md",
-    "raw/temp/research_faiss_20261017.md",
     "raw/temp/pari_vinn_abstract.html",
     "raw/temp/nasiriany_2023_sailor.pdf",
     "raw/temp/mobile_aloha_record_episodes.py",
@@ -251,19 +257,15 @@
     "raw/temp/lin_2024_flowretrieval.html",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
     "raw/temp/lerobot_aloha_mobile_wash_pan_card.md",
-    "raw/temp/lerobot_aloha_mobile_shrimp_card.md",
     "raw/temp/lerobot_aloha_mobile_elevator_card.md",
     "raw/temp/lerobot_aloha_mobile_chair_card.md",
-    "raw/temp/lerobot_aloha_mobile_cabinet_card.md",
     "raw/temp/hejna_remix_proceedings.html",
     "raw/temp/faiss_metrics_20261017.html",
-    "raw/temp/faiss_indexes_20261017.html",
     "log/lint/lint_20261017.md",
     "log/daily/daily_20261021.md",
     "log/daily/daily_20261020.md",
     "log/daily/daily_20261019.md",
     "log/daily/daily_20261018.md",
-    "log/daily/daily_20261017.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
