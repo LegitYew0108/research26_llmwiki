@@ -3,8 +3,8 @@ title: "Behavior RetrievalのVAE：基礎から検索手順まで"
 type: concept
 tags: [VAE, representation-learning, retrieval, imitation-learning, behavior-cloning]
 sources:
+  - ../../../raw/papers/sohn_2015_cvae.pdf
   - ../../../raw/papers/2304.08742v2.pdf
-  - ../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
 updated: 2026-10-31
 ---
 
@@ -30,7 +30,7 @@ VAEのencoderを学習
 
 ## 1. AutoencoderからVAEへ
 
-Autoencoderは、入力をencoderでベクトルに変え、decoderで元の入力へ戻す構成として理解できる。VAEではencoderが潜在変数の分布を出し、その分布から取り出したベクトルをdecoderに渡す。典型的には、入力ごとの平均 μ と標準偏差 σ を求め、z = μ + σ ⊙ ε（εは標準正規乱数）とする。[出典：VAE原論文§2–3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+Autoencoderは、入力をencoderでベクトルに変え、decoderで元の入力へ戻す構成として理解できる。VAEではencoderが潜在変数の分布を出し、その分布から取り出したベクトルをdecoderに渡す。典型的には、入力ごとの平均 μ と標準偏差 σ を求め、z = μ + σ ⊙ ε（εは標準正規乱数）とする。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ```text
 入力 x → encoder → 平均 μ・標準偏差 σ
@@ -40,7 +40,7 @@ Autoencoderは、入力をencoderでベクトルに変え、decoderで元の入�
                       入力の再構成
 ```
 
-学習は「元の入力を復元できるようにする再構成損失」と「入力ごとの潜在分布が事前分布から離れすぎないようにするKL項」を小さくする。再構成だけなら入力情報を保持することが優先され、KL項だけなら入力を区別しない分布になり得るため、両者の兼ね合いを取る。KL項は、正解デモと既存データの距離を直接縮める損失ではない。[出典：VAE原論文§2.2–3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+学習は「元の入力を復元できるようにする再構成損失」と「入力ごとの潜在分布が事前分布から離れすぎないようにするKL項」を小さくする。再構成だけなら入力情報を保持することが優先され、KL項だけなら入力を区別しない分布になり得るため、両者の兼ね合いを取る。KL項は、正解デモと既存データの距離を直接縮める損失ではない。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 潜在変数の各軸を「物体の位置」「進行方向」と読み替えるのは説明用のたとえにすぎず、そのような意味が各軸に対応するとは本論文から主張できない。Behavior Retrieval自体も、圧縮表現がタスク上重要な違いを捉えない可能性を限界として挙げる。[出典：§III-C・V](../../../raw/papers/2304.08742v2.pdf)
 
@@ -61,10 +61,10 @@ $$J_{VAE}=-\mathbb E_{q_\phi(z_{sa}|s,a)}[\log p_\theta(s,a|z_{sa})]+\beta D_{KL
 **入力した状態と行動そのものが、復元の正解になる。** 記録済みの行動もencoderへ入力する。状態から行動だけを予測する方策の学習は、検索後の別段階である。[出典：§III-C・E、Algorithm 1](../../../raw/papers/2304.08742v2.pdf)
 
 1. 大量の既存データ D_prior から、記録済みの状態・行動 (s,a) をbatchで取り出す。対象タスクの少数デモ D_t は、このVAE学習の教師として使うのではなく、後の検索で使う。[出典：Algorithm 1](../../../raw/papers/2304.08742v2.pdf)
-2. encoderへ (s,a) を入力し、潜在変数の分布を得る。Gaussian VAEの基本形では平均 μ と標準偏差 σ を出し、z_sa = μ + σ ⊙ ε でサンプリングする。[出典：§III-C、式(1)](../../../raw/papers/2304.08742v2.pdf)、[VAE原論文§2–3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+2. encoderへ (s,a) を入力し、潜在変数の分布を得る。Gaussian VAEの基本形では平均 μ と標準偏差 σ を出し、z_sa = μ + σ ⊙ ε でサンプリングする。[出典：§III-C、式(1)](../../../raw/papers/2304.08742v2.pdf)、[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 3. decoderへ z_sa を渡し、元の状態と行動の両方を復元する。画像を含む設定では画像も復元対象で、低次元の状態・行動も復元する。[出典：Appendix A-C](../../../raw/papers/2304.08742v2.pdf)
 4. 元の入力を復元できたかを評価する再構成損失と、潜在分布を固定Gaussian priorへ近づけるKL項を計算する。損失は「再構成損失 + β × KL項」。KL項は対象デモへ近づける項ではない。[出典：§III-C、式(1)、Appendix A-C](../../../raw/papers/2304.08742v2.pdf)
-5. 損失から勾配を計算し、encoderとdecoderの両方の重みを更新する。別のbatchでも繰り返す。サンプリングを通してencoderへ勾配を伝える仕組みがreparameterization trickである。[出典：Algorithm 1](../../../raw/papers/2304.08742v2.pdf)、[VAE原論文§2.4、Algorithm 1](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+5. 損失から勾配を計算し、encoderとdecoderの両方の重みを更新する。別のbatchでも繰り返す。サンプリングを通してencoderへ勾配を伝える仕組みがreparameterization trickである。[出典：Algorithm 1](../../../raw/papers/2304.08742v2.pdf)、[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ```text
 既存の記録 (状態s, 行動a) ──────────────────┐

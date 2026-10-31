@@ -4,8 +4,6 @@ type: concept
 tags: [CVAE, VAE, ACT, latent-variable, conditional-generation, ELBO]
 sources:
   - ../../../raw/papers/sohn_2015_cvae.pdf
-  - ../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
-  - ../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
 updated: 2026-10-31
 ---
@@ -15,7 +13,8 @@ updated: 2026-10-31
 ## 資料と読む順番
 
 読む順番は理解を助ける編集上の案内であり、研究方針ではない。CVAE原論文の[要約](../../sources/generative_models/sohn_2015_cvae.md)と[概念ページ](conditional_variational_autoencoder.md)を併用する。
-1. **VAEの復習**：[既存の日本語解説](variational_autoencoder.md)。encoderが平均・分散を出すこと、再構成損失、KL項、reparameterization trickを確認する。一次資料は[Auto-Encoding Variational Bayes（Kingma & Welling、2013）](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf) §2–3、および[An Introduction to Variational Autoencoders（2019）](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。後者は[公開本文](https://arxiv.org/html/1906.02691v3)でも読める。
+
+1. **VAEの復習**：[一般的なVAEの解説](variational_autoencoder.md)で、潜在分布、再構成損失とKL項、reparameterizationを確認する。式とモデルの定義は[CVAE原論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)で読める。
 2. **CVAEの原論文**：Sohn, Yan, Lee（NeurIPS 2015）、*Learning Structured Output Representation using Deep Conditional Generative Models*。[保存PDF](../../../raw/papers/sohn_2015_cvae.pdf) / [公式PDF](https://proceedings.neurips.cc/paper_files/paper/2015/file/8d55a249e6baa5c06772297520da2051-Paper.pdf)。§3でVAEを復習し、§4冒頭・式(4)–(5)・Fig.1で条件付き生成と学習を読む。直感には§5.1・Fig.3の「数字画像の一部から残りを生成する」実験が役立つ。画像の一部が同じでも、残りの形には複数の可能性がある。[出典：同論文§3–5.1](../../../raw/papers/sohn_2015_cvae.pdf)
 3. **ACTへの対応**：Zhao et al.（2023）、*Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware*。[既存PDF](../../../raw/papers/zhao_2023_act.pdf) / [公開ページ](https://arxiv.org/abs/2304.13705)。§IV-B、Fig.4、Algorithms 1–2、Appendix Cを読む。CVAE encoderと方策の構成、学習時と実行時の違いがまとまっている。[出典：ACT](../../../raw/papers/zhao_2023_act.pdf)
 
@@ -32,7 +31,7 @@ $$p_\theta(y\mid c)=\int p_\theta(y\mid c,z)p_\theta(z\mid c)\,dz.$$
 - **decoder $p_\theta(y\mid c,z)$**：条件と潜在変数から出力の分布を決める。
 - **encoder $q_\phi(z\mid c,y)$**：学習時に条件と正解出力を見て、潜在変数の事後分布を近似する。
 
-以上は[原論文§4・Fig.1・式(4)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)に基づく。$z$ は条件だけでは決まらない出力のばらつきを表すための変数だが、各成分に人が解釈できる意味が自動的に割り当てられる保証はない。[解説論文§1.1](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)
+以上は[原論文§4・Fig.1・式(4)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)に基づく。$z$ は条件だけでは決まらない出力のばらつきを表すための変数である。以下では各成分に人が解釈できる意味を割り当てず、モデルの変数として扱う。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ## 学習時と生成時
 
@@ -44,7 +43,7 @@ $$\mathcal J=-\mathbb E_{q_\phi(z\mid c,y)}[\log p_\theta(y\mid c,z)]+D_{\mathrm
 
 第1項は正解を説明するための再構成損失、第2項は学習時の潜在分布を生成時の事前分布に近づける項。正解を見て得た $z$ だけに依存すると、正解のない生成時との隔たりが大きくなる。この隔たりを抑える役割をKL項が担う。[出典：原論文式(4)–(5)・§4.2](../../../raw/papers/sohn_2015_cvae.pdf)
 
-Gaussian encoderでは $z=\mu+\sigma\odot\epsilon$、$\epsilon\sim\mathcal N(0,I)$ としてサンプリングし、encoderとdecoderを勾配で同時に学習する。[出典：VAE原論文§2.4・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+Gaussianの場合のreparameterizationを具体化すると $z=\mu+\sigma\odot\epsilon$、$\epsilon\sim\mathcal N(0,I)$ としてサンプリングし、encoderとdecoderを勾配で同時に学習する。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ## ACTでは何が条件・出力・潜在変数になるか
 
@@ -71,4 +70,4 @@ $z=0$ は**潜在変数の事前分布の平均**である。「平均的な行�
 
 ## 取得記録
 
-新規取得：`../../raw/papers/sohn_2015_cvae.pdf`、2026-10-08、NeurIPS公式PDF、9ページ。PDF本文のタイトル・著者と§4の内容を確認した。VAEの2本とACTは既存ファイルを再利用した。
+CVAE原論文は2026-10-08にNeurIPS公式PDF（9ページ）を取得し、取り込み済み。現在のガイドはその§3–4とACTに基づく。VAEの原論文・解説論文への参照は2026-10-31の整理で外した。

@@ -1,109 +1,85 @@
 ---
 title: "VAE（Variational Autoencoder）：仕組みと学習の目的"
 type: concept
-tags: [VAE, CVAE, generative-model, latent-variable, variational-inference, ELBO, representation-learning]
+tags: [VAE, generative-model, latent-variable, ELBO, reparameterization, representation-learning]
 sources:
-  - ../../../raw/papers/2304.08742v2.pdf
-  - ../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
-  - ../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf
+  - ../../../raw/papers/sohn_2015_cvae.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
+  - ../../../raw/papers/2304.08742v2.pdf
 updated: 2026-10-31
 ---
 
 # VAE（Variational Autoencoder）
 
-## まず直感で理解する
+## 何をするモデルか
 
-**VAEは、観測データを潜在変数の確率分布に変換するencoderと、潜在変数からデータの分布を作るdecoderを一緒に学習する生成モデル**である。日本語では「変分オートエンコーダ」と呼ばれる。入力を復元するだけでなく、学習後には潜在変数をサンプリングして新しいデータを生成できる。[原論文：§2–3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)・[原文リンク](https://arxiv.org/abs/1312.6114)
+**VAEは、データを説明する潜在変数の分布を学ぶ生成モデル**である。学習では入力を潜在変数を通して復元し、生成時には事前分布から選んだ潜在変数を使ってデータを作る。「小さなベクトルに圧縮する」だけでなく、確率分布として扱うことが特徴になる。[基礎となる生成過程・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
-説明用に手書き数字の画像を考える。画像をそのまま扱う代わりに、潜在変数 $z$ を通して画像の特徴を表現し、そこから画像を復元する。[潜在表現の出典：原論文§3・5](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)。説明上の注意として、$z$ の各成分が「傾き」「線の太さ」など、人が理解できる意味に必ず対応すると解釈してはいけない。解説論文でも、そのようなdisentangled representationの学習は研究課題として位置づけられている。[出典：解説論文§1.1](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)
+このページは特定論文の要約ではなく、基本的なVAEの理解を目的とする。生成過程、学習目的、サンプリングの説明は、取り込み済みのCVAE論文の基礎節に基づく。以下の例や図は理解のための説明であり、特定の学習結果ではない。[基礎の出典：§3・式(1)–(3)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-通常の決定的なAutoencoderとの主な違いは次のとおり。[出典：解説論文§2.1–2.4](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)・[解説の原文](https://arxiv.org/html/1906.02691v3)
+## EncoderとDecoderの役割
 
-| 観点 | 通常のAutoencoder | 基本的なVAE |
-|---|---|---|
-| encoderの出力 | 入力に対応する1つのベクトル | 潜在変数の分布のパラメータ（平均・分散など） |
-| decoderへの入力 | encoderが出したベクトル | 分布からサンプリングした潜在変数 |
-| 学習の目的 | 主に入力の再構成 | 再構成と、潜在分布を事前分布に近づける項 |
-| 新しいデータの生成 | 再構成の学習だけでは、コードのサンプリング方法が定まらない | 定義した事前分布から $z$ をサンプリングして生成する |
+入力データを$x$、潜在変数を$z$とする。例えば「入力画像の特徴を少数の数値で表し、その数値から画像を復元する」という説明用の場面を考える。学習では次の3つを区別する。[モデルの定義：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
-## 構成：encoder、潜在変数、decoder
+| 要素 | 役割 |
+| --- | --- |
+| encoder $q_\phi(z\mid x)$ | 入力$x$を説明する潜在変数$z$の分布を推定する。recognition modelとも呼ぶ。 |
+| decoder $p_\theta(x\mid z)$ | $z$から、データ$x$の分布を決める。generation modelとも呼ぶ。 |
+| 事前分布 $p(z)$ | 入力$x$を見る前に定める、潜在変数の分布。 |
 
-ここでは、観測データを $x$、潜在変数を $z$、encoderの学習パラメータを $\phi$、decoderの学習パラメータを $\theta$ とする。基本的なVAEは、次の生成過程を仮定する。[出典：原論文§2.1・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+encoderとdecoderのパラメータ$\phi,\theta$を一緒に学ぶ。encoderの分布は、計算が難しい真の事後分布$p_\theta(z\mid x)$を近似する役割を持つ。[CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
-$$z\sim p(z),\qquad x\sim p_\theta(x\mid z).$$
+```text
+学習：入力x → encoder → zの分布 → zを取り出す → decoder → 入力の復元
+        └──────────────────── 復元の正解 ───────────────────┘
 
-- **事前分布 $p(z)$**：データを見る前の潜在変数の分布。よく使う選択は標準正規分布 $\mathcal N(0,I)$。
-- **decoder $p_\theta(x\mid z)$**：$z$ を受け取り、データの分布のパラメータを出すニューラルネットワーク。例えば画像の各画素に対するBernoulli分布の確率や、Gaussian分布の平均などを出す。
-- **encoder $q_\phi(z\mid x)$**：入力 $x$ から、その入力を生成した可能性のある $z$ の分布を推定する。計算が難しい真の事後分布 $p_\theta(z\mid x)$ を近似する役割を持つ。
+生成：事前分布 → zを取り出す → decoder → データの生成
+```
 
-この3つの役割と分布の選択は[原論文§2.1・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)に基づく。Gaussianや標準正規分布は典型的な選択であり、VAE全般の必須条件ではない。
+図は生成過程と学習時のrecognition modelを簡略化したもの。KL項とパラメータ更新の経路は省略している。decoderは厳密にはデータの分布を定めるため、その分布から値を取り出すことと代表値を表示することは区別する。[モデル定義からの説明：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
-対角共分散のGaussian encoderの場合、
+## 「分布を出す」とは
 
-$$q_\phi(z\mid x)=\mathcal N\!\left(\mu_\phi(x),\operatorname{diag}(\sigma_\phi^2(x))\right).$$
+Gaussianを使う場合、分布は平均$\mu$と分散$\sigma^2$で表せる。encoderが決めるのは入力に対応したこれらの値で、そこから取り出した一つの$z$とは別物である。[Gaussian latent variableの基礎：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)、[平均・分散を推定する具体例：ACT §IV-B](../../../raw/papers/zhao_2023_act.pdf)
 
-encoderが出すのは $z$ 自体ではなく、平均 $\mu$ と分散 $\sigma^2$ を決める値である。実装では分散が正になるよう、$\log\sigma^2$ を出力する形がよく使われる。[出典：原論文§3・Appendix C](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+説明用に1次元の例を置く。平均が$1.0$、標準偏差が$0.2$なら、$z$は1.0付近を取りやすいが、常に1.0になるわけではない。標準正規乱数$\epsilon$を使って、
 
-## 学習：再構成だけでなく潜在分布も整える
+$$z=\mu+\sigma\epsilon$$
 
-モデルが実際のデータに高い尤度を与えるようにしたいが、
+と書ける。例えば$\epsilon=0.5$なら$z=1.1$になる。これはGaussianの変数変換による計算例で、実験値ではない。ベクトルの場合は各成分について$z=\mu+\sigma\odot\epsilon$とする。[微分可能な変換によるサンプリング：CVAE論文 §3・式(3)直後](../../../raw/papers/sohn_2015_cvae.pdf)
 
-$$p_\theta(x)=\int p_\theta(x\mid z)p(z)\,dz$$
+## 学習では何を小さくするか
 
-の積分は一般に直接計算するのが難しい。そこで、対数尤度の下界である **ELBO（Evidence Lower Bound）** を最大化する。[出典：原論文§2.1–2.2](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+基本的なVAEの損失は、次の2項の和として理解できる。ここでは学習目的の符号を反転し、最小化する形で表す。[CVAE論文 §3・式(2)–(3)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-$$\mathcal L_{\mathrm{ELBO}}(x)=\mathbb E_{q_\phi(z\mid x)}[\log p_\theta(x\mid z)]-D_{\mathrm{KL}}\!\left(q_\phi(z\mid x)\Vert p(z)\right).$$
+$$
+\mathcal J(x)=
+\underbrace{-\mathbb E_{q_\phi(z\mid x)}[\log p_\theta(x\mid z)]}_{\text{再構成損失}}
++\underbrace{D_{\mathrm{KL}}(q_\phi(z\mid x)\Vert p(z))}_{\text{KL項}}.
+$$
 
-損失を最小化する表記にすると、符号を反転して、
+- **再構成損失**：取り出した$z$から、元の入力をどれだけよく説明できるかを評価する。
+- **KL項**：入力から推定した潜在分布が、事前分布からどれだけ離れているかを評価する。
 
-$$\mathcal J(x)=\underbrace{-\mathbb E_{q_\phi(z\mid x)}[\log p_\theta(x\mid z)]}_{\text{再構成損失}}+\underbrace{D_{\mathrm{KL}}\!\left(q_\phi(z\mid x)\Vert p(z)\right)}_{\text{KL項}}.$$
+片方は入力を復元するための情報を保持する役割、もう片方は事前分布とのずれを抑える役割を持つ。KL項だけでは入力を復元する要求がなくなり、再構成だけでは事前分布との整合を求めなくなる。これは上の目的関数の各項を取り除いた場合の数学的な読み方である。[元の目的関数：CVAE論文 §3・式(2)–(3)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-**再構成損失**は、サンプリングした $z$ から元の入力 $x$ をどれだけ説明できるかを評価する。固定分散のGaussian decoderなら二乗誤差に対応し、Bernoulli decoderならbinary cross entropyに対応する。したがって「VAEの再構成損失は必ずMSE」とは限らない。[出典：原論文§3・Appendix C](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+この目的関数の符号を逆にした量が、対数尤度の下界であるELBO（Evidence Lower Bound）。計算しにくい真の事後分布を、扱える分布で近似しながら学習する変分推論の考え方に基づく。[CVAE論文 §3・式(1)–(3)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-**KL項**は、入力ごとの潜在分布 $q_\phi(z\mid x)$ が事前分布 $p(z)$ から離れることへのペナルティである。再構成のために入力の情報を保持することと、事前分布に近づけることの間にトレードオフが生じる。KL項だけを最小化すると入力に依存しない分布になり得るため、両方の項が必要になる。[出典：原論文§2.3・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+## 乱数を使っても学習できる理由
 
-標準正規事前分布と対角Gaussian encoderの場合、KL項は次のように計算できる。$d$ は潜在変数の次元数である。[出典：原論文Appendix B](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+上の$z=\mu+\sigma\odot\epsilon$では、乱数$\epsilon$と、encoderが決める$\mu,\sigma$を分けている。$\epsilon$を与えれば$z$は$\mu,\sigma$の微分可能な式になるため、decoderの復元誤差をencoderまで伝えて両方を更新できる。この考え方がreparameterization trickである。[CVAE論文 §3・式(3)直後](../../../raw/papers/sohn_2015_cvae.pdf)
 
-$$D_{\mathrm{KL}}(q_\phi\Vert p)=\frac12\sum_{j=1}^{d}\left(\mu_j^2+\sigma_j^2-1-\log\sigma_j^2\right).$$
+## CVAE・ロボット学習とのつながり
 
-## なぜ「変分」なのか
+CVAEは観測やラベルなどの条件$c$を加え、条件に合う出力の分布を学ぶ拡張である。条件だけでは出力が一つに決まらない場合を潜在変数で表す。[CVAE論文 §4・式(4)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-「変分」は、計算しにくい真の事後分布を、扱いやすい分布族 $q_\phi(z\mid x)$ で近似し、そのパラメータを最適化する **variational inference（変分推論）** に由来する。ELBOと対数尤度の関係は、
+ACTでは現在の画像・関節位置を条件として行動列を予測する。学習時のencoderは関節位置と正解行動列から$z$の分布を推定するが、実行時はencoderを使わず$z=0$に固定する。したがって、VAEの一般的な生成手順と、個々の方策の実行手順は分けて読む。[ACT §IV-B–C・Appendix C](../../../raw/papers/zhao_2023_act.pdf)
 
-$$\log p_\theta(x)=\mathcal L_{\mathrm{ELBO}}(x)+D_{\mathrm{KL}}\!\left(q_\phi(z\mid x)\Vert p_\theta(z\mid x)\right)$$
+Behavior Retrievalでは状態と行動を復元するVAEを学び、encoderの表現を既存データの検索に使う。VAEの復元学習と、検索後のBCによる方策学習は別の段階である。[Behavior Retrieval §III-C–E・Algorithm 1](../../../raw/papers/2304.08742v2.pdf)
 
-である。KL divergenceは非負なのでELBOは下界となる。ここに現れる「真の事後分布とのKL」と、損失に現れる「事前分布とのKL」は比較対象が異なる点に注意する。[出典：原論文§2.2、式(1)–(3)](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
-
-## Reparameterization trick：サンプリングを通して学習する
-
-encoderの分布から単純にサンプリングする操作では、その出力を通常の決定的な演算と同じように扱ってencoderへ勾配を伝えることはできない。Gaussianの場合には、サンプリングを次の形に書き換える。[出典：原論文§2.3–2.4](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
-
-$$\epsilon\sim\mathcal N(0,I),\qquad z=\mu_\phi(x)+\sigma_\phi(x)\odot\epsilon.$$
-
-ここで $\odot$ は要素ごとの積である。乱数 $\epsilon$ の分布を学習パラメータから切り離し、$\mu$ と $\sigma$ を使う微分可能な演算で $z$ を作る。これにより、decoderの再構成損失からencoderへも勾配を伝えられる。この方法を **reparameterization trick** と呼ぶ。[出典：原論文§2.4・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
-
-## 学習時と生成時の違い
-
-学習時は `入力x → encoder → 分布q(z|x) → zをサンプリング → decoder → 再構成損失` という流れで、KL項も加えて両ネットワークを更新する。新しいデータを生成する時は入力画像もencoderも必要なく、`事前分布p(z) → zをサンプリング → decoder → データを生成` となる。decoderの分布からのサンプリングと、その分布の平均を表示することは区別する。[出典：原論文§2–3・Algorithm 1](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
-
-## CVAEとACTとの関係
-
-**CVAE（Conditional VAE）** は、観測やラベルなどの条件 $c$ を与え、$p_\theta(x\mid z,c)$ を学習する拡張である。encoderも $q_\phi(z\mid x,c)$ のように条件を使う。条件付きの生成モデルとして扱うことで、同じ条件下のデータのばらつきを潜在変数で表せる。[出典：解説論文§1.3.1・1.7.2](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)
-
-既存の[ACT論文の要約](../../sources/imitation_learning/zhao_2023_act.md)では、この枠組みを行動列の予測に使う。ACTの学習時のCVAE encoderは関節位置と正解行動列から $z$ の分布を推定し、decoderは画像・関節位置・$z$ から行動列を予測する。推論時は $z=0$ に固定するので、基本的なVAEの「事前分布からランダムに生成する」手順とは異なる。またACTはL1再構成損失と重み付きKL項を用いるため、上の基本VAEの式と区別して読む。[出典：ACT §IV-B–C・Appendix C](../../../raw/papers/zhao_2023_act.pdf)・[ACT原文](https://arxiv.org/abs/2304.13705)
-
-## 出典と関連ページ
-
-1. Diederik P. Kingma, Max Welling, **Auto-Encoding Variational Bayes**（2013公開、ICLR 2014）。[論文ページ](https://arxiv.org/abs/1312.6114) / [ローカルPDF](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)。VAEの生成モデル、ELBO、reparameterization trickの原論文。
-2. Diederik P. Kingma, Max Welling, **An Introduction to Variational Autoencoders**（2019）。[論文ページ](https://arxiv.org/abs/1906.02691) / [Webで読める本文](https://arxiv.org/html/1906.02691v3) / [ローカルPDF（v3）](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。確率モデルの基礎からVAEを説明する解説論文。
-3. Tony Z. Zhao et al., **Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware**（2023）。[論文ページ](https://arxiv.org/abs/2304.13705) / [ローカルPDF](../../../raw/papers/zhao_2023_act.pdf)。ロボット模倣学習でのCVAE利用例。
-
-新規に参照したVAEのPDFは `raw/temp/` に保管している。本記事は依頼された概念の説明として作成したもので、これらの論文の個別ingestは行っていない。
-
-- [ACT：Action ChunkingとTemporal Ensembling](../imitation_learning/action_chunking_and_temporal_ensembling.md)
-- [ロボットの模倣学習と強化学習](../imitation_learning/imitation_and_reinforcement_learning.md)
+## 関連ページ
 
 - [CVAE：条件付き生成とACTでの使い方](conditional_variational_autoencoder.md)
-
-- [Behavior Retrieval：状態・行動の検索によるBCデータ選択](../../sources/retrieval/du_2023_behavior_retrieval.md)
+- [ACT用CVAEガイド](cvae_for_act_reading_guide.md)
+- [Behavior RetrievalのVAE：基礎から検索手順まで](../retrieval/behavior_retrieval_vae_search.md)
+- [ACTのCVAE：KL項と正解情報への依存](../imitation_learning/act_cvae_kl_regularization.md)

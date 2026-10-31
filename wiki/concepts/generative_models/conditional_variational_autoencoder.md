@@ -5,8 +5,6 @@ tags: [CVAE, VAE, ACT, conditional-generation, latent-variable, ELBO]
 sources:
   - ../../../raw/papers/sohn_2015_cvae.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
-  - ../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf
-  - ../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf
 updated: 2026-10-31
 ---
 
@@ -25,7 +23,7 @@ $$p_\theta(y\mid c)=\int p_\theta(y\mid c,z)p_\theta(z\mid c)\,dz.$$
 - **decoder $p_\theta(y\mid c,z)$**：条件と潜在変数から出力の分布を決める。
 - **encoder $q_\phi(z\mid c,y)$**：学習時に条件と正解出力を見て、潜在変数の事後分布を近似する。
 
-以上は[原論文§4・Fig.1・式(4)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)に基づく。$z$ は条件だけでは決まらない出力のばらつきを表すための変数だが、各成分に人が解釈できる意味が自動的に割り当てられる保証はない。[解説論文§1.1](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)
+以上は[原論文§4・Fig.1・式(4)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)に基づく。$z$ は条件だけでは決まらない出力のばらつきを表すための変数である。以下では各成分に人が解釈できる意味を割り当てず、モデルの変数として扱う。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ## Encoderを具体例で理解する
 
@@ -39,7 +37,7 @@ $$p_\theta(y\mid c)=\int p_\theta(y\mid c,z)p_\theta(z\mid c)\,dz.$$
 
 ### 出力：潜在変数の平均と分散
 
-対角Gaussianを使う場合、Encoderの出力は潜在空間の平均ベクトル $\mu$ と、各次元の分散を決める値。実装では $\log\sigma^2$ を出すことが多い。これは画像の画素の平均・分散ではなく、**潜在変数 $z$ の分布の平均・分散**である。[出典：VAE §3・Appendix C](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+対角Gaussianを使う場合、Encoderの出力は潜在空間の平均ベクトル $\mu$ と、各次元の分散を決める値。これは画像の画素の平均・分散ではなく、**潜在変数 $z$ の分布の平均・分散**である。Gaussianを使う構成の説明であり、分散の実装方法を一つに指定するものではない。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 例えば潜在空間を2次元にした説明用の仮想モデルなら、ある学習例で次を出すと考えられる。
 
@@ -49,7 +47,7 @@ $$\mu=(1.0,-0.5),\qquad \sigma^2=(0.04,0.09).$$
 
 $$z=\mu+\sigma\odot\epsilon=(1.1,-0.8).$$
 
-この **$z$ と条件**をDecoderへ渡し、正解の残りの画像を再構成する。Encoderの出力する平均・分散と、そこからサンプリングして得る1つの $z$ は別のもの。[計算方法の出典：VAE §2.4・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+この **$z$ と条件**をDecoderへ渡し、正解の残りの画像を再構成する。Encoderの出力する平均・分散と、そこからサンプリングして得る1つの $z$ は別のもの。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ```mermaid
 flowchart LR
@@ -68,9 +66,9 @@ flowchart LR
 
 ### やっていること：正解を再現できる潜在分布を学ぶ
 
-Encoderに「3用の $z$ の正解」や「平均・分散の正解」を教えるわけではない。Decoderの再構成が正解からずれていたら、その誤差からDecoderとEncoderの両方を更新する。Encoderも「再構成しやすい $z$ を出せる分布」へ変わっていく。同時にKL項で事前分布から離れすぎないようにする。[出典：CVAE §3–4・式(4)–(5)、VAE §2.4](../../../raw/papers/sohn_2015_cvae.pdf)・[VAE原論文](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+Encoderに「3用の $z$ の正解」や「平均・分散の正解」を教えるわけではない。Decoderの再構成が正解からずれていたら、その誤差からDecoderとEncoderの両方を更新する。Encoderも「再構成しやすい $z$ を出せる分布」へ変わっていく。同時にKL項で事前分布から離れすぎないようにする。[出典：CVAE §3–4・式(3)–(5)](../../../raw/papers/sohn_2015_cvae.pdf)
 
-「3」と「5」に対応する例で異なる潜在分布を使うことは可能だが、「第1次元が数字の種類になる」と決めているわけではない。また、必ず別々の領域にきれいに分かれる保証もない。潜在表現の意味は学習結果による。[多峰性の表現：CVAE §4](../../../raw/papers/sohn_2015_cvae.pdf)・[解釈可能な潜在表現の注意：VAE解説 §1.1](../../../raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)
+上の「3」「5」の例は、異なる出力を潜在変数で表すための仮想例である。「第1次元が数字の種類になる」「別々の領域へきれいに分かれる」という学習結果を示した例としては扱わない。[仮想例の前提となる多峰性のモデル：CVAE §4](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ### なぜ学習時だけ正解を見せてよいのか
 
@@ -94,7 +92,7 @@ $$\mathcal J=-\mathbb E_{q_\phi(z\mid c,y)}[\log p_\theta(y\mid c,z)]+D_{\mathrm
 
 第1項は正解を説明するための再構成損失、第2項は学習時の潜在分布を生成時の事前分布に近づける項。正解を見て得た $z$ だけに依存すると、正解のない生成時との隔たりが大きくなる。この隔たりを抑える役割をKL項が担う。[出典：原論文式(4)–(5)・§4.2](../../../raw/papers/sohn_2015_cvae.pdf)
 
-Gaussian encoderでは $z=\mu+\sigma\odot\epsilon$、$\epsilon\sim\mathcal N(0,I)$ としてサンプリングし、encoderとdecoderを勾配で同時に学習する。[出典：VAE原論文§2.4・3](../../../raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)
+Gaussianの場合のreparameterizationを具体化すると $z=\mu+\sigma\odot\epsilon$、$\epsilon\sim\mathcal N(0,I)$ としてサンプリングし、encoderとdecoderを勾配で同時に学習する。[VAEの基礎・学習：CVAE論文 §3](../../../raw/papers/sohn_2015_cvae.pdf)
 
 ## ACTでは何が条件・出力・潜在変数になるか
 

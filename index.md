@@ -36,7 +36,6 @@ updated: 2026-10-31
 - [FAISS：検索の基本とHNSW](wiki/concepts/vector_search/faiss_vector_search.md)
 - [Mobile ALOHA：観測・行動データの構造](wiki/entities/mobile_aloha_dataset.md)
 - [SAILOR：skill表現と検索による模倣学習](wiki/sources/retrieval/nasiriany_2023_sailor.md) — [原論文](raw/papers/nasiriany_2023_sailor.pdf)を取り込み済み。
-- VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/generative_models/variational_autoencoder.md)で参照。
 
 ### Web記事の参照記録
 
