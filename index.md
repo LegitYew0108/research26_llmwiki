@@ -23,21 +23,15 @@ updated: 2026-10-31
 - [調査資料の一時保管](raw/temp/)
 - [ミーティング記録](raw/meeting/)
 
-### Research候補と取り込み状況
+### 模倣学習に関連する資料の整理
 
-- [Mobile ALOHAの観測・動作データセット候補（2026-10-20）](raw/temp/research_mobile_aloha_datasets_20261020.md) — 6タスク、HDF5・LeRobot・RLDSの比較。原文11件は調査記事内に一覧。未ingest。
-
-- [SAILOR原論文（PMLR 2023／CoRL 2022）](raw/temp/nasiriany_2023_sailor.pdf) — スライド作成のため全文を確認。一時保管、未ingest。[出版ページ](https://proceedings.mlr.press/v205/nasiriany23a.html)。
-
-- [FAISS公式資料：検索の基本とHNSW（2026-10-17）](raw/temp/research_faiss_20261017.md) — index一覧・距離・入門の公式HTML3件を一時保存。未ingest。
-
-- [検索による模倣学習データ選択：既存研究調査（2026-10-17）](raw/temp/research_retrieval_imitation_20261017.md) — Behavior Retrieval、FlowRetrieval、DataMIL、ReMix、VINN。一次資料5件を一時保存。Behavior Retrievalはraw/papersに配置されたv2を取り込み済み、残る4件は未ingest。
-
-- [ACTのためのCVAE：資料と学習ガイド](raw/temp/research_cvae_for_act_20261008.md) — CVAE原論文PDFを取得。条件付き生成・学習と実行の違い・ACTとの対応を説明。CVAE論文は取り込み済み。
-
-- VAEの参照論文（個別ingestは未実施）：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders（v3）](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念の説明記事](wiki/concepts/variational_autoencoder.md)から原文にもリンク。
-
-- [ロボットの模倣学習・強化学習：12本の候補と読む順番](raw/temp/research_robot_imitation_reinforcement_learning_20261003.md) — サーベイ、DAgger、ACT、Diffusion Policy、SAC、四足歩行、Offline RL、RLPD、SERL、HIL-SERL。ACTは取り込み済み（下記）。残りは未ingest。各PDFへのリンクは候補一覧に記載。
+- [ロボットアームの模倣学習：基礎資料と読む観点](wiki/concepts/robot_arm_imitation_learning_reading_guide.md)
+- [ACTのためのCVAE学習ガイド](wiki/concepts/cvae_for_act_reading_guide.md)
+- [検索による模倣学習データ選択の関連研究](wiki/concepts/imitation_data_selection_related_work.md)
+- [FAISS：検索の基本とHNSW](wiki/concepts/faiss_vector_search.md)
+- [Mobile ALOHA：観測・行動データの構造](wiki/entities/mobile_aloha_dataset.md)
+- [SAILOR原論文](raw/temp/nasiriany_2023_sailor.pdf)：発表資料で参照。個別要約は未作成。
+- VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/variational_autoencoder.md)で参照。
 
 ### Web記事の参照記録
 

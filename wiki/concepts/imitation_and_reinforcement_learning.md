@@ -15,8 +15,7 @@ sources:
   - ../../raw/temp/chi_2023_diffusion_policy.pdf
   - ../../raw/temp/luo_2024_serl.pdf
   - ../../raw/temp/luo_2024_hil_serl.pdf
-  - ../../raw/temp/lee_2020_quadrupedal_locomotion.pdf
-updated: 2026-10-17
+updated: 2026-10-31
 ---
 
 # ロボットの模倣学習と強化学習：基本的な仕組みと違い
@@ -108,7 +107,6 @@ model-based RLは、環境の変化などを予測するmodelを利用し、mode
 
 ### 実機で学ぶとは限らない
 
-オンラインRLは、学習中に環境から新しい経験を集める設定。環境は実機でもシミュレータでもよい。シミュレーションで学んだ方策を実機へ移すsim-to-realの例として、Leeらの四足歩行研究がある。一方、offline RLは、追加の環境との相互作用をせず、既存データから報酬に基づく方策を学ぶ。したがって「RLなら実機で毎回試行錯誤する」とは限らない。[論文：Offline RL tutorial・Figure 1・§2.2](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)、[四足歩行論文・Introduction](../../raw/temp/lee_2020_quadrupedal_locomotion.pdf)
 
 off-policyとofflineも別の区別である。off-policyは、学習対象の方策とは異なる方策で収集した経験も利用できるという性質。off-policyの方法でもオンラインで新たな経験を集めることはできる。offlineは、学習中に追加収集しないというデータ利用の設定であり、通常のoff-policy手法がそのまま固定データだけでうまく学べるとは限らない。[論文：Offline RL tutorial §1・2](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
@@ -144,7 +142,6 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 模倣学習とRLは組み合わせられる。デモで方策を初期化してからRLで改善する、デモをRLの経験データとして利用する、学習中に人が修正介入する、といった構成がある。ただし、**デモを使っただけではBCを実施したことにはならない**。行動を教師として合わせているのか、報酬に基づく更新のデータとして使っているのかを確認する必要がある。[論文：Osaら §1・5](../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[SERL §4.1](../../raw/temp/luo_2024_serl.pdf)、[HIL-SERL・手法](../../raw/temp/luo_2024_hil_serl.pdf)
 
-例えば、SERLはdemonstrationなどの既存データを取り込めるoff-policy RLを実機学習に用いる。HIL-SERLはdemonstrationと人間の修正介入を組み込む。四足歩行では、RLで学んだteacherの振る舞いをstudentへ蒸留する構成もある。**模倣の対象は人間の動作だけではなく、RLで学んだ方策になる場合もある。** [論文：SERL §4](../../raw/temp/luo_2024_serl.pdf)、[HIL-SERL・手法](../../raw/temp/luo_2024_hil_serl.pdf)、[四足歩行論文・Introduction / Methods](../../raw/temp/lee_2020_quadrupedal_locomotion.pdf)
 
 ## 次に読む資料
 
@@ -152,7 +149,7 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 - WebでBCとロボット制御の接点を読む：[MIT・Imitation Learning（外部）](https://underactuated.csail.mit.edu/imitation.html)。講義のworking notesで、未完成の節もある。
 - RLのループと基本用語を読む：[Hugging Face・RL Framework（外部）](https://huggingface.co/learn/deep-rl-course/en/unit1/rl-framework)。
 - RLアルゴリズムの分類を読む：[Spinning Up・Kinds of RL Algorithms（外部）](https://spinningup.openai.com/en/latest/spinningup/rl_intro2.html)。基本分類に利用し、2018年時点の人気・性能の記述を現在の評価として扱わない。
-- 実機応用へ進む：[Research候補一覧](../../raw/temp/research_robot_imitation_reinforcement_learning_20261003.md)。
+- 実機応用へ進む：[Research候補一覧](<robot_arm_imitation_learning_reading_guide.md>)。
 
 Web記事の閲覧日は2026-10-03。参照記録は `raw/temp/` に保存し、本文には元記事への外部リンクを併記した。ACTは `raw/papers/` の取り込み済みPDFを参照し、その他の論文は `raw/temp/` のPDFを参照している。本ページの作成は各論文の個別要約を一括ingestするものではない。
 
