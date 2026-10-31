@@ -3,7 +3,7 @@ title: "デモを併用する実機RL：SERLの学習とデータの流れ"
 type: concept
 tags: [reinforcement-learning, robotics, demonstrations, SERL, RLPD, replay-buffer, UTD]
 sources:
-  - ../../../raw/temp/luo_2024_hil_serl.pdf
+  - ../../../raw/papers/luo_2024_hil_serl.pdf
   - ../../../raw/papers/luo_2024_serl.pdf
 updated: 2026-10-31
 ---
@@ -40,12 +40,24 @@ update-to-data（UTD）ratioは、環境の1 stepに対して何回gradient upda
 - [模倣学習と強化学習の基本](../imitation_learning/imitation_and_reinforcement_learning.md)
 - [Behavior CloningのCompounding Error](../imitation_learning/compounding_error.md)
 
-## HIL-SERLとの関係（概要確認）
+## HIL-SERL：オンラインの修正を追加する
 
-HIL-SERL（Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning）は、SERLに対して、初期デモに加え、学習中の人間による修正介入を組み込んだ実機の視覚ベースRLシステム。人が必要な場面で制御を引き継ぎ、その介入データをdemo bufferとRL bufferの両方へ入れる。方策自身の遷移はRL bufferにのみ入れる。修正行動への教師あり学習だけでなく、報酬に基づくoff-policy RLで方策を改善する。[出典：HIL-SERL §2–3・Fig. 2](../../../raw/temp/luo_2024_hil_serl.pdf)
+HIL-SERL（Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning）は、SERLに対して、初期デモに加え、学習中の人間による修正介入を組み込んだ実機の視覚ベースRLシステム。人が必要な場面で制御を引き継ぎ、その介入データをdemo bufferとRL bufferの両方へ入れる。方策自身の遷移はRL bufferにのみ入れる。修正行動への教師あり学習だけでなく、報酬に基づくoff-policy RLで方策を改善する。[出典：HIL-SERL §2–3・Fig. 2](../../../raw/papers/luo_2024_hil_serl.pdf)
 
-精密挿入、双腕での受け渡しやtiming belt組立、物体をフライパンで返す動作などを扱う。多くは1–2.5時間で学習するが、Table 1(a)のtiming belt組立は6時間。Jenga whippingでは実時間の人間修正を使わないため、全タスクが同じ介入条件ではない。[出典：HIL-SERL §4・Table 1](../../../raw/temp/luo_2024_hil_serl.pdf)
+精密挿入、双腕での受け渡しやtiming belt組立、物体をフライパンで返す動作などを扱う。多くは1–2.5時間で学習するが、Table 1(a)のtiming belt組立は6時間。Jenga whippingでは実時間の人間修正を使わないため、全タスクが同じ介入条件ではない。[出典：HIL-SERL §4・Table 1](../../../raw/papers/luo_2024_hil_serl.pdf)
 
-**編集上の判断：個別にingestする価値はある。** SERLを読んだ後に、人間の修正が探索とデータ蓄積をどう助けるか、双腕の実機RLへどう拡張するかを学べるため。ただし、グラフベース近傍検索の手法を提案・評価する論文ではないので、検索アルゴリズムそのものを調べる目的では補助資料として位置づける。この判断は研究方針の決定ではない。[判断の根拠：HIL-SERL §3–4](../../../raw/temp/luo_2024_hil_serl.pdf)
+個別の手法・実験・ablationは[HIL-SERL論文要約](../../sources/reinforcement_learning/luo_2024_hil_serl.md)を参照。対象はarXiv:2410.21845v3（2025-03-20）。[版の出典：表紙](../../../raw/papers/luo_2024_hil_serl.pdf)
 
-対象は保存済みarXiv:2410.21845v3（2025-03-20）。ここでは質問に対する概要のみを記録し、個別のsource記事としてのingestは行っていない。[版の出典：表紙](../../../raw/temp/luo_2024_hil_serl.pdf)
+### 介入データとHG-DAggerの違い
+
+| 観点 | HIL-SERL | HG-DAgger（論文内の比較） |
+| --- | --- | --- |
+| 人の関わり | 必要時に制御を引き継いで修正 | 必要時に制御を引き継いで修正 |
+| 学習目的 | 報酬に基づくQ-function・方策の改善 | 人の修正行動に合わせる教師あり学習 |
+| 自律試行 | 成功・失敗ともRLの遷移として利用 | 人のラベルを中心に方策を学ぶ |
+
+出典：[HIL-SERL §3.4・4.3](../../../raw/papers/luo_2024_hil_serl.pdf)。同じ「人が修正する」方式でも、学習の目的は異なる。
+
+### 介入の有効性はタスクごとに見る
+
+初期デモを増やしてオンライン介入を除くablationでは、RAM挿入48%、dashboard組立0%に対し、HIL-SERLは各100%。一方、object flippingでは介入なしでも100%だった。したがって、介入は難しい操作の探索を助けるが、全タスクで必須と一般化しない。また、各試行のリセットはscriptまたは人手であり、人の介入とreset-free学習は別の仕組みである。[出典：HIL-SERL §3.5・4.5・Table 1(b)](../../../raw/papers/luo_2024_hil_serl.pdf)

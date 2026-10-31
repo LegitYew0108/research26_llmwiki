@@ -90,3 +90,5 @@ Table 1の既存研究との比較は、類似した挿入タスクについて�
 - [デモを併用する実機RL：SERLの学習とデータの流れ](../../concepts/reinforcement_learning/demonstration_augmented_robot_rl.md)
 - [模倣学習と強化学習の基本](../../concepts/imitation_learning/imitation_and_reinforcement_learning.md)
 - [ロボットアームの模倣学習：基礎資料と読む観点](../../concepts/imitation_learning/robot_arm_imitation_learning_reading_guide.md)
+
+- [HIL-SERL：初期デモとオンライン修正を併用する実機RL](luo_2024_hil_serl.md)

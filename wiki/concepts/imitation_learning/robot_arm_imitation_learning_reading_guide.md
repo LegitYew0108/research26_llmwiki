@@ -9,7 +9,7 @@ sources:
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
   - ../../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../../raw/papers/luo_2024_serl.pdf
-  - ../../../raw/temp/luo_2024_hil_serl.pdf
+  - ../../../raw/papers/luo_2024_hil_serl.pdf
 updated: 2026-10-31
 ---
 
@@ -32,7 +32,7 @@ updated: 2026-10-31
 
 固定データから報酬を基準に方策を学ぶoffline RLは、expert行動を直接教師信号にするBCと目的が異なる。データが固定されていることだけではBCかRLかを判別できない。[Offline RL tutorial §2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-SERLとHIL-SERLは、デモ利用や人間介入と実機manipulationのRLを理解する隣接資料として残す。デモを使うこと自体を、学習全体がBCである根拠にはしない。[SERL §4](../../../raw/papers/luo_2024_serl.pdf)、[HIL-SERL 手法・実験](../../../raw/temp/luo_2024_hil_serl.pdf)
+SERLとHIL-SERLは、デモ利用や人間介入と実機manipulationのRLを理解する隣接資料として残す。デモを使うこと自体を、学習全体がBCである根拠にはしない。[SERL §4](../../../raw/papers/luo_2024_serl.pdf)、[HIL-SERL 手法・実験](../../../raw/papers/luo_2024_hil_serl.pdf)
 
 ## 関連ページ
 
@@ -42,3 +42,5 @@ SERLとHIL-SERLは、デモ利用や人間介入と実機manipulationのRLを理
 
 - [SERL論文要約：デモを併用する実機RLの構成と結果](../../sources/reinforcement_learning/luo_2024_serl.md)
 - [デモを併用する実機RL：学習とデータの流れ](../reinforcement_learning/demonstration_augmented_robot_rl.md)
+
+- [HIL-SERL論文要約：人の修正を使う実機RLとHG-DAgger比較](../../sources/reinforcement_learning/luo_2024_hil_serl.md)
