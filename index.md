@@ -141,6 +141,8 @@ updated: 2026-10-31
 
 ### 模倣学習・方策
 
+- [ロボットの動作に機械学習を使う動機](wiki/concepts/imitation_learning/robot_learning_motivation.md)
+
 - [Cosmos Policyの仕組み：動画モデル・world model・planning](wiki/concepts/imitation_learning/cosmos_policy.md)
 
 - [Behavior Cloning：学習方法と分布シフト](wiki/concepts/imitation_learning/behavior_cloning.md)
