@@ -25,14 +25,12 @@
             "id": "27ea49b3ebd7f7e5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf"
               },
-              "icon": "lucide-file",
-              "title": "index"
+              "icon": "lucide-file-text",
+              "title": "kingma_2013_auto_encoding_variational_bayes"
             }
           }
         ],
@@ -218,6 +216,10 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "raw/temp/kim_2026_cosmos_policy.pdf",
+    "index.md",
+    "raw/temp/cosmos_policy_research_20261031.md",
+    "raw/temp/nvidia_cosmos_policy_project_20261031.html",
     "wiki/sources/imitation_learning/chi_2023_diffusion_policy.md",
     "wiki/sources/retrieval/kumar_2025_collage.md",
     "wiki/sources/reinforcement_learning/luo_2024_serl.md",
@@ -246,14 +248,9 @@
     "wiki/concepts/generative_models/variational_autoencoder.md",
     "wiki/concepts/generative_models/cvae_for_act_reading_guide.md",
     "wiki/concepts/generative_models/conditional_variational_autoencoder.md",
-    "wiki/concepts/generative_models",
     "wiki/concepts/vector_search/reference_angle_probability.md",
     "wiki/concepts/vector_search/projection_configuration_ks.md",
     "wiki/concepts/vector_search/angle_testing.md",
-    "wiki/concepts/vector_search",
-    "wiki/concepts/imitation_learning/skill_based_imitation_learning.md",
-    "wiki/concepts/imitation_learning/robot_arm_imitation_learning_reading_guide.md",
-    "wiki/concepts/imitation_learning/imitation_and_reinforcement_learning.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
