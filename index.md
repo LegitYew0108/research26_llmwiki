@@ -24,6 +24,7 @@ updated: 2026-10-31
 
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
+- [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — 未ingest。
 - [ミーティング記録](raw/meeting/)
 
 ### 模倣学習に関連する資料の整理

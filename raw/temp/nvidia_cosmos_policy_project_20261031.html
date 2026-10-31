@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cosmos Policy — Cosmos Lab</title>
+  <meta property="og:title"       content="">
+  <meta property="og:description" content="">
+  <meta property="og:image"       content="">
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://images.nvidia.com" crossorigin>
+  <link rel="preload" href="https://images.nvidia.com/etc/designs/nvidiaGDC/clientlibs_base/fonts/nvidia-sans/NALA/var/NVIDIASansVF_NALA_W_Wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../project.css">
+</head>
+<body>
+
+
+  <!-- Header injected by project.js -->
+  <main class="project-page">
+
+    <!-- Hero — populated by project.js -->
+    <section class="project-hero">
+      <h1 class="project-title"></h1>
+      <p class="project-subtitle"></p>
+      <p class="project-authors"></p>
+      <div class="project-venue">
+        <span class="venue-pill"></span>
+      </div>
+      <div class="project-links"></div>
+    </section>
+
+    <!-- Teaser -->
+    <div class="teaser">
+      <div class="teaser-card">
+        <iframe
+          width="100%"
+          style="aspect-ratio:16/9;"
+          src="https://www.youtube.com/embed/V2qdFD9n5BM?enablejsapi=1&rel=0"
+          title="Cosmos Policy Teaser Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Abstract -->
+    <section class="abstract proj-section">
+      <h2 class="proj-heading">Abstract</h2>
+      <p>
+        In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model
+        (Cosmos-Predict2) into an effective robot policy through a single stage of post-training on robot demonstrations,
+        with no architectural modifications. Cosmos Policy learns to directly generate robot actions encoded as latent
+        frames within the video model's latent diffusion process, harnessing the model's pretrained priors and core
+        learning algorithm to capture complex action distributions. Additionally, Cosmos Policy generates future state
+        images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time
+        planning of action trajectories with higher likelihood of success. In our evaluations, Cosmos Policy achieves
+        state-of-the-art performance on the LIBERO and RoboCasa simulation benchmarks (98.5% and 67.1% average success
+        rates, respectively) and the highest average score in challenging real-world bimanual manipulation tasks,
+        outperforming strong diffusion policies trained from scratch, video model-based policies, and state-of-the-art
+        vision-language-action models fine-tuned on the same robot demonstrations. Furthermore, given policy rollout
+        data, Cosmos Policy can learn from experience to refine its world model and value function and leverage
+        model-based planning to achieve even higher success rates in challenging tasks.
+      </p>
+    </section>
+
+    <!-- Benchmark Results -->
+    <section class="proj-section">
+      <h2 class="proj-heading">Benchmark Results</h2>
+
+      <h3 class="proj-subheading">LIBERO Simulation</h3>
+      <div class="proj-table-wrap">
+        <table class="proj-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center">Spatial SR (%)</th>
+              <th class="center">Object SR (%)</th>
+              <th class="center">Goal SR (%)</th>
+              <th class="center">Long SR (%)</th>
+              <th class="center">Average SR (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Diffusion Policy</td>
+              <td class="center">78.3</td>
+              <td class="center">92.5</td>
+              <td class="center">68.3</td>
+              <td class="center">50.5</td>
+              <td class="center">72.4</td>
+            </tr>
+            <tr>
+              <td>Dita</td>
+              <td class="center">97.4</td>
+              <td class="center">94.8</td>
+              <td class="center">93.2</td>
+              <td class="center">83.6</td>
+              <td class="center">92.3</td>
+            </tr>
+            <tr>
+              <td>π<sub>0</sub></td>
+              <td class="center">96.8</td>
+              <td class="center">98.8</td>
+              <td class="center">95.8</td>
+              <td class="center">85.2</td>
+              <td class="center">94.2</td>
+            </tr>
+            <tr>
+              <td>UVA</td>
+              <td class="center">--</td>
+              <td class="center">--</td>
+              <td class="center">--</td>
+              <td class="center">90.0</td>
+              <td class="center">--</td>
+            </tr>
+            <tr>
+              <td>UniVLA</td>
+              <td class="center">96.5</td>
+              <td class="center">96.8</td>
+              <td class="center">95.6</td>
+              <td class="center">92.0</td>
+              <td class="center">95.2</td>
+            </tr>
+            <tr>
+              <td>π<sub>0.5</sub></td>
+              <td class="center best">98.8</td>
+              <td class="center">98.2</td>
+              <td class="center">98.0</td>
+              <td class="center">92.4</td>
+              <td class="center">96.9</td>
+            </tr>
+            <tr>
+              <td>Video Policy</td>
+              <td class="center">--</td>
+              <td class="center">--</td>
+              <td class="center">--</td>
+              <td class="center">94.0</td>
+              <td class="center">--</td>
+            </tr>
+            <tr>
+              <td>OpenVLA-OFT</td>
+              <td class="center">97.6</td>
+              <td class="center">98.4</td>
+              <td class="center">97.9</td>
+              <td class="center">94.5</td>
+              <td class="center">97.1</td>
+            </tr>
+            <tr>
+              <td>CogVLA</td>
+              <td class="center">98.6</td>
+              <td class="center">98.8</td>
+              <td class="center">96.6</td>
+              <td class="center">95.4</td>
+              <td class="center">97.4</td>
+            </tr>
+            <tr>
+              <td><strong>Cosmos Policy (ours)</strong></td>
+              <td class="center">98.1</td>
+              <td class="center best">100.0</td>
+              <td class="center best">98.2</td>
+              <td class="center best">97.6</td>
+              <td class="center best">98.5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Cosmos Policy achieves state-of-the-art performance on the LIBERO simulation benchmark, with an average success rate of 98.5% across four task suites.</p>
+
+      <h3 class="proj-subheading">RoboCasa Simulation</h3>
+      <div class="proj-table-wrap">
+        <table class="proj-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th class="center"># Training Demos per Task</th>
+              <th class="center">Average SR (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GR00T-N1</td>
+              <td class="center">300</td>
+              <td class="center">49.6</td>
+            </tr>
+            <tr>
+              <td>UVA</td>
+              <td class="center">50</td>
+              <td class="center">50.0</td>
+            </tr>
+            <tr>
+              <td>DP-VLA</td>
+              <td class="center">3000</td>
+              <td class="center">57.3</td>
+            </tr>
+            <tr>
+              <td>GR00T-N1 + DreamGen</td>
+              <td class="center">300 (+ 10000 synthetic)</td>
+              <td class="center">57.6</td>
+            </tr>
+            <tr>
+              <td>GR00T-N1 + DUST</td>
+              <td class="center">300</td>
+              <td class="center">58.5</td>
+            </tr>
+            <tr>
+              <td>UWM</td>
+              <td class="center">1000</td>
+              <td class="center">60.8</td>
+            </tr>
+            <tr>
+              <td>π<sub>0</sub></td>
+              <td class="center">300</td>
+              <td class="center">62.5</td>
+            </tr>
+            <tr>
+              <td>GR00T-N1.5</td>
+              <td class="center">300</td>
+              <td class="center">64.1</td>
+            </tr>
+            <tr>
+              <td>Video Policy</td>
+              <td class="center">300</td>
+              <td class="center">66.0</td>
+            </tr>
+            <tr>
+              <td>FLARE</td>
+              <td class="center">300</td>
+              <td class="center">66.4</td>
+            </tr>
+            <tr>
+              <td>GR00T-N1.5 + HAMLET</td>
+              <td class="center">300</td>
+              <td class="center">66.4</td>
+            </tr>
+            <tr>
+              <td><strong>Cosmos Policy (ours)</strong></td>
+              <td class="center">50</td>
+              <td class="center best">67.1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Cosmos Policy also achieves state-of-the-art performance in the RoboCasa simulation benchmark (24 Kitchen manipulation tasks), achieving an average success rate of 67.1% while requiring significantly fewer training demonstrations than prior SOTA methods (50 demos versus 300).</p>
+    </section>
+
+    <!-- Sample Rollouts & Future Image Predictions -->
+    <section class="proj-section">
+      <h2 class="proj-heading">Sample Rollouts &amp; Future Image Predictions</h2>
+      <p>
+        Below we show sample rollout videos with Cosmos Policy, along with its future image predictions. For LIBERO
+        and ALOHA, the prediction and execution horizon are equal (i.e., we predict an action chunk and execute it
+        fully before generating the next one); for RoboCasa, the execution horizon is half the prediction horizon
+        (i.e., we execute the first half of each action chunk).
+      </p>
+
+      <h3 class="proj-subheading">LIBERO</h3>
+      <div class="results-grid" style="grid-template-columns:repeat(2,1fr)">
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_libero_spatial.mp4" type="video/mp4">
+          </video>
+          <figcaption>LIBERO-Spatial</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_libero_object.mp4" type="video/mp4">
+          </video>
+          <figcaption>LIBERO-Object</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_libero_goal.mp4" type="video/mp4">
+          </video>
+          <figcaption>LIBERO-Goal</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_libero_long.mp4" type="video/mp4">
+          </video>
+          <figcaption>LIBERO-Long</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="proj-subheading">RoboCasa</h3>
+      <div class="results-grid" style="grid-template-columns:repeat(2,1fr)">
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_robocasa_close_doors.mp4" type="video/mp4">
+          </video>
+          <figcaption>Close Doors</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_robocasa_open_drawer.mp4" type="video/mp4">
+          </video>
+          <figcaption>Open Drawer</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_robocasa_pick_and_place.mp4" type="video/mp4">
+          </video>
+          <figcaption>Pick and Place</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_robocasa_turn_off_stove.mp4" type="video/mp4">
+          </video>
+          <figcaption>Turn Off Stove</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="proj-subheading">ALOHA Real-World</h3>
+      <div class="results-grid" style="grid-template-columns:repeat(2,1fr)">
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_aloha_put_candies_in_bowl.mp4" type="video/mp4">
+          </video>
+          <figcaption>Put Candies in Bowl (1)</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_aloha_put_candies_in_bowl2.mp4" type="video/mp4">
+          </video>
+          <figcaption>Put Candies in Bowl (2)</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_aloha_put_candy_in_bag.mp4" type="video/mp4">
+          </video>
+          <figcaption>Put Candy in Bag (1)</figcaption>
+        </figure>
+        <figure>
+          <video autoplay muted loop playsinline>
+            <source src="assets/cosmos_policy_aloha_put_candy_in_bag2.mp4" type="video/mp4">
+          </video>
+          <figcaption>Put Candy in Bag (2)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Citation — <code> pre-filled by project.js -->
+    <section class="citation proj-section">
+      <h2 class="proj-heading">Citation</h2>
+      <div class="citation-block">
+        <pre><code>@inproceedings{kim2025cosmospolicy,
+  title={Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning},
+  author={Kim, Moo Jin and Gao, Yihuai and Lin, Tsung-Yi and Lin, Yen-Chen and Ge, Yunhao and Lam, Grace and Liang, Percy and Song, Shuran and Liu, Ming-Yu and Finn, Chelsea and Gu, Jinwei},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2026}
+}</code></pre>
+        <button class="copy-btn" onclick="copyCitation(this)">Copy</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injected by project.js -->
+  <script src="../js/project.js"></script>
+</body>
+</html>
