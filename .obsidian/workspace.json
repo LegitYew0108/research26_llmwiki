@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/concepts/retrieval_augmented_imitation_learning.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "retrieval_augmented_imitation_learning"
+              "title": "index"
             }
           }
         ],
@@ -218,6 +218,11 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "wiki/concepts/probabilistic_routing_ks2.md",
+    "wiki/concepts/imitation_data_selection_related_work.md",
+    "wiki/concepts/projection_configuration_ks.md",
+    "wiki/concepts/reference_angle_probability.md",
+    "wiki/concepts/retrieval_augmented_imitation_learning.md",
     "wiki/concepts/retrieval_based_imitation_data_selection.md",
     "wiki/concepts/robot_arm_imitation_learning_reading_guide.md",
     "wiki/concepts/skill_based_imitation_learning.md",
@@ -236,7 +241,6 @@
     "raw/temp/lee_2020_quadrupedal_locomotion.pdf",
     "wiki/entities/mobile_aloha_dataset.md",
     "raw/temp/tfds_aloha_mobile_snapshot.txt",
-    "wiki/concepts/imitation_data_selection_related_work.md",
     "wiki/concepts/faiss_vector_search.md",
     "wiki/concepts/cvae_for_act_reading_guide.md",
     "raw/temp/lerobot_aloha_mobile_wipe_wine_card.md",
@@ -248,10 +252,6 @@
     "raw/papers/zhao_2023_act.pdf",
     "log/daily/daily_20261031.md",
     "log/lint/lint_20261031.md",
-    "wiki/sources/kumar_2025_collage.md",
-    "wiki/sources/du_2023_behavior_retrieval.md",
-    "wiki/concepts/retrieval_augmented_imitation_learning.md",
-    "wiki/concepts/compounding_error.md",
     "raw/temp/pari_vinn_abstract.html",
     "raw/temp/nasiriany_2023_sailor.pdf",
     "artifacts/sailor/slide.png",
