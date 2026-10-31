@@ -203,6 +203,8 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf",
+    "raw/temp/paper.pdf",
     "wiki/concepts/imitation_learning/robot_policy_data_efficiency.md",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "wiki/sources/imitation_learning/guo_2026_loopwam.md",
@@ -221,7 +223,6 @@
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/kober_2013_robot_rl_survey.pdf",
     "wiki/concepts/imitation_learning/robot_policy_evaluation_metrics.md",
-    "raw/temp/ross_2011_dagger.pdf",
     "wiki/concepts/imitation_learning/robot_learning_motivation.md",
     "wiki/concepts/imitation_learning/cosmos_policy.md",
     "wiki/sources/imitation_learning/kim_2026_cosmos_policy.md",
@@ -238,7 +239,6 @@
     "wiki/sources/imitation_learning/zhao_2023_act.md",
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
-    "wiki/concepts/memory/associative_memory_and_kernel_regression.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
