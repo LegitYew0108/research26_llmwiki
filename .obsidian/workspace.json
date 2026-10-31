@@ -214,8 +214,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "27ea49b3ebd7f7e5",
+  "active": "0bb1aae2cd8c6dfc",
   "lastOpenFiles": [
+    "wiki/sources/imitation_learning/kim_2026_cosmos_policy.md",
+    "wiki/sources/reinforcement_learning/luo_2024_hil_serl.md",
+    "raw/papers/luo_2024_hil_serl.pdf",
+    "raw/papers/nasiriany_2023_sailor.pdf",
     "raw/papers/luo_2024_serl.pdf",
     "raw/temp/kim_2026_cosmos_policy.pdf",
     "index.md",
@@ -237,21 +241,17 @@
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
     "wiki/sources/imitation_learning",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
-    "wiki/sources/memory",
     "wiki/concepts/memory/associative_memory_and_kernel_regression.md",
-    "wiki/concepts/memory",
     "wiki/concepts/vector_search/faiss_vector_search.md",
     "wiki/concepts/imitation_learning/diffusion_policy.md",
     "wiki/concepts/vector_search/probabilistic_routing_ks2.md",
     "wiki/concepts/imitation_learning/behavior_cloning.md",
     "wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md",
-    "wiki/concepts/reinforcement_learning",
     "wiki/concepts/generative_models/variational_autoencoder.md",
     "wiki/concepts/generative_models/cvae_for_act_reading_guide.md",
     "wiki/concepts/generative_models/conditional_variational_autoencoder.md",
     "wiki/concepts/vector_search/reference_angle_probability.md",
     "wiki/concepts/vector_search/projection_configuration_ks.md",
-    "wiki/concepts/vector_search/angle_testing.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
