@@ -11,14 +11,12 @@
             "id": "1be8791edf6a9c25",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "raw/temp/robot_arm_sota_research_20261031.md",
-                "mode": "source",
-                "source": false
+                "file": "raw/temp/pi_2025_pistar06.pdf"
               },
-              "icon": "lucide-file",
-              "title": "robot_arm_sota_research_20261031"
+              "icon": "lucide-file-text",
+              "title": "pi_2025_pistar06"
             }
           }
         ]
@@ -203,9 +201,9 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
-    "raw/temp/pi_2025_pistar06.pdf",
     "raw/temp/pi_2026_pi07.pdf",
-    "raw/temp/robot_arm_sota_research_20261031.md",
+    "mind/IL/robot_arm_sota_research_20261031.md",
+    "raw/temp/pi_2025_pistar06.pdf",
     "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "raw/temp/cosmos_policy_research_20261031.md",
     "raw/temp/guo_2026_loopwam.pdf",

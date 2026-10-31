@@ -25,7 +25,7 @@ updated: 2026-10-31
 
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
-- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](raw/temp/robot_arm_sota_research_20261031.md) — LoopWAM・π0.7・π*0.6のPDFをtempへ収集。個別ingestは未実施。
+- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](robot_arm_sota_research_20261031.md) — LoopWAM・π0.7・π*0.6のPDFをtempへ収集。個別ingestは未実施。
 - [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
 - [ミーティング記録](raw/meeting/)
 
