@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/temp/osa_2018_imitation_learning_survey.pdf"
+                "file": "raw/temp/levine_2020_offline_rl_tutorial.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "osa_2018_imitation_learning_survey"
+              "title": "levine_2020_offline_rl_tutorial"
             }
           }
         ]
@@ -201,13 +201,14 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "raw/temp/osa_2018_imitation_learning_survey.pdf",
+    "raw/temp/kober_2013_robot_rl_survey.pdf",
+    "raw/temp/pi_2025_pistar06.pdf",
+    "raw/temp/pi_2026_pi07.pdf",
     "wiki/concepts/imitation_learning/robot_policy_evaluation_metrics.md",
     "raw/temp/robot_arm_sota_research_20261031.md",
     "raw/temp/guo_2026_loopwam.pdf",
-    "raw/temp/pi_2025_pistar06.pdf",
-    "raw/temp/pi_2026_pi07.pdf",
     "raw/temp/ross_2011_dagger.pdf",
-    "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "raw/temp/levine_2020_offline_rl_tutorial.pdf",
     "raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf",
     "wiki/concepts/imitation_learning/robot_learning_motivation.md",
@@ -236,7 +237,6 @@
     "wiki/concepts/vector_search/probabilistic_routing_ks2.md",
     "wiki/concepts/imitation_learning/behavior_cloning.md",
     "wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md",
-    "wiki/concepts/generative_models/variational_autoencoder.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
