@@ -4,7 +4,7 @@ type: concept
 tags: [imitation-learning, behavior-cloning, retrieval, data-selection, state-action-embedding]
 sources:
   - ../../../raw/papers/2304.08742v2.pdf
-  - ../../../raw/temp/nasiriany_2023_sailor.pdf
+  - ../../../raw/papers/nasiriany_2023_sailor.pdf
 updated: 2026-10-31
 ---
 
@@ -30,9 +30,9 @@ updated: 2026-10-31
 
 ## SAILOR：部分軌跡を選んでskill方策を学ぶ
 
-[SAILOR](../../sources/retrieval/nasiriany_2023_sailor.md)は固定長の部分軌跡をskillに埋め込み、各既存候補から対象デモ集合への最小L2距離で順位付けして、候補全体の上位割合を選ぶ。検索結果は観測履歴からskillを予測する方策の教師データとなる。状態・行動の組を選ぶBehavior Retrievalとは検索単位と最終方策が異なるため、取得割合や成功率を同じ条件の比較として扱わない。[出典：SAILOR §3–4、Algorithm 2](../../../raw/temp/nasiriany_2023_sailor.pdf)、[Behavior Retrieval §III](../../../raw/papers/2304.08742v2.pdf)
+[SAILOR](../../sources/retrieval/nasiriany_2023_sailor.md)は固定長の部分軌跡をskillに埋め込み、各既存候補から対象デモ集合への最小L2距離で順位付けして、候補全体の上位割合を選ぶ。検索結果は観測履歴からskillを予測する方策の教師データとなる。状態・行動の組を選ぶBehavior Retrievalとは検索単位と最終方策が異なるため、取得割合や成功率を同じ条件の比較として扱わない。[出典：SAILOR §3–4、Algorithm 2](../../../raw/papers/nasiriany_2023_sailor.pdf)、[Behavior Retrieval §III](../../../raw/papers/2304.08742v2.pdf)
 
-SAILORのCALVIN ablationでは、Cleaning Upで関連データ検索がランダム選択を上回る一方、Setting Upでは両者が同程度である。関連性による選別の効果はタスク・データセットに依存する。[出典：Appendix A.4、Table 6](../../../raw/temp/nasiriany_2023_sailor.pdf)
+SAILORのCALVIN ablationでは、Cleaning Upで関連データ検索がランダム選択を上回る一方、Setting Upでは両者が同程度である。関連性による選別の効果はタスク・データセットに依存する。[出典：Appendix A.4、Table 6](../../../raw/papers/nasiriany_2023_sailor.pdf)
 
 ## 関連ページ
 

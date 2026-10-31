@@ -3,8 +3,9 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/papers/luo_2024_hil_serl.pdf
   - raw/papers/luo_2024_serl.pdf
-  - raw/temp/nasiriany_2023_sailor.pdf
+  - raw/papers/nasiriany_2023_sailor.pdf
   - raw/papers/2304.08742v2.pdf
   - raw/papers/2508.01131v2.pdf
   - raw/papers/2401.17698v1.pdf
@@ -34,7 +35,7 @@ updated: 2026-10-31
 - [検索による模倣学習データ選択の関連研究](wiki/concepts/retrieval/imitation_data_selection_related_work.md)
 - [FAISS：検索の基本とHNSW](wiki/concepts/vector_search/faiss_vector_search.md)
 - [Mobile ALOHA：観測・行動データの構造](wiki/entities/mobile_aloha_dataset.md)
-- [SAILOR：skill表現と検索による模倣学習](wiki/sources/retrieval/nasiriany_2023_sailor.md) — [原論文](raw/temp/nasiriany_2023_sailor.pdf)を取り込み済み。
+- [SAILOR：skill表現と検索による模倣学習](wiki/sources/retrieval/nasiriany_2023_sailor.md) — [原論文](raw/papers/nasiriany_2023_sailor.pdf)を取り込み済み。
 - VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/generative_models/variational_autoencoder.md)で参照。
 
 ### Web記事の参照記録
@@ -67,7 +68,7 @@ updated: 2026-10-31
 
 - [Behavior RetrievalとSAILOR：タスク別の実験結果比較](artifacts/retrieval_results_comparison.md) — 各原論文内の既存手法比較とSAILORの検索ablation。
 
-- [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/temp/nasiriany_2023_sailor.pdf)に基づく。
+- [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/papers/nasiriany_2023_sailor.pdf)に基づく。
 
 - [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/2304.08742v2.pdf)に基づく。
 
@@ -132,6 +133,7 @@ updated: 2026-10-31
 ### 強化学習・デモの併用
 
 - [SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning](wiki/sources/reinforcement_learning/luo_2024_serl.md)
+- [HIL-SERL：人の修正を使う精密・動的・双腕の実機RL](wiki/sources/reinforcement_learning/luo_2024_hil_serl.md)
 
 ## 概念・手法のページ
 

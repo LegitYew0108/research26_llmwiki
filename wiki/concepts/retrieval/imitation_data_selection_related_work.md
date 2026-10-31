@@ -3,7 +3,7 @@ title: "検索による模倣学習データ選択：既存研究調査"
 type: concept
 tags: [imitation-learning, data-selection, retrieval, ACT, ANNS]
 sources:
-  - ../../../raw/temp/nasiriany_2023_sailor.pdf
+  - ../../../raw/papers/nasiriany_2023_sailor.pdf
   - ../../../raw/temp/du_2023_behavior_retrieval.html
   - ../../../raw/temp/lin_2024_flowretrieval.html
   - ../../../raw/temp/dass_datamil_project.html
@@ -19,7 +19,7 @@ updated: 2026-10-31
 
 | 研究 | 確認できた内容 | 参照先 |
 | --- | --- | --- |
-| SAILOR（CoRL 2022） | 部分軌跡のVAE skill表現と時間差予測を学習し、対象集合への最小L2距離で既存候補の上位割合を取得。観測履歴からskillを予測するLSTM方策を学ぶ。 | [保存PDF §4・Appendix C](../../../raw/temp/nasiriany_2023_sailor.pdf)、[個別要約](../../sources/retrieval/nasiriany_2023_sailor.md) |
+| SAILOR（CoRL 2022） | 部分軌跡のVAE skill表現と時間差予測を学習し、対象集合への最小L2距離で既存候補の上位割合を取得。観測履歴からskillを予測するLSTM方策を学ぶ。 | [保存PDF §4・Appendix C](../../../raw/papers/nasiriany_2023_sailor.pdf)、[個別要約](../../sources/retrieval/nasiriany_2023_sailor.md) |
 | Behavior Retrieval（2023） | 少数の対象デモを使って既存データから関連する状態・行動を選び、両者を共同学習する。状態・行動のVAE表現とL2距離を利用。方策はLSTM–GMM。 | [保存全文](../../../raw/temp/du_2023_behavior_retrieval.html)、[原文 §III・付録A](https://arxiv.org/html/2304.08742v2) |
 | FlowRetrieval（2024） | Optical flowをVAEで表現して関連区間を選び、flow予測の補助損失を加えて学習する。実験の方策はDiffusion Policy。 | [保存全文](../../../raw/temp/lin_2024_flowretrieval.html)、[原文 §4](https://arxiv.org/html/2408.16944v1) |
 | DataMIL（preprint 2025／ICLR 2026） | 類似性だけでなく方策への影響を推定して選択。対象デモのvalidation lossを代理指標にし、trajectory/sub-trajectory単位のclusteringを使う。 | [保存著者ページ](../../../raw/temp/dass_datamil_project.html)、[著者ページ](https://robin-lab.cs.utexas.edu/datamodels4imitation/)、[論文](https://arxiv.org/abs/2505.09603)、[出版情報](https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html) |
