@@ -25,7 +25,7 @@ updated: 2026-10-31
 
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
-- [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — 未ingest。
+- [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
 - [ミーティング記録](raw/meeting/)
 
 ### 模倣学習に関連する資料の整理
@@ -107,6 +107,8 @@ updated: 2026-10-31
 
 ### 模倣学習・方策
 
+- [Cosmos Policy：動画モデルの追加学習によるロボット制御とplanning](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)
+
 - [ALVINN: An Autonomous Land Vehicle in a Neural Network](wiki/sources/imitation_learning/pomerleau_1988_alvinn.md)
 - [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](wiki/sources/imitation_learning/zhao_2023_act.md)
 - [Bi-ACT: Bilateral Control-Based Imitation Learning via Action Chunking with Transformer](wiki/sources/imitation_learning/buamanee_2024_biact.md)
@@ -138,6 +140,8 @@ updated: 2026-10-31
 ## 概念・手法のページ
 
 ### 模倣学習・方策
+
+- [Cosmos Policyの仕組み：動画モデル・world model・planning](wiki/concepts/imitation_learning/cosmos_policy.md)
 
 - [Behavior Cloning：学習方法と分布シフト](wiki/concepts/imitation_learning/behavior_cloning.md)
 - [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/imitation_learning/compounding_error.md)

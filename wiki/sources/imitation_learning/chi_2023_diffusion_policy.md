@@ -128,3 +128,5 @@ BCに由来するデモ不足・品質の問題は残り、単純な方策より
 - [Action ChunkingとTemporal Ensembling](../../concepts/imitation_learning/action_chunking_and_temporal_ensembling.md)
 - [ACT](zhao_2023_act.md)
 - [模倣学習データ選択の関連研究：FlowRetrieval等](../../concepts/retrieval/imitation_data_selection_related_work.md)
+
+- [Cosmos Policy：事前学習済み動画モデルによる行動・未来観測・価値の生成](kim_2026_cosmos_policy.md)

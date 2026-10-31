@@ -64,3 +64,5 @@ $$\mathcal L=\operatorname{MSE}\left(\epsilon^k,\epsilon_\theta(O_t,A_t^0+\epsil
 - [Behavior Cloning](behavior_cloning.md)
 - [Action ChunkingとTemporal Ensembling](action_chunking_and_temporal_ensembling.md)
 - [CVAEとACT](../generative_models/conditional_variational_autoencoder.md)
+
+- [Cosmos Policy：事前学習済み動画モデルによる行動・未来観測・価値の生成](cosmos_policy.md)
