@@ -3,6 +3,8 @@ title: ロボット方策の評価指標とSOTAの読み方
 type: concept
 tags: [robotics, evaluation, benchmark, success-rate, generalization]
 sources:
+  - ../../../raw/papers/pi_2025_pistar06.pdf
+  - ../../../raw/papers/pi_2026_pi07.pdf
   - ../../../raw/papers/luo_2024_hil_serl.pdf
   - ../../../raw/papers/kim_2026_cosmos_policy.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
@@ -30,6 +32,12 @@ updated: 2026-10-31
 | 計算負担と応答性 | 学習GPU数・時間、推論遅延、chunk長 | [Cosmos Policy Appendix A.2–A.3・Table 5](../../../raw/papers/kim_2026_cosmos_policy.pdf) |
 
 汎化を成功率で測る場合もある。「異なる指標」には、数式が異なる量だけでなく、同じ成功率を異なる条件で測る評価軸も含む。これは上記の実験条件を踏まえた整理。
+
+## Throughputと汎化の追加例
+
+RECAPは1時間あたりの成功作業数をthroughputとして評価し、成功率と速度の両方を捉える。π0.7 Fig.6上段のthroughputは専門方策に対して正規化され、下段はtask progressなので数値をそのまま比較しない。また、学習で見たタスクの専門方策との比較と、未知タスク・未知task–robot組合せへの転移を区別する。[RECAP §VI-C・Fig.7](../../../raw/papers/pi_2025_pistar06.pdf)、[π0.7 §IX・Fig.6](../../../raw/papers/pi_2026_pi07.pdf)
+
+詳しくは[π*0.6からπ0.7へ](pi_recap_and_pi07.md)を参照。
 
 ## 記述上の注意
 

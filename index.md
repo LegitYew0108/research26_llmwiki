@@ -3,6 +3,8 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/papers/pi_2025_pistar06.pdf
+  - raw/papers/pi_2026_pi07.pdf
   - raw/papers/luo_2024_hil_serl.pdf
   - raw/papers/luo_2024_serl.pdf
   - raw/papers/nasiriany_2023_sailor.pdf
@@ -25,7 +27,7 @@ updated: 2026-10-31
 
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
-- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](robot_arm_sota_research_20261031.md) — LoopWAM・π0.7・π*0.6のPDFをtempへ収集。個別ingestは未実施。
+- [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](mind/IL/robot_arm_sota_research_20261031.md) — LoopWAMはtemp。π0.7・π*0.6は正式保存先へ移して取り込み済み。
 - [Cosmos Policy：論文・公式一次情報の調査記録](raw/temp/cosmos_policy_research_20261031.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
 - [ミーティング記録](raw/meeting/)
 
@@ -107,6 +109,8 @@ updated: 2026-10-31
 
 ### 模倣学習・方策
 
+- [π0.7：多様なpromptで操る汎用VLA](wiki/sources/imitation_learning/pi_2026_pi07.md)
+
 - [Cosmos Policy：動画モデルの追加学習によるロボット制御とplanning](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)
 
 - [ALVINN: An Autonomous Land Vehicle in a Neural Network](wiki/sources/imitation_learning/pomerleau_1988_alvinn.md)
@@ -134,12 +138,15 @@ updated: 2026-10-31
 
 ### 強化学習・デモの併用
 
+- [π*0.6 / RECAP：実機経験と人の修正から学ぶVLA](wiki/sources/reinforcement_learning/pi_2025_pistar06.md)
 - [SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning](wiki/sources/reinforcement_learning/luo_2024_serl.md)
 - [HIL-SERL：人の修正を使う精密・動的・双腕の実機RL](wiki/sources/reinforcement_learning/luo_2024_hil_serl.md)
 
 ## 概念・手法のページ
 
 ### 模倣学習・方策
+
+- [π*0.6からπ0.7へ：経験による改善と多様な条件付け](wiki/concepts/imitation_learning/pi_recap_and_pi07.md)
 
 - [ロボット方策の評価指標とSOTAの読み方](wiki/concepts/imitation_learning/robot_policy_evaluation_metrics.md)
 
