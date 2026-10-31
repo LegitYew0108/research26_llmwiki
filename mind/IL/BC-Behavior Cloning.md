@@ -50,8 +50,8 @@ BCの代表的な弱点
 ## 関連ページ・出典
 
 - [Imitation Learning：自分の理解](<IL-Imitation Learning(模倣学習).md>)
-- [模倣学習と強化学習の基礎](../../wiki/concepts/imitation_and_reinforcement_learning.md)
-- [ACTの論文要約](../../wiki/sources/zhao_2023_act.md)
+- [模倣学習と強化学習の基礎](../../wiki/concepts/imitation_learning/imitation_and_reinforcement_learning.md)
+- [ACTの論文要約](../../wiki/sources/imitation_learning/zhao_2023_act.md)
 - [模倣学習のサーベイ：§2.2・3](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
 - [DAgger：§1–3（分布シフトと誤差の累積）](../../raw/temp/ross_2011_dagger.pdf)
 - [ACT：§IV（行動列の学習とL1 loss）](../../raw/papers/zhao_2023_act.pdf)

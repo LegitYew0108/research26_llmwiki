@@ -28,13 +28,13 @@ updated: 2026-10-31
 
 ### 模倣学習に関連する資料の整理
 
-- [ロボットアームの模倣学習：基礎資料と読む観点](wiki/concepts/robot_arm_imitation_learning_reading_guide.md)
-- [ACTのためのCVAE学習ガイド](wiki/concepts/cvae_for_act_reading_guide.md)
-- [検索による模倣学習データ選択の関連研究](wiki/concepts/imitation_data_selection_related_work.md)
-- [FAISS：検索の基本とHNSW](wiki/concepts/faiss_vector_search.md)
+- [ロボットアームの模倣学習：基礎資料と読む観点](wiki/concepts/imitation_learning/robot_arm_imitation_learning_reading_guide.md)
+- [ACTのためのCVAE学習ガイド](wiki/concepts/generative_models/cvae_for_act_reading_guide.md)
+- [検索による模倣学習データ選択の関連研究](wiki/concepts/retrieval/imitation_data_selection_related_work.md)
+- [FAISS：検索の基本とHNSW](wiki/concepts/vector_search/faiss_vector_search.md)
 - [Mobile ALOHA：観測・行動データの構造](wiki/entities/mobile_aloha_dataset.md)
-- [SAILOR：skill表現と検索による模倣学習](wiki/sources/nasiriany_2023_sailor.md) — [原論文](raw/temp/nasiriany_2023_sailor.pdf)を取り込み済み。
-- VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/variational_autoencoder.md)で参照。
+- [SAILOR：skill表現と検索による模倣学習](wiki/sources/retrieval/nasiriany_2023_sailor.md) — [原論文](raw/temp/nasiriany_2023_sailor.pdf)を取り込み済み。
+- VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/generative_models/variational_autoencoder.md)で参照。
 
 ### Web記事の参照記録
 
@@ -47,6 +47,20 @@ updated: 2026-10-31
 - [論文ごとの要約](wiki/sources/)
 - [概念・手法](wiki/concepts/)
 - [研究者・研究室・データセット](wiki/entities/)
+
+### 分野から探す
+
+記事種別（概念／論文要約）の下に分野別フォルダを置く。分野をまたぐ記事は主題で配置し、関連ページで接続する。
+
+| 分野 | 概念・手法 | 論文要約 |
+| --- | --- | --- |
+| 模倣学習・方策 | [概念](wiki/concepts/imitation_learning/) | [論文](wiki/sources/imitation_learning/) |
+| 検索によるデータ選択 | [概念](wiki/concepts/retrieval/) | [論文](wiki/sources/retrieval/) |
+| 生成モデル（VAE・CVAE） | [概念](wiki/concepts/generative_models/) | [論文](wiki/sources/generative_models/) |
+| ベクトル検索・角度判定 | [概念](wiki/concepts/vector_search/) | [論文](wiki/sources/vector_search/) |
+| 連想記憶・Memory Mosaics | [概念](wiki/concepts/memory/) | [論文](wiki/sources/memory/) |
+| 強化学習・デモの併用 | [概念](wiki/concepts/reinforcement_learning/) | [論文](wiki/sources/reinforcement_learning/) |
+
 
 ## 研究活動
 
@@ -89,64 +103,79 @@ updated: 2026-10-31
 
 ## 取り込み済みの論文
 
-- [SERL：Sample-Efficient Robotic Reinforcement Learning](wiki/sources/luo_2024_serl.md) — [一次資料（arXiv v4）](raw/temp/luo_2024_serl.pdf)
+### 模倣学習・方策
 
-- [Diffusion Policy：Action Diffusionによる模倣学習（保存版v5）](wiki/sources/chi_2023_diffusion_policy.md) — [一次資料](raw/papers/chi_2023_diffusion_policy.pdf)
+- [ALVINN: An Autonomous Land Vehicle in a Neural Network](wiki/sources/imitation_learning/pomerleau_1988_alvinn.md)
+- [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](wiki/sources/imitation_learning/zhao_2023_act.md)
+- [Bi-ACT: Bilateral Control-Based Imitation Learning via Action Chunking with Transformer](wiki/sources/imitation_learning/buamanee_2024_biact.md)
+- [Diffusion Policy：Action Diffusionによる視覚ベースの模倣学習](wiki/sources/imitation_learning/chi_2023_diffusion_policy.md)
 
-- [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/nasiriany_2023_sailor.md) — [一次資料](raw/temp/nasiriany_2023_sailor.pdf)
+### 検索によるデータ選択
 
-- [Behavior Retrieval：少数デモによる既存データ検索とBC](wiki/sources/du_2023_behavior_retrieval.md) — [一次資料（v2）](raw/papers/2304.08742v2.pdf)
+- [Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets](wiki/sources/retrieval/du_2023_behavior_retrieval.md)
+- [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/retrieval/kumar_2025_collage.md)
+- [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/retrieval/nasiriany_2023_sailor.md)
 
-- [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/kumar_2025_collage.md) — [一次資料（v2）](raw/papers/2508.01131v2.pdf)
+### 生成モデル（VAE・CVAE）
 
-- [Bi-ACT：Bilateral ControlとACTの統合](wiki/sources/buamanee_2024_biact.md) — [一次資料](raw/papers/2401.17698v1.pdf)
+- [Learning Structured Output Representation using Deep Conditional Generative Models](wiki/sources/generative_models/sohn_2015_cvae.md)
 
-- [Memory Mosaics at scale（モデルv2／arXiv v3）](wiki/sources/zhang_2025_memory_mosaics_at_scale.md) — [一次資料](raw/papers/2507.03285v3.pdf)
+### ベクトル検索・角度判定
 
-- [Learning Structured Output Representation using Deep Conditional Generative Models（CVAE）](wiki/sources/sohn_2015_cvae.md) — [一次資料](raw/papers/sohn_2015_cvae.pdf)
+- [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/vector_search/kernel_function_for_angle_testing.md)
 
-- [ALVINN: An Autonomous Land Vehicle in a Neural Network（NIPS 1988）](wiki/sources/pomerleau_1988_alvinn.md) — [一次資料](raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
+### 連想記憶・Memory Mosaics
 
-- [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware（ACT）](wiki/sources/zhao_2023_act.md) — [一次資料](raw/papers/zhao_2023_act.pdf)
+- [Memory Mosaics at scale](wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md)
 
-- [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
+### 強化学習・デモの併用
+
+- [SERL: A Software Suite for Sample-Efficient Robotic Reinforcement Learning](wiki/sources/reinforcement_learning/luo_2024_serl.md)
 
 ## 概念・手法のページ
 
-- [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/demonstration_augmented_robot_rl.md)
+### 模倣学習・方策
 
-- [Diffusion Policy：ノイズ予測から行動列を生成する仕組み](wiki/concepts/diffusion_policy.md)
+- [Behavior Cloning：学習方法と分布シフト](wiki/concepts/imitation_learning/behavior_cloning.md)
+- [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/imitation_learning/compounding_error.md)
+- [ロボットの模倣学習と強化学習：基本的な仕組みと違い](wiki/concepts/imitation_learning/imitation_and_reinforcement_learning.md)
+- [ロボットアームの模倣学習：基礎資料と読む観点](wiki/concepts/imitation_learning/robot_arm_imitation_learning_reading_guide.md)
+- [Action ChunkingとTemporal Ensembling](wiki/concepts/imitation_learning/action_chunking_and_temporal_ensembling.md)
+- [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/imitation_learning/act_infer_z.md)
+- [ACTのCVAE：KL項と正解情報への依存](wiki/concepts/imitation_learning/act_cvae_kl_regularization.md)
+- [Bilateral Controlに基づく模倣学習](wiki/concepts/imitation_learning/bilateral_control_based_imitation_learning.md)
+- [Diffusion Policy：ノイズ予測から行動列を生成する仕組み](wiki/concepts/imitation_learning/diffusion_policy.md)
+- [Skill-based Imitation Learning：skill表現と階層方策](wiki/concepts/imitation_learning/skill_based_imitation_learning.md)
 
-- [Skill-based Imitation Learning：skill表現と階層方策](wiki/concepts/skill_based_imitation_learning.md)
+### 検索によるデータ選択
 
-- [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/compounding_error.md)
-- [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/behavior_retrieval_vae_search.md) — batchの抽出、分布の推定、状態・行動の復元、損失計算、重み更新を順に説明。
+- [検索による模倣学習データ選択](wiki/concepts/retrieval/retrieval_based_imitation_data_selection.md)
+- [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval/retrieval_augmented_imitation_learning.md)
+- [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/retrieval/behavior_retrieval_vae_search.md)
+- [検索による模倣学習データ選択：既存研究調査](wiki/concepts/retrieval/imitation_data_selection_related_work.md)
+- [Subsequence DTW：部分軌跡の時間対応を取る検索](wiki/concepts/retrieval/subsequence_dynamic_time_warping.md)
 
-- [検索による模倣学習データ選択](wiki/concepts/retrieval_based_imitation_data_selection.md)
+### 生成モデル（VAE・CVAE）
 
-- [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval_augmented_imitation_learning.md)
-- [Subsequence DTW：部分軌跡の時間対応を取る検索](wiki/concepts/subsequence_dynamic_time_warping.md)
+- [VAE（Variational Autoencoder）：仕組みと学習の目的](wiki/concepts/generative_models/variational_autoencoder.md)
+- [CVAE：条件付き生成とACTでの使い方](wiki/concepts/generative_models/conditional_variational_autoencoder.md)
+- [ACTのためのCVAE：資料と学習ガイド](wiki/concepts/generative_models/cvae_for_act_reading_guide.md)
 
-- [ACTのCVAE：KL項と正解情報への依存](wiki/concepts/act_cvae_kl_regularization.md)
-- [ACTのinfer z：学習時に正解行動列を使う理由](wiki/concepts/act_infer_z.md)
+### ベクトル検索・角度判定
 
-- [Bilateral Controlに基づく模倣学習](wiki/concepts/bilateral_control_based_imitation_learning.md)
+- [角度判定と参照角度](wiki/concepts/vector_search/angle_testing.md)
+- [参照角度によるKS₁・KS₂の確率解析](wiki/concepts/vector_search/reference_angle_probability.md)
+- [KSの射影配置と部分空間分割](wiki/concepts/vector_search/projection_configuration_ks.md)
+- [確率的ルーティングとKS₂テスト](wiki/concepts/vector_search/probabilistic_routing_ks2.md)
+- [FAISS公式資料：検索の基本とHNSW](wiki/concepts/vector_search/faiss_vector_search.md)
 
-- [Associative MemoryとKernel Regression](wiki/concepts/associative_memory_and_kernel_regression.md)
+### 連想記憶・Memory Mosaics
 
-- [CVAE：条件付き生成とACTでの使い方](wiki/concepts/conditional_variational_autoencoder.md)
+- [Associative MemoryとKernel Regression](wiki/concepts/memory/associative_memory_and_kernel_regression.md)
 
-- [Behavior Cloning：学習方法と分布シフト](wiki/concepts/behavior_cloning.md)
+### 強化学習・デモの併用
 
-- [VAE（Variational Autoencoder）：仕組みと学習の目的](wiki/concepts/variational_autoencoder.md)
-
-- [Action ChunkingとTemporal Ensembling](wiki/concepts/action_chunking_and_temporal_ensembling.md)
-
-- [ロボットの模倣学習と強化学習：基本的な仕組みと違い](wiki/concepts/imitation_and_reinforcement_learning.md)
-- [角度判定と参照角度](wiki/concepts/angle_testing.md)
-- [参照角度によるKS₁・KS₂の確率解析](wiki/concepts/reference_angle_probability.md)
-- [KSの射影配置と部分空間分割](wiki/concepts/projection_configuration_ks.md)
-- [確率的ルーティングとKS₂テスト](wiki/concepts/probabilistic_routing_ks2.md)
+- [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md)
 
 ## 日次ログ一覧
 

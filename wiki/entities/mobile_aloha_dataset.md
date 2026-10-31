@@ -44,5 +44,5 @@ LeRobot配布版の件数表・カード由来の説明は、2026-10-31のユー
 
 ## 関連ページ
 
-- [ACTとALOHA](../sources/zhao_2023_act.md)
-- [Action Chunking](../concepts/action_chunking_and_temporal_ensembling.md)
+- [ACTとALOHA](../sources/imitation_learning/zhao_2023_act.md)
+- [Action Chunking](../concepts/imitation_learning/action_chunking_and_temporal_ensembling.md)
