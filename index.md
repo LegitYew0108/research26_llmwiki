@@ -3,6 +3,7 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/temp/nasiriany_2023_sailor.pdf
   - raw/papers/2304.08742v2.pdf
   - raw/papers/2508.01131v2.pdf
   - raw/papers/2401.17698v1.pdf
@@ -30,7 +31,7 @@ updated: 2026-10-31
 - [検索による模倣学習データ選択の関連研究](wiki/concepts/imitation_data_selection_related_work.md)
 - [FAISS：検索の基本とHNSW](wiki/concepts/faiss_vector_search.md)
 - [Mobile ALOHA：観測・行動データの構造](wiki/entities/mobile_aloha_dataset.md)
-- [SAILOR原論文](raw/temp/nasiriany_2023_sailor.pdf)：発表資料で参照。個別要約は未作成。
+- [SAILOR：skill表現と検索による模倣学習](wiki/sources/nasiriany_2023_sailor.md) — [原論文](raw/temp/nasiriany_2023_sailor.pdf)を取り込み済み。
 - VAEの参照論文：[Auto-Encoding Variational Bayes](raw/temp/kingma_2013_auto_encoding_variational_bayes.pdf)、[An Introduction to Variational Autoencoders](raw/temp/kingma_2019_introduction_to_variational_autoencoders.pdf)。[概念ページ](wiki/concepts/variational_autoencoder.md)で参照。
 
 ### Web記事の参照記録
@@ -86,6 +87,8 @@ updated: 2026-10-31
 
 ## 取り込み済みの論文
 
+- [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/nasiriany_2023_sailor.md) — [一次資料](raw/temp/nasiriany_2023_sailor.pdf)
+
 - [Behavior Retrieval：少数デモによる既存データ検索とBC](wiki/sources/du_2023_behavior_retrieval.md) — [一次資料（v2）](raw/papers/2304.08742v2.pdf)
 
 - [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/kumar_2025_collage.md) — [一次資料（v2）](raw/papers/2508.01131v2.pdf)
@@ -103,6 +106,8 @@ updated: 2026-10-31
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/kernel_function_for_angle_testing.md) — [一次資料](raw/papers/kernel_function_for_angle_testing.pdf)
 
 ## 概念・手法のページ
+
+- [Skill-based Imitation Learning：skill表現と階層方策](wiki/concepts/skill_based_imitation_learning.md)
 
 - [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/compounding_error.md)
 - [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/behavior_retrieval_vae_search.md) — batchの抽出、分布の推定、状態・行動の復元、損失計算、重み更新を順に説明。
