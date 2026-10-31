@@ -11,12 +11,14 @@
             "id": "1be8791edf6a9c25",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/temp/osa_2018_imitation_learning_survey.pdf"
+                "file": "wiki/concepts/retrieval/behavior_retrieval_vae_search.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "osa_2018_imitation_learning_survey"
+              "icon": "lucide-file",
+              "title": "behavior_retrieval_vae_search"
             }
           }
         ]
@@ -201,6 +203,8 @@
   },
   "active": "1be8791edf6a9c25",
   "lastOpenFiles": [
+    "wiki/concepts/imitation_learning/robot_policy_data_efficiency.md",
+    "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "wiki/sources/imitation_learning/guo_2026_loopwam.md",
     "raw/papers/guo_2026_loopwam.pdf",
     "wiki/concepts/imitation_learning/pi_recap_and_pi07.md",
@@ -209,7 +213,6 @@
     "raw/papers/pi_2026_pi07.pdf",
     "raw/papers/pi_2025_pistar06.pdf",
     "raw/temp/pi_2025_pistar06.pdf",
-    "raw/temp/osa_2018_imitation_learning_survey.pdf",
     "mind/IL/BC-Behavior Cloning.md",
     "mind/IL/Cosmos Policyについての調査結果.md",
     "raw/temp/pi_2026_pi07.pdf",
@@ -236,7 +239,6 @@
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
     "wiki/concepts/memory/associative_memory_and_kernel_regression.md",
-    "wiki/concepts/vector_search/faiss_vector_search.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
