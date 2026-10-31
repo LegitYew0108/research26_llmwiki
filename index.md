@@ -148,7 +148,7 @@ updated: 2026-10-31
 - [Cosmos Policyの仕組み：動画モデル・world model・planning](wiki/concepts/imitation_learning/cosmos_policy.md)
 
 - [Behavior Cloning：学習方法と分布シフト](wiki/concepts/imitation_learning/behavior_cloning.md)
-- [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/imitation_learning/compounding_error.md)
+- [Behavior CloningのCompounding Error：状態分布のずれと誤りの連鎖](wiki/concepts/imitation_learning/compounding_error.md) — 本文を保持。DAgger原論文へのリンクは整理済み。
 - [ロボットの模倣学習と強化学習：基本的な仕組みと違い](wiki/concepts/imitation_learning/imitation_and_reinforcement_learning.md)
 - [ロボットアームの模倣学習：基礎資料と読む観点](wiki/concepts/imitation_learning/robot_arm_imitation_learning_reading_guide.md)
 - [Action ChunkingとTemporal Ensembling](wiki/concepts/imitation_learning/action_chunking_and_temporal_ensembling.md)

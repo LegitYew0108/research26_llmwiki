@@ -8,7 +8,6 @@ sources:
   - ../../../raw/web/web_huggingface_rl_framework_20261003.md
   - ../../../raw/web/web_spinningup_rl_algorithms_20261003.md
   - ../../../raw/temp/osa_2018_imitation_learning_survey.pdf
-  - ../../../raw/temp/ross_2011_dagger.pdf
   - ../../../raw/temp/kober_2013_robot_rl_survey.pdf
   - ../../../raw/temp/levine_2020_offline_rl_tutorial.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
@@ -61,9 +60,7 @@ $\theta$ は方策モデルのパラメータ。ただし、BCの損失は二乗
 
 ### なぜお手本に合うだけでは失敗するのか
 
-学習中に見る状況はexpertが訪れた状況だが、実行時には学習した方策自身の行動が次の状況を作る。少し操作を間違えると、デモにない状況へ移り、そこでさらに間違えることがある。この**distribution shiftと誤差の累積**のため、データ上の行動予測が正確でも、タスク全体を成功させられるとは限らない。[論文：DAgger・Introduction](../../../raw/temp/ross_2011_dagger.pdf)
-
-DAggerは、この問題に対し、学習者が訪れる状況についてexpertに適切な行動をラベル付けしてもらい、データを集約して学習し直す方法。したがって、模倣学習が必ず「最初に集めた固定データだけで完結する」わけではない。expertに追加のラベルを求められるか、という条件も重要になる。[論文：DAgger §3・Algorithm 3.1](../../../raw/temp/ross_2011_dagger.pdf)
+学習中に見る状況はexpertが訪れた状況だが、実行時には学習した方策自身の行動が次の状況を作る。少し操作を間違えると、デモにない状況へ移り、そこでさらに間違えることがある。この**distribution shiftと誤差の累積**のため、データ上の行動予測が正確でも、タスク全体を成功させられるとは限らない。[論文：ACT §II・IV](../../../raw/papers/zhao_2023_act.pdf)
 
 ### 模倣学習はBCだけではない
 
@@ -109,12 +106,11 @@ model-based RLは、環境の変化などを予測するmodelを利用し、mode
 
 オンラインRLは学習中に環境から新しい経験を集め、offline RLは追加のオンライン収集をせず固定データから学習する。後者も報酬を用いるので、固定データでの学習という条件だけではBCと同じにならない。[Offline RL tutorial §2.1–2.2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-
 off-policyとofflineも別の区別である。off-policyは、学習対象の方策とは異なる方策で収集した経験も利用できるという性質。off-policyの方法でもオンラインで新たな経験を集めることはできる。offlineは、学習中に追加収集しないというデータ利用の設定であり、通常のoff-policy手法がそのまま固定データだけでうまく学べるとは限らない。[論文：Offline RL tutorial §1・2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 ## 両者はどう違うか
 
-ここでは、違いが最も分かりやすい**標準的なBCと、報酬に基づくRL**を比較する。IRLやDAggerなど、模倣学習全体の性質をこの表だけで決めない。[比較の根拠：Osaら §2.2・3・4](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+ここでは、違いが最も分かりやすい**標準的なBCと、報酬に基づくRL**を比較する。IRLなど、模倣学習全体の性質をこの表だけで決めない。[比較の根拠：Osaら §2.2・3・4](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
 | 観点 | 標準的なBehavior Cloning | 強化学習 |
 | --- | --- | --- |
@@ -132,18 +128,17 @@ off-policyとofflineも別の区別である。off-policyは、学習対象の�
 
 完全に状態を観測でき、各状態でexpertの行動 $\pi_E(s)$ を得られるという仮定の下で、例えば $r_E(s,a)=-\|a-\pi_E(s)\|^2$ と置ける。これを使って $\max_\pi\mathbb{E}_{\tau\sim\pi}[\sum_t\gamma^t r_E(s_t,a_t)]$ を解くなら、expertに似た行動を目的とするRLとして模倣を定式化している。これは「損失の負号を報酬にする」という数学的な対応であり、模倣学習の全手法がこの報酬を使うという意味ではない。[根拠となる定義：Osaら §2.2・3・4](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[Offline RL tutorial §2.1](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-一方、通常のBCは固定されたexpertのデータ上で、予測行動と記録された行動の損失を小さくする。入力となる状態は学習中の方策が変わっても変わらない。逐次的なRLでは、自分の行動が次の状態を変え、その後の報酬にも影響する。このため、**損失の符号を変えて「報酬」と呼ぶだけでは、学習対象の状態分布と将来の扱いが同じにならない。** [Web：MIT・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../../raw/web/web_mit_imitation_learning_20261003.md)）、[論文：DAgger §2](../../../raw/temp/ross_2011_dagger.pdf)、[Offline RL tutorial §2.1](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
+一方、通常のBCは固定されたexpertのデータ上で、予測行動と記録された行動の損失を小さくする。入力となる状態は学習中の方策が変わっても変わらない。逐次的なRLでは、自分の行動が次の状態を変え、その後の報酬にも影響する。このため、**損失の符号を変えて「報酬」と呼ぶだけでは、学習対象の状態分布と将来の扱いが同じにならない。** [Web：MIT・Behavior cloning（外部）](https://underactuated.csail.mit.edu/imitation.html)（[参照記録](../../../raw/web/web_mit_imitation_learning_20261003.md)）、[Offline RL tutorial §2.1](../../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
 
-また、手元にあるのがデモだけなら、自分が新しく訪れた状態でexpertが何をするかは一般に分からず、上の $r_E(s,a)$ をそのまま評価できない。追加のexpertラベルを求める方法や、デモから学んだmodelで補う方法では、それぞれ条件と推定誤差を考える必要がある。DAggerは学習者が訪れる状態へのexpertラベルを集める具体例である。[論文：DAgger §3](../../../raw/temp/ross_2011_dagger.pdf)
+また、手元にあるのがデモだけなら、自分が新しく訪れた状態でexpertが何をするかは一般に分からず、上の $r_E(s,a)$ をそのまま評価できない。追加のexpertラベルを求める方法や、デモから学んだmodelで補う方法では、それぞれ条件と推定誤差を考える必要がある。[論文：ACT §II](../../../raw/papers/zhao_2023_act.pdf)
 
 この説明から整理すると、「模倣学習」はお手本から振る舞いを学ぶ目的・情報源の側面、「RL」は報酬に基づく逐次的な意思決定の側面として捉えられ、両者は重なり得る。BCは教師あり学習で直接方策を学ぶ代表例、IRLはデモから報酬・costを推定する代表例である。[論文：Osaら §2.2・5.1](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)
 
 ## ロボットでの学習の制約と組み合わせの具体例
 
-ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../../raw/papers/luo_2024_serl.pdf)、[ACT §III・IV](../../../raw/papers/zhao_2023_act.pdf)、[DAgger・Introduction](../../../raw/temp/ross_2011_dagger.pdf)
+ロボットRLでは、経験を集める時間、試行後のリセット、機体や周囲への損傷、部分観測、連続で多次元の行動などが制約になる。報酬を与えれば自動で解決するわけではなく、環境・controller・データ収集の設計も必要になる。模倣学習では人の遠隔操作などで有用な動作を示せる一方、デモ収集の負担や、デモにない状況への対応が課題になる。[論文：Koberら §3](../../../raw/temp/kober_2013_robot_rl_survey.pdf)、[SERL §3・4](../../../raw/papers/luo_2024_serl.pdf)、[ACT §III・IV](../../../raw/papers/zhao_2023_act.pdf)
 
 模倣学習とRLは組み合わせられる。デモで方策を初期化してからRLで改善する、デモをRLの経験データとして利用する、学習中に人が修正介入する、といった構成がある。ただし、**デモを使っただけではBCを実施したことにはならない**。行動を教師として合わせているのか、報酬に基づく更新のデータとして使っているのかを確認する必要がある。[論文：Osaら §1・5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf)、[SERL §4.1](../../../raw/papers/luo_2024_serl.pdf)、[HIL-SERL・手法](../../../raw/papers/luo_2024_hil_serl.pdf)
-
 
 ## 次に読む資料
 

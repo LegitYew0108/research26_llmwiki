@@ -4,7 +4,6 @@ type: concept
 tags: [robot-arm, imitation-learning, ACT, diffusion-policy, reading-guide]
 sources:
   - ../../../raw/temp/osa_2018_imitation_learning_survey.pdf
-  - ../../../raw/temp/ross_2011_dagger.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
   - ../../../raw/temp/levine_2020_offline_rl_tutorial.pdf
@@ -22,7 +21,6 @@ updated: 2026-10-31
 | 資料 | 読む観点・一次資料 |
 | --- | --- |
 | Osa et al., An Algorithmic Perspective on Imitation Learning（2018） | BCとIRLの違い、デモの表現、学習の分類。[§2–5](../../../raw/temp/osa_2018_imitation_learning_survey.pdf) |
-| Ross et al., DAgger（2011） | 学習者の行動が訪問状態を変えること、expertによる追加ラベルとデータ集約。[§1–3](../../../raw/temp/ross_2011_dagger.pdf) |
 | Zhao et al., ACT（2023） | 双腕テレオペ、action chunk、CVAE、temporal ensembling。[§III–IV](../../../raw/papers/zhao_2023_act.pdf)／[既存要約](../../sources/imitation_learning/zhao_2023_act.md) |
 | Chi et al., Diffusion Policy（2023初稿、保存版v5） | 観測を条件とするdiffusion modelによる行動列生成とreceding horizon control。[§3](../../../raw/papers/chi_2023_diffusion_policy.pdf)／[取り込み済み要約](../../sources/imitation_learning/chi_2023_diffusion_policy.md) |
 

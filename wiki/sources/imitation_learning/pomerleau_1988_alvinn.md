@@ -76,7 +76,7 @@ range finderの重みはカメラに比べて小さいが、道路と見なす�
 
 本論文は、人間の運転中の画像を使う学習へ進む際、正確に走った例だけでなく、**間違えた後に道路中央へ戻る例**も必要だと指摘している。また、運転を引き継いだ際に遭遇する状況を学習データが十分に覆わなければ、頑健な表現を得られないと述べる。[出典：Discussion and Extensions、p.311](../../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
 
-**Wiki上の整理**：この指摘は、BCにおける実行時のdistribution shiftと関連付けて読むことができる。ただし、ALVINNの本実験は人工画像を用いた教師あり学習であり、デモからのBCの実験やDAggerの実装・評価として扱わない。DAggerは後年、学習者が訪れる状態へexpertのラベルを追加してデータを集約する方法を示した。[関連付けの根拠：ALVINN p.311](../../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)、[DAgger §1–3](../../../raw/temp/ross_2011_dagger.pdf)
+**Wiki上の整理**：この指摘は、BCにおける実行時のdistribution shiftと関連付けて読むことができる。ただし、ALVINNの本実験は人工画像を用いた教師あり学習であり、人間のデモからのBC実験として扱わない。[関連付けの根拠：ALVINN p.311](../../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
 
 ## 関連ページ
 
