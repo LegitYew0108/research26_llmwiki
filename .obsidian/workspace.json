@@ -25,12 +25,14 @@
             "id": "04158bba9a23cd68",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/1603.09320v4.pdf"
+                "file": "mind/paper/HNSW.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "1603.09320v4"
+              "icon": "lucide-file",
+              "title": "HNSW"
             }
           }
         ],
@@ -198,7 +200,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 378.67578125
+    "width": 378.67578125,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,49 +216,12 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "floating": {
-    "id": "53ff325d96ac6fe6",
-    "type": "floating",
-    "children": [
-      {
-        "id": "b139ae20084f6cb6",
-        "type": "window",
-        "children": [
-          {
-            "id": "e81114f6a9965f60",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e7c8bddcd1c4a94e",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "raw/papers/1603.09320v4.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "1603.09320v4"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 10,
-        "y": 10,
-        "width": 2560,
-        "height": 1440,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "raw/papers/1603.09320v4.pdf",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "mind/paper/HNSW.md",
     "wiki/concepts/vector_search/anns_in_image_recognition.md",
-    "raw/papers/1603.09320v4.pdf",
     "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf",
     "raw/papers/zhao_2023_act.pdf",
     "raw/temp/1603.09320v4.pdf",
@@ -287,7 +253,6 @@
     "wiki/sources/generative_models/sohn_2015_cvae.md",
     "wiki/sources/generative_models",
     "wiki/entities/mobile_aloha_dataset.md",
-    "wiki/concepts/vector_search/reference_angle_probability.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
