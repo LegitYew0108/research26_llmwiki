@@ -41,10 +41,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "raw/papers/zhao_2023_act.pdf"
+                "file": "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "zhao_2023_act"
+              "title": "OfflineImitationLearningThroughGraphSearchandRetrieval"
             }
           }
         ],
@@ -229,8 +229,8 @@
   },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "raw/papers/zhao_2023_act.pdf",
+    "conflict-files-obsidian-git.md",
     "wiki/research.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
     "wiki/sources/vector_search",
