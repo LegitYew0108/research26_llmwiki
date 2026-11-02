@@ -1,4 +1,5 @@
-HNSW=knn search with navigable small world graphs with controllable hierarchy
+HNSW=Hierarchical Navigable Small World
+- knn search with navigable small world graphs with controllable hierarchy
 	- 要するに、制御可能な階層を使った小さな探索可能グラフによるK近傍検索
 - 完全グラフベース手法で、他手法で主に用いられる追加探索0
 
@@ -15,4 +16,17 @@ ANNS=Approximate Nearest Neighbor Search　の一つ。
 ### 何が問題なのか
 ANNSは一般的にデータが増えると検索速度が落ちる
 高次元データではこれが顕著。
+	これを一般的に「次元の呪い」という
+
+この次元の呪いを回避し、高速に安定した性能で検索を達成できるようにする手法がHNSW
+
+# アルゴリズム
+### 重要ポイント
+アルゴリズムのポイントは3点
+1. グラフ構造を使う
+	- データポイントをノードとして類似データをエッジで結んでグラフに
+2. 階層構造を持つ
+	- 複数階層で構造を作り、上階になるほどデータが疎に
+3. スモールワールド特性
+	- 知り合いの知り合いをたどるように効率的に目的地へ
 
