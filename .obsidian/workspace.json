@@ -220,20 +220,20 @@
     "type": "floating",
     "children": [
       {
-        "id": "dccffab3628194d4",
+        "id": "b139ae20084f6cb6",
         "type": "window",
         "children": [
           {
-            "id": "c96fe8f6ea681108",
+            "id": "e81114f6a9965f60",
             "type": "tabs",
             "children": [
               {
-                "id": "27ea49b3ebd7f7e5",
+                "id": "e7c8bddcd1c4a94e",
                 "type": "leaf",
                 "state": {
                   "type": "pdf",
                   "state": {
-                    "file": "raw/temp/1603.09320v4.pdf"
+                    "file": "raw/papers/1603.09320v4.pdf"
                   },
                   "icon": "lucide-file-text",
                   "title": "1603.09320v4"
@@ -252,13 +252,18 @@
       }
     ]
   },
-  "active": "27ea49b3ebd7f7e5",
+  "active": "e7c8bddcd1c4a94e",
   "lastOpenFiles": [
     "mind/paper/HNSW.md",
-    "wiki/research.md",
-    "raw/temp/1603.09320v4.pdf",
+    "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf",
     "raw/papers/zhao_2023_act.pdf",
+    "raw/temp/1603.09320v4.pdf",
+    "log/daily/daily_20261102.md",
+    "wiki/concepts/vector_search/hnsw.md",
+    "wiki/sources/vector_search/malkov_2018_hnsw.md",
+    "raw/papers/1603.09320v4.pdf",
+    "wiki/research.md",
     "conflict-files-obsidian-git.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
     "wiki/sources/vector_search",
@@ -285,11 +290,6 @@
     "wiki/entities/mobile_aloha_dataset.md",
     "wiki/concepts/vector_search/reference_angle_probability.md",
     "wiki/concepts/vector_search/projection_configuration_ks.md",
-    "wiki/concepts/vector_search/probabilistic_routing_ks2.md",
-    "wiki/concepts/vector_search/faiss_vector_search.md",
-    "wiki/concepts/vector_search/angle_testing.md",
-    "wiki/concepts/vector_search",
-    "wiki/concepts/retrieval/subsequence_dynamic_time_warping.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
