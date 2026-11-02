@@ -34,21 +34,9 @@
               "icon": "lucide-file",
               "title": "research"
             }
-          },
-          {
-            "id": "27ea49b3ebd7f7e5",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "OfflineImitationLearningThroughGraphSearchandRetrieval"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -227,8 +215,47 @@
       "marp-slides:Show Slide Preview": false
     }
   },
+  "floating": {
+    "id": "53ff325d96ac6fe6",
+    "type": "floating",
+    "children": [
+      {
+        "id": "dccffab3628194d4",
+        "type": "window",
+        "children": [
+          {
+            "id": "c96fe8f6ea681108",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "27ea49b3ebd7f7e5",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "raw/temp/1603.09320v4.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "1603.09320v4"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 16,
+        "y": 10,
+        "width": 1837,
+        "height": 1400,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
   "active": "27ea49b3ebd7f7e5",
   "lastOpenFiles": [
+    "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf",
+    "raw/temp/1603.09320v4.pdf",
     "raw/papers/zhao_2023_act.pdf",
     "conflict-files-obsidian-git.md",
     "wiki/research.md",
@@ -263,7 +290,6 @@
     "wiki/concepts/vector_search",
     "wiki/concepts/retrieval/subsequence_dynamic_time_warping.md",
     "wiki/concepts/retrieval",
-    "wiki/concepts/reinforcement_learning",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
