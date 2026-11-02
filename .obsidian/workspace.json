@@ -252,8 +252,9 @@
       }
     ]
   },
-  "active": "e7c8bddcd1c4a94e",
+  "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "raw/papers/1603.09320v4.pdf",
     "mind/paper/HNSW.md",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "raw/temp/OfflineImitationLearningThroughGraphSearchandRetrieval.pdf",
@@ -262,7 +263,6 @@
     "log/daily/daily_20261102.md",
     "wiki/concepts/vector_search/hnsw.md",
     "wiki/sources/vector_search/malkov_2018_hnsw.md",
-    "raw/papers/1603.09320v4.pdf",
     "wiki/research.md",
     "conflict-files-obsidian-git.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
@@ -289,7 +289,6 @@
     "wiki/sources/generative_models",
     "wiki/entities/mobile_aloha_dataset.md",
     "wiki/concepts/vector_search/reference_angle_probability.md",
-    "wiki/concepts/vector_search/projection_configuration_ks.md",
     "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
