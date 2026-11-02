@@ -188,6 +188,7 @@ updated: 2026-11-02
 ### ベクトル検索・角度判定
 
 - [HNSW：階層グラフによる近似近傍検索](wiki/concepts/vector_search/hnsw.md)
+- [画像認識におけるANNSの役割](wiki/concepts/vector_search/anns_in_image_recognition.md)
 - [角度判定と参照角度](wiki/concepts/vector_search/angle_testing.md)
 - [参照角度によるKS₁・KS₂の確率解析](wiki/concepts/vector_search/reference_angle_probability.md)
 - [KSの射影配置と部分空間分割](wiki/concepts/vector_search/projection_configuration_ks.md)
