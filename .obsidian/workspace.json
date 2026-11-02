@@ -48,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -228,10 +228,10 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "6d2500ae9da11489",
+  "active": "04158bba9a23cd68",
   "lastOpenFiles": [
-    "raw/papers/1603.09320v4.pdf",
     "wiki/sources/vector_search/malkov_2018_hnsw.md",
+    "raw/papers/1603.09320v4.pdf",
     "mind/Questionnaire/VLA.md",
     "mind/paper/HNSW.md",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
