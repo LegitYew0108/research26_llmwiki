@@ -3,6 +3,7 @@ title: 目次
 type: index
 tags: [index]
 sources:
+  - raw/papers/1603.09320v4.pdf
   - raw/papers/pi_2025_pistar06.pdf
   - raw/papers/pi_2026_pi07.pdf
   - raw/papers/guo_2026_loopwam.pdf
@@ -19,7 +20,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
-updated: 2026-10-31
+updated: 2026-11-02
 ---
 
 # 目次
@@ -133,6 +134,7 @@ updated: 2026-10-31
 
 ### ベクトル検索・角度判定
 
+- [HNSW：階層グラフによる近似近傍検索の原論文](wiki/sources/vector_search/malkov_2018_hnsw.md)
 - [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/vector_search/kernel_function_for_angle_testing.md)
 
 ### 連想記憶・Memory Mosaics
@@ -185,6 +187,7 @@ updated: 2026-10-31
 
 ### ベクトル検索・角度判定
 
+- [HNSW：階層グラフによる近似近傍検索](wiki/concepts/vector_search/hnsw.md)
 - [角度判定と参照角度](wiki/concepts/vector_search/angle_testing.md)
 - [参照角度によるKS₁・KS₂の確率解析](wiki/concepts/vector_search/reference_angle_probability.md)
 - [KSの射影配置と部分空間分割](wiki/concepts/vector_search/projection_configuration_ks.md)
@@ -200,6 +203,8 @@ updated: 2026-10-31
 - [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md)
 
 ## 日次ログ一覧
+
+- [2026-11-02](log/daily/daily_20261102.md)
 
 - [2026-10-31](log/daily/daily_20261031.md)
 
