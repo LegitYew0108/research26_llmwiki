@@ -3,7 +3,7 @@ title: SAILOR 発表メモ
 type: presentation-notes
 tags: [sailor, skill-learning, imitation-learning, presentation]
 sources:
-  - ../../raw/temp/nasiriany_2023_sailor.pdf
+  - ../../raw/papers/nasiriany_2023_sailor.pdf
   - ../../raw/papers/2304.08742v2.pdf
 updated: 2026-10-19
 ---
@@ -20,5 +20,5 @@ SAILORは、過去のロボットのデータから短い動作系列をスキ�
 
 Behavior Retrievalが状態・行動の組の類似度でデータを選ぶのに対し、SAILORは短い動作系列の表現を検索と方策の出力に使います。今回の研究との接点は、このスキルベクトル間の検索です。ただし、原論文の検索はペアごとのL2距離計算であり、グラフ型ANNによる高速化を検証したものではありません。SAILOR自体は模倣学習の手法です。
 
-出典：SAILOR原論文 Fig.1–2、§3–4.2、Algorithm 1–2（../../raw/temp/nasiriany_2023_sailor.pdf）。Behavior Retrievalとの比較：../../raw/papers/2304.08742v2.pdf §III。図はSAILOR原論文Fig.1を抜粋。
+出典：SAILOR原論文 Fig.1–2、§3–4.2、Algorithm 1–2（../../raw/papers/nasiriany_2023_sailor.pdf）。Behavior Retrievalとの比較：../../raw/papers/2304.08742v2.pdf §III。図はSAILOR原論文Fig.1を抜粋。
 

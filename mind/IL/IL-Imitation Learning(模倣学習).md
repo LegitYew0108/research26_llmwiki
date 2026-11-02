@@ -4,8 +4,6 @@ type: mind
 tags: [mind, imitation-learning, reinforcement-learning, policy, behavior-cloning, inverse-reinforcement-learning]
 sources:
   - ../../raw/temp/osa_2018_imitation_learning_survey.pdf
-  - ../../raw/temp/ross_2011_dagger.pdf
-  - ../../raw/temp/levine_2020_offline_rl_tutorial.pdf
 updated: 2026-10-05
 ---
 
@@ -22,7 +20,6 @@ RLにおいては正解データはなく、適切に決定された報酬関数
 
 # 代表的手法
 - Behavior Cloning(BC)
-- Dataset Aggregation(DAgger)
 - Generative Adversarial Imitation Learning(GAIL)
 - Adversarial Inverse Reinforcement Learning(AIRL)
 - Inverse Reinforcement Learning(IRL)
@@ -30,7 +27,5 @@ RLにおいては正解データはなく、適切に決定された報酬関数
 ## 関連ページ・出典
 
 - [Behavior Cloning：自分の理解](<BC-Behavior Cloning.md>)
-- [模倣学習と強化学習の基礎](../../wiki/concepts/imitation_and_reinforcement_learning.md)
+- [模倣学習と強化学習の基礎](../../wiki/concepts/imitation_learning/imitation_and_reinforcement_learning.md)
 - [模倣学習のサーベイ：§2.2・4・5.1](../../raw/temp/osa_2018_imitation_learning_survey.pdf)
-- [DAgger：§3（expertによる追加ラベルとデータ集約）](../../raw/temp/ross_2011_dagger.pdf)
-- [Offline RL tutorial：§2.1–2.2](../../raw/temp/levine_2020_offline_rl_tutorial.pdf)
