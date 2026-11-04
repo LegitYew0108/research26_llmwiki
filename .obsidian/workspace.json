@@ -232,6 +232,10 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "wiki/concepts/retrieval/sed6bAA3Y",
+    "raw/web/pari_vinn_abstract.html",
+    "wiki/sources/retrieval/pari_2022_vinn.md",
+    "wiki/sources/retrieval/pari_2022_vinn.md.tmp.47110.1d523893b630",
     "raw/papers/pari_2022_vinn.pdf",
     "log/lint/lint_20261104.md",
     "log/lint/lint_20261104.md.tmp.47110.e8423ec739a1",
@@ -256,19 +260,15 @@
     "wiki/research.md",
     "conflict-files-obsidian-git.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
-    "wiki/sources/vector_search",
     "wiki/sources/retrieval/nasiriany_2023_sailor.md",
     "wiki/sources/retrieval/kumar_2025_collage.md",
     "wiki/sources/retrieval/du_2023_behavior_retrieval.md",
-    "wiki/sources/retrieval",
     "wiki/sources/reinforcement_learning/pi_2025_pistar06.md",
     "wiki/sources/reinforcement_learning/luo_2024_serl.md",
     "wiki/sources/reinforcement_learning/luo_2024_hil_serl.md",
-    "wiki/sources/reinforcement_learning",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
     "wiki/sources/imitation_learning/zhao_2023_act.md",
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
-    "wiki/sources/imitation_learning/pi_2026_pi07.md",
     "artifacts/behavior_retrieval/slide.png"
   ]
 }
