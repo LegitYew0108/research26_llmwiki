@@ -20,7 +20,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
 
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # 目次
@@ -93,7 +93,9 @@ updated: 2026-11-02
 
 ### 研究方針・計画の記事
 
-以下はユーザーの記録。日付の異なる計画や案は、最新の採用方針と同一とは限らない。
+以下はユーザーの記録、および明示的な依頼によりまとめた計画。日付の異なる計画や案は、最新の採用方針と同一とは限らない。
+
+- [動作時検索とACTの混合：研究計画（2026-11-04）](lab/research_policy/20261104_inference_time_retrieval_act.md) — 学習前のデータ拡張から動作時検索へ方針変更。動作検索の成立から段階的に検証。詳細仕様は未決定。
 
 - [1008計画](lab/research_policy/1008計画.md)
 - [1013計画](lab/research_policy/1013計画.md)
@@ -204,6 +206,8 @@ updated: 2026-11-02
 - [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md)
 
 ## 日次ログ一覧
+
+- [2026-11-04](log/daily/daily_20261104.md)
 
 - [2026-11-02](log/daily/daily_20261102.md)
 
