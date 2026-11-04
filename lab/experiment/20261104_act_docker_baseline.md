@@ -25,7 +25,14 @@ updated: 2026-11-04
 
 - SSH接続・GPU確認を実施。
 - 公式ソースをgit archiveで転送し、Dockerビルドを開始。
-- 現時点でデモ生成・学習・評価の結果は未取得。実行状況に応じて追記する。
+- Dockerイメージのビルド完了：`sha256:13e790fb80270caa3c35d656736f0332142b97fcdb0a8e0545ec1b2fc671c0c3`。
+- 2026-11-04 17:11:11 JSTにコンテナ`act-official-gpu5-20261104`を起動。ID：`3fdc8181425c3a9daa55de7ba66b7534d52b616684bc767714810df0ba8959ec`。
+- GPU 5の認識（Quadro RTX 8000）とMuJoCo EGL描画（480×640×3）が成功。
+- 17:14 JST頃の確認でepisode 0〜10の保存完了、episode 11生成中。学習・評価はまだ開始していない。
+- episode 0のHDF5を検査：action/qpos/qvelは各(400,14) float32、top画像は(400,480,640,3) uint8。
+- 公式visualize_episodes.pyでepisode 0の動画・関節グラフを生成。ffprobeで640×480・50fps・400 frameを確認。
+- ローカルにも`/home/wada-lab/Univ/research26_workspace/act_baseline_docker/artifacts/episode_0_video.mp4`と`episode_0_qpos.png`を回収。これはスクリプト方策のデモであり、学習済みACTの評価映像ではない。
+- 途中で手元のDNSが研究室外DNSを選び、名前解決に失敗。設定済み研究室DNS 10.0.0.1へ直接照会してkubera=10.0.16.19を確認し、`HostName=10.0.16.19`・`HostKeyAlias=kubera.bigdata-lab`で既知のホスト鍵を検証して再接続。サーバーの処理は継続していた。
 
 ## 実行する公式手順
 
