@@ -232,6 +232,9 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
+    "log/lint/lint_20261104.md",
+    "log/lint/lint_20261104.md.tmp.47110.e8423ec739a1",
+    "wiki/concepts/retrieval/sedKjIIzs",
     "lab/research_policy/20261104_inference_time_retrieval_act.md",
     "lab/experiment/20261104_act_docker_baseline.md",
     "lab/experiment",
@@ -262,13 +265,10 @@
     "wiki/sources/reinforcement_learning/luo_2024_hil_serl.md",
     "wiki/sources/reinforcement_learning",
     "wiki/sources/memory/zhang_2025_memory_mosaics_at_scale.md",
-    "wiki/sources/memory",
     "wiki/sources/imitation_learning/zhao_2023_act.md",
     "wiki/sources/imitation_learning/pomerleau_1988_alvinn.md",
     "wiki/sources/imitation_learning/pi_2026_pi07.md",
     "wiki/sources/imitation_learning/kim_2026_cosmos_policy.md",
-    "wiki/sources/imitation_learning/buamanee_2024_biact.md",
-    "wiki/sources/imitation_learning",
     "artifacts/behavior_retrieval/slide.png"
   ]
 }
