@@ -70,6 +70,8 @@ updated: 2026-11-04
 
 ## 研究活動
 
+- [kubera GPU5：公式ACT Docker基準実験](lab/experiment/20261104_act_docker_baseline.md) — 実行状況・条件・成果物。
+
 - [Behavior RetrievalとSAILOR：タスク別の実験結果比較](artifacts/retrieval_results_comparison.md) — 各原論文内の既存手法比較とSAILORの検索ablation。
 
 - [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/papers/nasiriany_2023_sailor.pdf)に基づく。
