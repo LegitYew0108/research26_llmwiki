@@ -20,6 +20,7 @@ sources:
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
   - raw/papers/pari_2022_vinn.pdf
+  - raw/papers/yin_2024_gsr.pdf
 
 updated: 2026-11-04
 ---
@@ -136,6 +137,7 @@ updated: 2026-11-04
 - [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/retrieval/kumar_2025_collage.md)
 - [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/retrieval/nasiriany_2023_sailor.md)
 - [VINN：近傍行動の重み付き平均による視覚模倣](wiki/sources/retrieval/pari_2022_vinn.md)
+- [GSR：グラフ探索と検索による質の低いデモからの模倣学習](wiki/sources/retrieval/yin_2024_gsr.md)
 
 ### 生成モデル（VAE・CVAE）
 

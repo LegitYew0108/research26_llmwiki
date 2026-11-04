@@ -4,7 +4,7 @@ type: source
 tags: [robotics, imitation-learning, behavior-cloning, retrieval, few-shot-learning, VAE, offline-data]
 sources:
   - ../../../raw/papers/2304.08742v2.pdf
-updated: 2026-10-31
+updated: 2026-11-04
 ---
 
 # Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets
@@ -94,3 +94,4 @@ Algorithm 1ではそれぞれのデータから同じbatch sizeでサンプリ�
 - [Behavior Cloning](../../concepts/imitation_learning/behavior_cloning.md)
 - [VAE](../../concepts/generative_models/variational_autoencoder.md)
 - [ACTの論文要約](../imitation_learning/zhao_2023_act.md)
+- [GSR：グラフ探索と検索による重み付きBC](yin_2024_gsr.md)

@@ -150,3 +150,4 @@ $$
 - [ACTの論文要約](../imitation_learning/zhao_2023_act.md)
 - [FAISS](../../concepts/vector_search/faiss_vector_search.md)
 - [HNSW](../../concepts/vector_search/hnsw.md)
+- [GSR：検索を学習データの重み付けに使う例](yin_2024_gsr.md)
