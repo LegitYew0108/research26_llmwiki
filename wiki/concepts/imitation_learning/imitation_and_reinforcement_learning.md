@@ -5,7 +5,7 @@ tags: [robotics, imitation-learning, behavior-cloning, observation, action, poli
 sources:
   - ../../../raw/papers/zhao_2023_act.pdf
   - ../../../raw/papers/chi_2023_diffusion_policy.pdf
-  - ../../../raw/papers/2304.08742v2.pdf
+  - ../../../raw/papers/du_2023_behavior_retrieval.pdf
   - ../../../raw/web/web_mit_imitation_learning_20261003.md
   - ../../../raw/web/web_huggingface_rl_framework_20261003.md
   - ../../../raw/papers/luo_2024_hil_serl.pdf
@@ -36,7 +36,7 @@ updated: 2026-10-31
 
 ## Behavior Cloning：行動を教師信号にする
 
-BCは、デモの観測を入力、記録されたexpertの行動を教師信号にして方策を学ぶ。例えば、観測$o_i$と教師行動$a_i^*$の組に対し、予測行動とのずれを小さくする。次式はその学習を説明するための一般形で、すべての手法が同じ損失を使うという意味ではない。[BCの参照記録：MIT](../../../raw/web/web_mit_imitation_learning_20261003.md)、[具体的な目的関数：Behavior Retrieval §III-E](../../../raw/papers/2304.08742v2.pdf)
+BCは、デモの観測を入力、記録されたexpertの行動を教師信号にして方策を学ぶ。例えば、観測$o_i$と教師行動$a_i^*$の組に対し、予測行動とのずれを小さくする。次式はその学習を説明するための一般形で、すべての手法が同じ損失を使うという意味ではない。[BCの参照記録：MIT](../../../raw/web/web_mit_imitation_learning_20261003.md)、[具体的な目的関数：Behavior Retrieval §III-E](../../../raw/papers/du_2023_behavior_retrieval.pdf)
 
 $$\min_\theta\;\frac1{|D|}\sum_{(o_i,a_i^*)\in D}\ell(\pi_\theta(o_i),a_i^*).$$
 
@@ -46,7 +46,7 @@ BCの構成は一時刻の行動を二乗誤差で回帰するものに限らな
 
 学習時の観測はお手本に含まれる状況だが、実行時は学習した方策の行動が次の状況を作る。小さな誤りでデモに少ない状態へ移ると、さらに誤ることがある。このdistribution shiftとcompounding errorのため、データ上の行動予測が正確でも、タスクの成功が保証されるわけではない。[ACT §II・IV-A](../../../raw/papers/zhao_2023_act.pdf)
 
-デモ収集の負担も課題である。Behavior Retrievalは、少数の対象デモに似た状態・行動を既存データから選んでBCの訓練に加える。一方、無関係なデータを混ぜれば常に改善するとは限らない。[Behavior Retrieval §I・III・V](../../../raw/papers/2304.08742v2.pdf)
+デモ収集の負担も課題である。Behavior Retrievalは、少数の対象デモに似た状態・行動を既存データから選んでBCの訓練に加える。一方、無関係なデータを混ぜれば常に改善するとは限らない。[Behavior Retrieval §I・III・V](../../../raw/papers/du_2023_behavior_retrieval.pdf)
 
 ## RLとの違いは学習の基準
 

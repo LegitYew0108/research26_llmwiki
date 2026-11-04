@@ -5,7 +5,7 @@ tags: [VAE, generative-model, latent-variable, ELBO, reparameterization, represe
 sources:
   - ../../../raw/papers/sohn_2015_cvae.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
-  - ../../../raw/papers/2304.08742v2.pdf
+  - ../../../raw/papers/du_2023_behavior_retrieval.pdf
 updated: 2026-10-31
 ---
 
@@ -75,7 +75,7 @@ CVAEは観測やラベルなどの条件$c$を加え、条件に合う出力の�
 
 ACTでは現在の画像・関節位置を条件として行動列を予測する。学習時のencoderは関節位置と正解行動列から$z$の分布を推定するが、実行時はencoderを使わず$z=0$に固定する。したがって、VAEの一般的な生成手順と、個々の方策の実行手順は分けて読む。[ACT §IV-B–C・Appendix C](../../../raw/papers/zhao_2023_act.pdf)
 
-Behavior Retrievalでは状態と行動を復元するVAEを学び、encoderの表現を既存データの検索に使う。VAEの復元学習と、検索後のBCによる方策学習は別の段階である。[Behavior Retrieval §III-C–E・Algorithm 1](../../../raw/papers/2304.08742v2.pdf)
+Behavior Retrievalでは状態と行動を復元するVAEを学び、encoderの表現を既存データの検索に使う。VAEの復元学習と、検索後のBCによる方策学習は別の段階である。[Behavior Retrieval §III-C–E・Algorithm 1](../../../raw/papers/du_2023_behavior_retrieval.pdf)
 
 ## 関連ページ
 

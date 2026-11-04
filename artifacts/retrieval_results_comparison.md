@@ -3,14 +3,14 @@ title: Behavior RetrievalとSAILORの実験結果比較
 type: research-comparison
 tags: [behavior-retrieval, sailor, evaluation, imitation-learning]
 sources:
-  - ../raw/papers/2304.08742v2.pdf
+  - ../raw/papers/du_2023_behavior_retrieval.pdf
   - ../raw/papers/nasiriany_2023_sailor.pdf
 updated: 2026-10-19
 ---
 
 # Behavior RetrievalとSAILORの実験結果
 
-別々のタスク・実験条件で評価されているため、両手法の成功率から直接優劣は比較できない。以下は各論文内の比較。単位は成功率%。ppはpercentage points。差分は掲載平均値からの計算であり、有意差検定ではない。[BR Table I・Fig.10](../raw/papers/2304.08742v2.pdf)、[SAILOR Table 1・§5.4](../raw/papers/nasiriany_2023_sailor.pdf)
+別々のタスク・実験条件で評価されているため、両手法の成功率から直接優劣は比較できない。以下は各論文内の比較。単位は成功率%。ppはpercentage points。差分は掲載平均値からの計算であり、有意差検定ではない。[BR Table I・Fig.10](../raw/papers/du_2023_behavior_retrieval.pdf)、[SAILOR Table 1・§5.4](../raw/papers/nasiriany_2023_sailor.pdf)
 
 ## Behavior Retrieval：シミュレーション
 
@@ -24,9 +24,9 @@ updated: 2026-10-19
 | Office・状態 | 76 ± 5 | 76 ± 1 | 85 ± 4 | +9 |
 | 論文の平均 | 35 ± 4 | 36 ± 2 | 72 ± 2 | +36 |
 
-100試行、3 seeds、±標準誤差。GCBCはgoal-conditioned BC、FTはfine-tuning。対象デモ10本。[出典：Table I、§IV](../raw/papers/2304.08742v2.pdf)
+100試行、3 seeds、±標準誤差。GCBCはgoal-conditioned BC、FTはfine-tuning。対象デモ10本。[出典：Table I、§IV](../raw/papers/du_2023_behavior_retrieval.pdf)
 
-実機のNutAssembly・Pickle・SoapはFig.10の棒グラフから概ね50%、58%、65%。表に掲載された厳密値ではなく図の読取概数。対象デモ10本、各40評価。Ground Truthは同じタスク名の軌道を選ぶ比較であり理論上限ではない。[出典：Fig.10](../raw/papers/2304.08742v2.pdf)
+実機のNutAssembly・Pickle・SoapはFig.10の棒グラフから概ね50%、58%、65%。表に掲載された厳密値ではなく図の読取概数。対象デモ10本、各40評価。Ground Truthは同じタスク名の軌道を選ぶ比較であり理論上限ではない。[出典：Fig.10](../raw/papers/du_2023_behavior_retrieval.pdf)
 
 ## SAILOR：シミュレーション
 

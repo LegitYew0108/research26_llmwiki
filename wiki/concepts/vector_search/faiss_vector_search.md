@@ -6,8 +6,8 @@ sources:
   - ../../../raw/temp/faiss_indexes_20261017.html
   - ../../../raw/temp/faiss_metrics_20261017.html
   - ../../../raw/temp/faiss_getting_started_20261017.html
-  - ../../../raw/papers/2304.08742v2.pdf
-  - ../../../raw/papers/kernel_function_for_angle_testing.pdf
+  - ../../../raw/papers/du_2023_behavior_retrieval.pdf
+  - ../../../raw/papers/lu_2025_ks_angle_testing.pdf
 updated: 2026-10-31
 ---
 
@@ -30,5 +30,5 @@ updated: 2026-10-31
 
 ## 既存の一次資料との区別
 
-- Behavior Retrievalは状態・行動の埋め込みを使い、既存データからBC用のデータを選ぶ。FAISSの利用やグラフ型ANNの優位性を示した論文としては扱わない。[出典：§III、Appendix A-G](../../../raw/papers/2304.08742v2.pdf)
-- KS₂はHNSWの探索中に候補を選別し、正確な距離計算を減らす仕組みとして評価されている。FAISSのPython APIを使えばKS₂が自動的に適用されるという意味ではない。[出典：§6.2、Algorithm 7](../../../raw/papers/kernel_function_for_angle_testing.pdf)
+- Behavior Retrievalは状態・行動の埋め込みを使い、既存データからBC用のデータを選ぶ。FAISSの利用やグラフ型ANNの優位性を示した論文としては扱わない。[出典：§III、Appendix A-G](../../../raw/papers/du_2023_behavior_retrieval.pdf)
+- KS₂はHNSWの探索中に候補を選別し、正確な距離計算を減らす仕組みとして評価されている。FAISSのPython APIを使えばKS₂が自動的に適用されるという意味ではない。[出典：§6.2、Algorithm 7](../../../raw/papers/lu_2025_ks_angle_testing.pdf)

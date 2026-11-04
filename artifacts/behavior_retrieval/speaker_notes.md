@@ -3,7 +3,7 @@ title: Behavior Retrieval 発表メモ
 type: presentation-notes
 tags: [behavior-retrieval, imitation-learning, presentation]
 sources:
-  - ../../raw/papers/2304.08742v2.pdf
+  - ../../raw/papers/du_2023_behavior_retrieval.pdf
 updated: 2026-10-19
 ---
 
@@ -15,4 +15,4 @@ Behavior Retrievalは、少数の対象タスクのデモを手がかりに、�
 右では、対象デモと検索結果から同数ずつサンプルし、Behavior Cloningで方策を学習します。検索は学習データの選択に使い、実行時には学習済み方策が行動します。
 今回の研究との接点は、中央のベクトル間の距離比較です。原論文はバッチで距離を計算しており、グラフ型ANNによる高速化の有効性は示していません。また、この手法自体は報酬最大化による強化学習ではなく、模倣学習です。
 補足：unlabeledはタスクラベルがないという意味で、行動の記録は必要です。閾値選択はtop-k検索とは異なります。
-出典：../../raw/papers/2304.08742v2.pdf（Fig.2、§III-A〜E、Algorithm 1、Appendix A-G）。図は原論文Fig.2を抜粋。
+出典：../../raw/papers/du_2023_behavior_retrieval.pdf（Fig.2、§III-A〜E、Algorithm 1、Appendix A-G）。図は原論文Fig.2を抜粋。

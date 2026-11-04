@@ -3,22 +3,22 @@ title: 目次
 type: index
 tags: [index]
 sources:
-  - raw/papers/1603.09320v4.pdf
+  - raw/papers/malkov_2018_hnsw.pdf
   - raw/papers/pi_2025_pistar06.pdf
   - raw/papers/pi_2026_pi07.pdf
   - raw/papers/guo_2026_loopwam.pdf
   - raw/papers/luo_2024_hil_serl.pdf
   - raw/papers/luo_2024_serl.pdf
   - raw/papers/nasiriany_2023_sailor.pdf
-  - raw/papers/2304.08742v2.pdf
-  - raw/papers/2508.01131v2.pdf
-  - raw/papers/2401.17698v1.pdf
-  - raw/papers/2507.03285v3.pdf
-  - raw/papers/kernel_function_for_angle_testing.pdf
+  - raw/papers/du_2023_behavior_retrieval.pdf
+  - raw/papers/kumar_2025_collage.pdf
+  - raw/papers/buamanee_2024_biact.pdf
+  - raw/papers/zhang_2025_memory_mosaics_at_scale.pdf
+  - raw/papers/lu_2025_ks_angle_testing.pdf
   - raw/papers/zhao_2023_act.pdf
   - raw/papers/chi_2023_diffusion_policy.pdf
   - raw/papers/sohn_2015_cvae.pdf
-  - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
+  - raw/papers/pomerleau_1988_alvinn.pdf
   - raw/papers/pari_2022_vinn.pdf
   - raw/papers/yin_2024_gsr.pdf
 
@@ -46,7 +46,7 @@ updated: 2026-11-04
 
 ### Web記事の参照記録
 
-- [arXiv：VINNのabstractページ](raw/web/pari_vinn_abstract.html) — 2026-10-17保存、[論文要約](wiki/sources/retrieval/pari_2022_vinn.md)に取り込み済み。
+- [arXiv：VINNのabstractページ](raw/web/web_arxiv_vinn_abstract_20261017.html) — 2026-10-17保存、[論文要約](wiki/sources/retrieval/pari_2022_vinn.md)に取り込み済み。
 - [MIT：Imitation Learning](raw/web/web_mit_imitation_learning_20261003.md)
 - [Hugging Face：RL Framework](raw/web/web_huggingface_rl_framework_20261003.md)
 - [Spinning Up：Kinds of RL Algorithms](raw/web/web_spinningup_rl_algorithms_20261003.md)
@@ -79,7 +79,7 @@ updated: 2026-11-04
 
 - [SAILOR解説スライド（1枚）](artifacts/sailor/sailor.pptx) — [発表メモ](artifacts/sailor/speaker_notes.md)、[プレビュー](artifacts/sailor/slide.png)。[原論文Fig.1–2・§4](raw/papers/nasiriany_2023_sailor.pdf)に基づく。
 
-- [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/2304.08742v2.pdf)に基づく。
+- [Behavior Retrieval解説スライド（1枚）](artifacts/behavior_retrieval/behavior_retrieval.pptx) — [発表メモ](artifacts/behavior_retrieval/speaker_notes.md)、[プレビュー](artifacts/behavior_retrieval/slide.png)。[原論文Fig.2・§III](raw/papers/du_2023_behavior_retrieval.pdf)に基づく。
 
 - [研究概要発表：Marpスライド案（2026-10-16）](lab/presentation/research_overview_20261016.md) — 30分・21枚。検索表現は空欄、追加の実験設計案は未採用として記載。
 
@@ -146,7 +146,7 @@ updated: 2026-11-04
 ### ベクトル検索・角度判定
 
 - [HNSW：階層グラフによる近似近傍検索の原論文](wiki/sources/vector_search/malkov_2018_hnsw.md)
-- [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/vector_search/kernel_function_for_angle_testing.md)
+- [Probabilistic Kernel Function for Fast Angle Testing](wiki/sources/vector_search/lu_2025_ks_angle_testing.md)
 
 ### 連想記憶・Memory Mosaics
 

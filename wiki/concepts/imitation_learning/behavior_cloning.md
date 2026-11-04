@@ -3,10 +3,10 @@ title: "Behavior Cloning：学習方法と分布シフト"
 type: concept
 tags: [robotics, imitation-learning, behavior-cloning, supervised-learning, distribution-shift, compounding-error]
 sources:
-  - ../../../raw/papers/2304.08742v2.pdf
+  - ../../../raw/papers/du_2023_behavior_retrieval.pdf
   - ../../../raw/temp/osa_2018_imitation_learning_survey.pdf
   - ../../../raw/papers/zhao_2023_act.pdf
-  - ../../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
+  - ../../../raw/papers/pomerleau_1988_alvinn.pdf
 updated: 2026-10-31
 ---
 
@@ -32,7 +32,7 @@ $\pi_\theta$ はパラメータ $\theta$ を持つ方策、$\ell$ は予測と�
 
 ## ALVINNに見られる、回復例を学ぶ必要性
 
-ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する将来構想について、正しい運転だけでなく、間違えた後に道路中央へ戻る例も必要だと記す。ただし、**この版で実施された学習は人工道路画像と教師信号によるものであり、人間のデモを用いた学習は将来構想である。** この論文を読む際には、教師ありの観測→行動学習という共通点と、教師データの生成元を分けて捉える。[出典：ALVINN、Training and Performance・Discussion and Extensions、pp.307–308・311](../../../raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf)
+ALVINN（NIPS 1988）は、人間の運転画像から適応的に学習する将来構想について、正しい運転だけでなく、間違えた後に道路中央へ戻る例も必要だと記す。ただし、**この版で実施された学習は人工道路画像と教師信号によるものであり、人間のデモを用いた学習は将来構想である。** この論文を読む際には、教師ありの観測→行動学習という共通点と、教師データの生成元を分けて捉える。[出典：ALVINN、Training and Performance・Discussion and Extensions、pp.307–308・311](../../../raw/papers/pomerleau_1988_alvinn.pdf)
 
 ## 関連ページ
 

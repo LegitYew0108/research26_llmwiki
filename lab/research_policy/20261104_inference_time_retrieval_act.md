@@ -4,8 +4,8 @@ type: research-plan
 tags: [research-policy, imitation-learning, ACT, inference-time-retrieval, confidence, HNSW, KS2, reranking]
 sources:
   - ../../raw/papers/zhao_2023_act.pdf
-  - ../../raw/papers/1603.09320v4.pdf
-  - ../../raw/papers/kernel_function_for_angle_testing.pdf
+  - ../../raw/papers/malkov_2018_hnsw.pdf
+  - ../../raw/papers/lu_2025_ks_angle_testing.pdf
 updated: 2026-11-04
 ---
 
@@ -89,7 +89,7 @@ ACT → 行動Chunk → 信頼度の評価
 
 実行時には未来の正解行動は利用できない。ACTの予測Chunkをクエリに含める設計は可能性として残すが、現在状態だけの検索と分けて検証する。
 
-距離関数、正規化、画像と関節状態の重み、次元数は未決定。KS₂はHNSW内のユークリッド距離に基づくroutingにも接続されるため、「角度判定カーネルを使うからクエリは必ずコサイン距離」とは決めない。[出典：KS §6.2](../../raw/papers/kernel_function_for_angle_testing.pdf)
+距離関数、正規化、画像と関節状態の重み、次元数は未決定。KS₂はHNSW内のユークリッド距離に基づくroutingにも接続されるため、「角度判定カーネルを使うからクエリは必ずコサイン距離」とは決めない。[出典：KS §6.2](../../raw/papers/lu_2025_ks_angle_testing.pdf)
 
 ## 6. ACTの信頼スコア
 
@@ -129,7 +129,7 @@ $$
 
 現在のクエリから候補をK_c件取得する。最初は厳密検索で確認し、その後HNSW、HNSW＋KS₂へ移す。K_c、返却候補数、efSearchは別のパラメータとして管理する。
 
-HNSWの検索時efは保持する候補集合の大きさを調整するパラメータであり、訪問ノード数や時間の厳密な上限ではない。[出典：HNSW Algorithms 2・5](../../raw/papers/1603.09320v4.pdf)
+HNSWの検索時efは保持する候補集合の大きさを調整するパラメータであり、訪問ノード数や時間の厳密な上限ではない。[出典：HNSW Algorithms 2・5](../../raw/papers/malkov_2018_hnsw.pdf)
 
 ### 7.2 再評価の案
 
@@ -176,7 +176,7 @@ ACT原論文の行動は双腕の絶対目標関節位置である。[出典：A
 
 最初は固定efSearchと固定候補数を使う案。混合の有効性を確かめた後、信頼度に応じた段階的なefSearch、軽い検索から追加探索する方式、候補数の変更を比較する。低信頼度でも経験集合に適切な動作がなければ、探索量を増やすだけでは解決しない。
 
-KS₂はHNSWの辺方向を用いた候補テストにより、正確な距離計算を削減する。クエリ前処理もあり、どの規模・次元・探索量でも高速化する保証はない。論文の検索性能をロボット制御へそのまま転用せず実測する。[出典：KS §5–7、Algorithm 7](../../raw/papers/kernel_function_for_angle_testing.pdf)
+KS₂はHNSWの辺方向を用いた候補テストにより、正確な距離計算を削減する。クエリ前処理もあり、どの規模・次元・探索量でも高速化する保証はない。論文の検索性能をロボット制御へそのまま転用せず実測する。[出典：KS §5–7、Algorithm 7](../../raw/papers/lu_2025_ks_angle_testing.pdf)
 
 探索量を増やす効果、再評価の効果、KS₂の効果は個別に測る。efSearchだけで制御期限を保証できるとは扱わない。
 
@@ -262,12 +262,12 @@ KS₂はHNSWの辺方向を用いた候補テストにより、正確な距離�
 - 検索比較ではCPU・スレッド数・索引条件を記録する。オンライン応答とバッチQPSは区別する。
 - 時間予算、計測境界、期限超過時の処理を本評価前に定める。停止・棄却した試行を成功率計算から除外しない。
 
-Recall@Kは定義した距離での近傍再現を測り、行動の有用性や成功率そのものではない。[検索Recallの定義：HNSW §1](../../raw/papers/1603.09320v4.pdf)
+Recall@Kは定義した距離での近傍再現を測り、行動の有用性や成功率そのものではない。[検索Recallの定義：HNSW §1](../../raw/papers/malkov_2018_hnsw.pdf)
 
 ## 12. 先行研究との関係と新規性の検討
 
 - **ACT**：行動ChunkとTemporal Ensemblingを利用する基盤。信頼度を使った検索補完は本計画側で検証する。[保存原論文](../../raw/papers/zhao_2023_act.pdf)
-- **HNSW・KS₂**：近傍取得とその高速化を担当する。KS論文の実験はベクトル検索であり、本研究のロボットでの効果は未検証。[HNSW](../../raw/papers/1603.09320v4.pdf)・[KS](../../raw/papers/kernel_function_for_angle_testing.pdf)
+- **HNSW・KS₂**：近傍取得とその高速化を担当する。KS論文の実験はベクトル検索であり、本研究のロボットでの効果は未検証。[HNSW](../../raw/papers/malkov_2018_hnsw.pdf)・[KS](../../raw/papers/lu_2025_ks_angle_testing.pdf)
 - **VINN**：視覚表現の近傍を検索して対応行動を重み付き平均する。複数候補の平均それ自体は本研究独自の要素ではない。[原論文 §III](https://www.roboticsproceedings.org/rss18/p010.pdf)
 - **DARP**：近傍の状態・行動とクエリとの差を使って行動を予測する。検索とネットワークを併用するだけでは十分な差分にならない。[原論文](https://personalrobotics.cs.washington.edu/publications/pfeiferdifference.pdf)
 - **STAC・Rewind-IL**：重なる行動予測の時間的一貫性を失敗検出に使う関連研究。Chunk不一致による判定自体の独自性は主張しない。[STAC §4](https://openreview.net/pdf/8a9b36ed31beffc880a260525741f3e2277c447a.pdf)・[Rewind-IL著者ページ](https://sjay05.github.io/rewind-il/)
@@ -296,6 +296,6 @@ Recall@Kは定義した距離での近傍再現を測り、行動の有用性や
 - [ACT論文要約](../../wiki/sources/imitation_learning/zhao_2023_act.md)
 - [Action ChunkingとTemporal Ensembling](../../wiki/concepts/imitation_learning/action_chunking_and_temporal_ensembling.md)
 - [HNSW](../../wiki/concepts/vector_search/hnsw.md)
-- [KS原論文要約](../../wiki/sources/vector_search/kernel_function_for_angle_testing.md)
+- [KS原論文要約](../../wiki/sources/vector_search/lu_2025_ks_angle_testing.md)
 - [確率的routingとKS₂](../../wiki/concepts/vector_search/probabilistic_routing_ks2.md)
 - [検索による模倣学習データ選択の関連研究](../../wiki/concepts/retrieval/imitation_data_selection_related_work.md)

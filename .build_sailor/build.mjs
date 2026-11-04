@@ -19,7 +19,7 @@ text('デモ＋検索結果でBC',920,620,340,42,26,'#172D42',true);
 text('Nasiriany et al., CoRL 2022 / PMLR 2023  Fig. 1 / §4',62,677,1150,25,16,'#66727C');
 const notes=await fs.readFile(root+'/.build_sailor/notes.txt','utf8');
 s.speakerNotes.text=notes;
-await fs.writeFile(root+'/artifacts/sailor/speaker_notes.md',`---\ntitle: SAILOR 発表メモ\ntype: presentation-notes\ntags: [sailor, skill-learning, imitation-learning, presentation]\nsources:\n  - ../../raw/temp/nasiriany_2023_sailor.pdf\n  - ../../raw/papers/2304.08742v2.pdf\nupdated: 2026-10-19\n---\n\n# 発表原稿（約2〜3分）\n\n${notes}\n`);
+await fs.writeFile(root+'/artifacts/sailor/speaker_notes.md',`---\ntitle: SAILOR 発表メモ\ntype: presentation-notes\ntags: [sailor, skill-learning, imitation-learning, presentation]\nsources:\n  - ../../raw/temp/nasiriany_2023_sailor.pdf\n  - ../../raw/papers/du_2023_behavior_retrieval.pdf\nupdated: 2026-10-19\n---\n\n# 発表原稿（約2〜3分）\n\n${notes}\n`);
 await (await PresentationFile.exportPptx(p)).save(root+'/.build_sailor/candidate.pptx');
 const png=await p.export({slide:s,format:'png',scale:1.5});await fs.writeFile(root+'/artifacts/sailor/slide.png',new Uint8Array(await png.arrayBuffer()));
 const {finalizePresentation}=await import(pathToFileURL(skill+'/container_tools/artifact_tool_utils.mjs').href);

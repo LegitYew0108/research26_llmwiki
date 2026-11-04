@@ -8,7 +8,7 @@ type: presentation
 tags: [robotics, imitation-learning, ACT, ANNS, HNSW, KS2, research-plan]
 sources:
   - ../../raw/papers/zhao_2023_act.pdf
-  - ../../raw/papers/kernel_function_for_angle_testing.pdf
+  - ../../raw/papers/lu_2025_ks_angle_testing.pdf
   - ../../raw/papers/sohn_2015_cvae.pdf
 updated: 2026-10-16
 style: |
@@ -220,7 +220,7 @@ $$a_t=\frac{\sum_i w_i\hat a_t^{(i)}}{\sum_i w_i}$$
 
 ベクトルは索引。学習には、対応する元の観測・行動列を使う。
 
-> 検索の背景：[KS §1・6](../../raw/papers/kernel_function_for_angle_testing.pdf)。デモ区間への対応づけは本研究の計画。
+> 検索の背景：[KS §1・6](../../raw/papers/lu_2025_ks_angle_testing.pdf)。デモ区間への対応づけは本研究の計画。
 
 <!-- 約1分。ベクトル化を決める問題と、高速検索を決める問題を分ける。 -->
 
@@ -238,7 +238,7 @@ HNSWの / 探索候補 → KS₂の / 確率的テスト → 通過した候補�
 
 比較の基本：**HNSW vs. HNSW＋KS₂**
 
-> 出典：[KS §3・6–7](../../raw/papers/kernel_function_for_angle_testing.pdf)。角度判定を距離によるroutingへ接続する。
+> 出典：[KS §3・6–7](../../raw/papers/lu_2025_ks_angle_testing.pdf)。角度判定を距離によるroutingへ接続する。
 
 <!-- 約1分。KS₁は候補比較、KS₂は閾値判定。今回はKS₂のHNSW組み込みを中心に説明する。ロボットデータでの高速化は未検証。 -->
 
@@ -309,7 +309,7 @@ Embedding・ベクトル表現（画像／関節位置／行動列など）
 
 検索のRecallが同じでも、取得区間や学習結果が同じとは限らない。
 
-> 検索比較の考え方：[KS §7](../../raw/papers/kernel_function_for_angle_testing.pdf)。ACTの成功率維持は本研究の未検証仮説。
+> 検索比較の考え方：[KS §7](../../raw/papers/lu_2025_ks_angle_testing.pdf)。ACTの成功率維持は本研究の未検証仮説。
 
 <!-- 約1分30秒。「維持」の許容差や反復数は今後決定する。差が有意でないだけで同等性を証明したとは扱わない。 -->
 
@@ -362,7 +362,7 @@ Embedding・ベクトル表現（画像／関節位置／行動列など）
 
 前処理・索引構築・全クエリ処理の時間も、計測候補とする。
 
-> Recall–QPSの検索評価：[KS §7](../../raw/papers/kernel_function_for_angle_testing.pdf)。追加の計測・反復条件は未採用の設計案。
+> Recall–QPSの検索評価：[KS §7](../../raw/papers/lu_2025_ks_angle_testing.pdf)。追加の計測・反復条件は未採用の設計案。
 
 <!-- 約2分。Recallの正解集合は固定した表現・距離の厳密top-K。seed数、評価試行数、K、レイテンシ集計方法は未定。前処理込みの時間は、学習前検索の実用性を説明するための提案。 -->
 
@@ -390,7 +390,7 @@ Embedding・ベクトル表現（画像／関節位置／行動列など）
 <!-- _class: references -->
 
 1. Zhao et al., *Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware*, 2023. [保存PDF](../../raw/papers/zhao_2023_act.pdf)
-2. Lu et al., *Probabilistic Kernel Function for Fast Angle Testing*, 保存版 arXiv:2505.20274v3, 2026. [保存PDF](../../raw/papers/kernel_function_for_angle_testing.pdf)
+2. Lu et al., *Probabilistic Kernel Function for Fast Angle Testing*, 保存版 arXiv:2505.20274v3, 2026. [保存PDF](../../raw/papers/lu_2025_ks_angle_testing.pdf)
 3. Sohn et al., *Learning Structured Output Representation using Deep Conditional Generative Models*, 2015. [保存PDF](../../raw/papers/sohn_2015_cvae.pdf)
 
 研究方針：[1013計画](../research_policy/1013計画.md)  
