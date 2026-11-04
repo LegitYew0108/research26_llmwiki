@@ -269,7 +269,7 @@ Recall@Kは定義した距離での近傍再現を測り、行動の有用性や
 - **ACT**：行動ChunkとTemporal Ensemblingを利用する基盤。信頼度を使った検索補完は本計画側で検証する。[保存原論文](../../raw/papers/zhao_2023_act.pdf)
 - **HNSW・KS₂**：近傍取得とその高速化を担当する。KS論文の実験はベクトル検索であり、本研究のロボットでの効果は未検証。[HNSW](../../raw/papers/malkov_2018_hnsw.pdf)・[KS](../../raw/papers/lu_2025_ks_angle_testing.pdf)
 - **VINN**：視覚表現の近傍を検索して対応行動を重み付き平均する。複数候補の平均それ自体は本研究独自の要素ではない。[原論文 §III](https://www.roboticsproceedings.org/rss18/p010.pdf)
-- **DARP**：近傍の状態・行動とクエリとの差を使って行動を予測する。検索とネットワークを併用するだけでは十分な差分にならない。[原論文](https://personalrobotics.cs.washington.edu/publications/pfeiferdifference.pdf)
+- **DARP**：近傍の状態・行動とクエリとの差を使って行動を予測する。検索とネットワークを併用するだけでは十分な差分にならない。[原論文](../../raw/papers/pfeifer_2026_darp.pdf)・[論文要約](../../wiki/sources/retrieval/pfeifer_2026_darp.md)
 - **STAC・Rewind-IL**：重なる行動予測の時間的一貫性を失敗検出に使う関連研究。Chunk不一致による判定自体の独自性は主張しない。[STAC §4](https://openreview.net/pdf/8a9b36ed31beffc880a260525741f3e2277c447a.pdf)・[Rewind-IL著者ページ](https://sjay05.github.io/rewind-il/)
 
 外部リンクは会話で確認した関連一次情報の参照先であり、本記事作成に伴う新規ingestは行っていない。未保存資料については、詳細な実装比較・新規性の判断前に追加確認が必要。

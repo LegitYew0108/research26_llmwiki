@@ -21,6 +21,7 @@ sources:
   - raw/papers/pomerleau_1988_alvinn.pdf
   - raw/papers/pari_2022_vinn.pdf
   - raw/papers/yin_2024_gsr.pdf
+  - raw/papers/pfeifer_2026_darp.pdf
 
 updated: 2026-11-04
 ---
@@ -138,6 +139,7 @@ updated: 2026-11-04
 - [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/retrieval/nasiriany_2023_sailor.md)
 - [VINN：近傍行動の重み付き平均による視覚模倣](wiki/sources/retrieval/pari_2022_vinn.md)
 - [GSR：グラフ探索と検索による質の低いデモからの模倣学習](wiki/sources/retrieval/yin_2024_gsr.md)
+- [DARP：近傍との差分を使う検索型方策（ICLR 2026）](wiki/sources/retrieval/pfeifer_2026_darp.md)
 
 ### 生成モデル（VAE・CVAE）
 
@@ -189,6 +191,7 @@ updated: 2026-11-04
 - [Behavior RetrievalのVAE：基礎から検索手順まで](wiki/concepts/retrieval/behavior_retrieval_vae_search.md)
 - [検索による模倣学習データ選択：既存研究調査](wiki/concepts/retrieval/imitation_data_selection_related_work.md)
 - [Subsequence DTW：部分軌跡の時間対応を取る検索](wiki/concepts/retrieval/subsequence_dynamic_time_warping.md)
+- [推論時検索による行動推定：VINNとDARP](wiki/concepts/retrieval/inference_time_retrieval_policies.md)
 
 ### 生成モデル（VAE・CVAE）
 

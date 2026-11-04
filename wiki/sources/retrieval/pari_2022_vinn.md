@@ -151,3 +151,5 @@ $$
 - [FAISS](../../concepts/vector_search/faiss_vector_search.md)
 - [HNSW](../../concepts/vector_search/hnsw.md)
 - [GSR：検索を学習データの重み付けに使う例](yin_2024_gsr.md)
+- [DARP：近傍との差分を学習して補正する後続研究](pfeifer_2026_darp.md)
+- [推論時検索による行動推定：VINNとDARP](../../concepts/retrieval/inference_time_retrieval_policies.md)
