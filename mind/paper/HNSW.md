@@ -52,3 +52,9 @@ $$L=\lfloor -ln(U)m_L \rfloor $$
 
 
 
+
+## 関連ページ
+
+- [HNSWの仕組み（Wiki）](../../wiki/concepts/vector_search/hnsw.md)
+- [HNSW原論文の要約（Wiki）](../../wiki/sources/vector_search/malkov_2018_hnsw.md)
+- [画像認識におけるANNS（Wiki）](../../wiki/concepts/vector_search/anns_in_image_recognition.md)

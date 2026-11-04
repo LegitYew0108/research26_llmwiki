@@ -4,7 +4,7 @@ type: source
 tags: [ANNS, HNSW, angle-testing, random-projection, KS1, KS2]
 sources:
   - ../../../raw/papers/kernel_function_for_angle_testing.pdf
-updated: 2026-11-02
+updated: 2026-11-04
 ---
 
 # Probabilistic Kernel Function for Fast Angle Testing
@@ -121,11 +121,11 @@ KS₂はデータベクトル自体だけでなく、訪問ノードから隣接
 
 論文が示したのは、参照角度によって有限次元の判定分布を記述できること、配置の工夫でその判定を改善できること、そして評価した静的ベクトル検索でグラフroutingを高速化できることである。一方、$(\delta,0.5)$-routingは閾値内の隣接候補に関する局所的保証であり、量子化を含む実装の検索全体やロボットタスクの成功率を保証するものではない。[出典：補題4.2–4.3、系6.2、§7](../../../raw/papers/kernel_function_for_angle_testing.pdf#page=7)
 
-卒研への接続では、検索部分が学習時間のどれだけを占めるか、必要なRecall、埋め込みの更新頻度を先に調べるとよい、というのが本Wikiの研究上の提案である。これは本論文の実証結果ではなく、辺ごとの前計算と確率的な候補棄却を強化学習に持ち込む際の未検証の検討事項である。[着想元：§5–7](../../../raw/papers/kernel_function_for_angle_testing.pdf#page=6)
-
 ## 卒研との接点・読む順序
 
 本論文が評価するのはベクトル検索であり、ロボット制御や強化学習の実験はない。[出典：§7・付録D](../../../raw/papers/kernel_function_for_angle_testing.pdf#page=8)
+
+現在の研究計画では、KS₂を動作時検索（HNSW＋KS₂）の高速化候補として扱う。これは未検証の計画であり、本論文の結果ではない。[研究計画：§9・段階6](../../../lab/research_policy/20261104_inference_time_retrieval_act.md)
 
 理解は[角度判定と参照角度](../../concepts/vector_search/angle_testing.md) → [参照角度による確率解析](../../concepts/vector_search/reference_angle_probability.md) → [射影配置と部分空間分割](../../concepts/vector_search/projection_configuration_ks.md) → [確率的ルーティングとKS₂](../../concepts/vector_search/probabilistic_routing_ks2.md)の順に進めるとよい。原論文は§3–6を対応させて読み、付録A・Bで理論、付録C.4・Dでアルゴリズムと実験を確認する。
 

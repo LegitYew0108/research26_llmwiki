@@ -30,7 +30,7 @@ updated: 2026-11-04
 - [論文・記事](raw/papers/)
 - [調査資料の一時保管](raw/temp/)
 - [ロボットアーム制御のSOTAと評価指標：2026-10-31調査](mind/IL/robot_arm_sota_research_20261031.md) — LoopWAMは[取り込み済み](wiki/sources/imitation_learning/guo_2026_loopwam.md)。π0.7・π*0.6も正式保存先へ移して取り込み済み。
-- [Cosmos Policy：論文・公式一次情報の調査記録](Cosmos%20Policyについての調査結果.md) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
+- [Cosmos Policy：論文・公式一次情報の調査記録](<mind/IL/Cosmos Policyについての調査結果.md>) — [論文要約](wiki/sources/imitation_learning/kim_2026_cosmos_policy.md)に取り込み済み。
 - [ミーティング記録](raw/meeting/)
 
 ### 模倣学習に関連する資料の整理
@@ -88,6 +88,7 @@ updated: 2026-11-04
 
 - [Behavior Cloning](<mind/IL/BC-Behavior Cloning.md>)
 - [Imitation Learning](<mind/IL/IL-Imitation Learning(模倣学習).md>)
+- [HNSWの理解](mind/paper/HNSW.md)
 - [ACT論文の読書ノート](<mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md>)
 - [Attention（ざっくり）](<mind/Transformer/Attention(ざっくり).md>)
 - [VLAについての疑問](mind/Questionnaire/VLA.md)
@@ -108,6 +109,7 @@ updated: 2026-11-04
 
 - [日次ログ](log/daily/)
 - [週次ログ](log/weekly/)
+- [2026-11-04 Wiki Lint結果](log/lint/lint_20261104.md)
 - [2026-10-31 Wiki Lint結果](log/lint/lint_20261031.md)
 - [2026-10-17 Wiki Lint結果](log/lint/lint_20261017.md)
 
