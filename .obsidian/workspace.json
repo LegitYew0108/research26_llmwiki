@@ -25,12 +25,14 @@
             "id": "04158bba9a23cd68",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "raw/papers/1603.09320v4.pdf"
+                "file": "artifacts/sailor/speaker_notes.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "1603.09320v4"
+              "icon": "lucide-file",
+              "title": "speaker_notes"
             }
           },
           {
@@ -230,8 +232,9 @@
   },
   "active": "04158bba9a23cd68",
   "lastOpenFiles": [
-    "wiki/sources/vector_search/malkov_2018_hnsw.md",
+    "artifacts/sailor/slide.png",
     "raw/papers/1603.09320v4.pdf",
+    "wiki/sources/vector_search/malkov_2018_hnsw.md",
     "mind/Questionnaire/VLA.md",
     "mind/paper/HNSW.md",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
@@ -265,7 +268,6 @@
     "wiki/sources/imitation_learning",
     "wiki/sources/generative_models/sohn_2015_cvae.md",
     "wiki/sources/generative_models",
-    "artifacts/sailor/slide.png",
     "artifacts/behavior_retrieval/slide.png"
   ]
 }
