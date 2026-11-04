@@ -8,14 +8,14 @@ sources:
   - ../../../raw/temp/lin_2024_flowretrieval.html
   - ../../../raw/temp/dass_datamil_project.html
   - ../../../raw/temp/hejna_remix_proceedings.html
-  - ../../../raw/temp/pari_vinn_abstract.html
+  - ../../../raw/papers/pari_2022_vinn.pdf
   - ../../../raw/papers/kernel_function_for_angle_testing.pdf
 updated: 2026-11-04
 ---
 
 # 検索による模倣学習データ選択：既存研究調査
 
-2026-10-17に確認した資料に基づく整理に、2026-10-31のSAILOR原論文ingestを追加。Behavior RetrievalとFlowRetrievalは保存全文、DataMILは著者ページ、ReMixは出版ページ、VINNはabstractが確認範囲であり、網羅的なサーベイではない。出版情報や実装の最新性は再確認していない。
+2026-10-17に確認した資料に基づく整理に、2026-10-31のSAILOR原論文ingestを追加。Behavior RetrievalとFlowRetrievalは保存全文、DataMILは著者ページ、ReMixは出版ページが確認範囲で、VINNは2026-11-04に原論文PDFを取り込んだ。網羅的なサーベイではない。出版情報や実装の最新性は再確認していない。
 
 | 研究 | 確認できた内容 | 参照先 |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ updated: 2026-11-04
 | FlowRetrieval（2024） | Optical flowをVAEで表現して関連区間を選び、flow予測の補助損失を加えて学習する。実験の方策はDiffusion Policy。 | [保存全文](../../../raw/temp/lin_2024_flowretrieval.html)、[原文 §4](https://arxiv.org/html/2408.16944v1) |
 | DataMIL（preprint 2025／ICLR 2026） | 類似性だけでなく方策への影響を推定して選択。対象デモのvalidation lossを代理指標にし、trajectory/sub-trajectory単位のclusteringを使う。 | [保存著者ページ](../../../raw/temp/dass_datamil_project.html)、[著者ページ](https://robin-lab.cs.utexas.edu/datamodels4imitation/)、[論文](https://arxiv.org/abs/2505.09603)、[出版情報](https://proceedings.iclr.cc/paper_files/paper/2026/hash/033d9e8dbbbc0ad90e59222cf1db0fc2-Abstract-Conference.html) |
 | ReMix（CoRL第8回／PMLR 2025） | 事前学習のデータdomainの重みをDROにより調整する。BridgeとOpenXで評価。 | [保存出版ページ](../../../raw/temp/hejna_remix_proceedings.html)、[出版ページ](https://proceedings.mlr.press/v270/hejna25a.html) |
-| VINN（preprint 2021） | 表現学習と行動の対応付けを分離し、Locally Weighted Regressionで行動を予測する。学習前の追加データ選択とは用途が異なる。 | [保存abstract](../../../raw/temp/pari_vinn_abstract.html)、[原文](https://arxiv.org/abs/2112.01511) |
+| VINN（RSS 2022） | 表現学習と行動の対応付けを分離し、Locally Weighted Regressionで行動を予測する。学習前の追加データ選択とは用途が異なる。 | [保存PDF（RSS 2022） §III-B](../../../raw/papers/pari_2022_vinn.pdf)、[個別要約](../../sources/retrieval/pari_2022_vinn.md) |
 
 ## 方式を比較するときの注意
 

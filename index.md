@@ -19,6 +19,7 @@ sources:
   - raw/papers/chi_2023_diffusion_policy.pdf
   - raw/papers/sohn_2015_cvae.pdf
   - raw/papers/NIPS-1988-alvinn-an-autonomous-land-vehicle-in-a-neural-network-Paper.pdf
+  - raw/papers/pari_2022_vinn.pdf
 
 updated: 2026-11-04
 ---
@@ -44,6 +45,7 @@ updated: 2026-11-04
 
 ### Web記事の参照記録
 
+- [arXiv：VINNのabstractページ](raw/web/pari_vinn_abstract.html) — 2026-10-17保存、[論文要約](wiki/sources/retrieval/pari_2022_vinn.md)に取り込み済み。
 - [MIT：Imitation Learning](raw/web/web_mit_imitation_learning_20261003.md)
 - [Hugging Face：RL Framework](raw/web/web_huggingface_rl_framework_20261003.md)
 - [Spinning Up：Kinds of RL Algorithms](raw/web/web_spinningup_rl_algorithms_20261003.md)
@@ -61,7 +63,7 @@ updated: 2026-11-04
 | 分野 | 概念・手法 | 論文要約 |
 | --- | --- | --- |
 | 模倣学習・方策 | [概念](wiki/concepts/imitation_learning/) | [論文](wiki/sources/imitation_learning/) |
-| 検索によるデータ選択 | [概念](wiki/concepts/retrieval/) | [論文](wiki/sources/retrieval/) |
+| 検索によるデータ選択・行動推定 | [概念](wiki/concepts/retrieval/) | [論文](wiki/sources/retrieval/) |
 | 生成モデル（VAE・CVAE） | [概念](wiki/concepts/generative_models/) | [論文](wiki/sources/generative_models/) |
 | ベクトル検索・角度判定 | [概念](wiki/concepts/vector_search/) | [論文](wiki/sources/vector_search/) |
 | 連想記憶・Memory Mosaics | [概念](wiki/concepts/memory/) | [論文](wiki/sources/memory/) |
@@ -128,11 +130,12 @@ updated: 2026-11-04
 - [Bi-ACT: Bilateral Control-Based Imitation Learning via Action Chunking with Transformer](wiki/sources/imitation_learning/buamanee_2024_biact.md)
 - [Diffusion Policy：Action Diffusionによる視覚ベースの模倣学習](wiki/sources/imitation_learning/chi_2023_diffusion_policy.md)
 
-### 検索によるデータ選択
+### 検索によるデータ選択・行動推定
 
 - [Behavior Retrieval: Few-Shot Imitation Learning by Querying Unlabeled Datasets](wiki/sources/retrieval/du_2023_behavior_retrieval.md)
 - [COLLAGE：Adaptive Fusion-based Retrieval for Augmented Policy Learning](wiki/sources/retrieval/kumar_2025_collage.md)
 - [SAILOR：Learning and Retrieval from Prior Data for Skill-based Imitation Learning](wiki/sources/retrieval/nasiriany_2023_sailor.md)
+- [VINN：近傍行動の重み付き平均による視覚模倣](wiki/sources/retrieval/pari_2022_vinn.md)
 
 ### 生成モデル（VAE・CVAE）
 
@@ -177,7 +180,7 @@ updated: 2026-11-04
 - [Diffusion Policy：ノイズ予測から行動列を生成する仕組み](wiki/concepts/imitation_learning/diffusion_policy.md)
 - [Skill-based Imitation Learning：skill表現と階層方策](wiki/concepts/imitation_learning/skill_based_imitation_learning.md)
 
-### 検索によるデータ選択
+### 検索によるデータ選択・行動推定
 
 - [検索による模倣学習データ選択](wiki/concepts/retrieval/retrieval_based_imitation_data_selection.md)
 - [Retrieval-augmented Imitation Learning：検索による学習データ拡張](wiki/concepts/retrieval/retrieval_augmented_imitation_learning.md)
