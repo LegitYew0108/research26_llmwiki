@@ -63,3 +63,12 @@ updated: 2026-11-04
 - 学習が自動開始。17:24 JST頃にはepoch 67/2000まで進行。GPU5は使用メモリ約3943MiB・使用率95%を観測。
 - 初期のepoch時間は約1.5〜1.6秒。残り約50分の推定は実測途中の目安であり、終了時刻の保証ではない。
 - 評価は学習完了後に自動実行予定。現時点でACTの評価成功率・評価動画は未取得。
+
+## 学習完了・評価開始（2026-11-04 18:17 JST頃）
+
+- 2000 epochの学習を完走。公式ログの学習所要時間は53分50秒。
+- 最良checkpointはepoch 1995、検証損失0.043501。`policy_best.ckpt`の読み込みは`All keys matched successfully`。
+- `--eval --temporal_agg`による評価を開始。最初の3試行は最大報酬4に到達し成功。50試行全体の成功率は未確定。
+- `video0.mp4`をローカルの`/home/wada-lab/Univ/research26_workspace/act_baseline_docker/artifacts/act_eval_video0.mp4`へ回収。4秒位置のフレームを視覚確認し、3視点の描画を確認。
+- 学習・検証のデータ分割等は公式コードのまま。損失の値と閉ループ成功率を区別する。
+- 実行環境・依存一覧・デモ検証記録は`outputs/run-metadata.tar.gz`にまとめ、ローカルartifactsにも回収済み。
