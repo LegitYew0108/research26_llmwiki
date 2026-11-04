@@ -9,6 +9,8 @@ updated: 2026-11-04
 
 # kubera GPU5：公式ACT Docker基準実験
 
+**完了：2026-11-04 18:34:48 JST。公式コードを変更せず2000 epoch学習し、50試行中49成功（98%）。動画・デモ動作データを保存し、全件検証済み。**
+
 ## 目的と条件
 
 ユーザーの指示により、公式ACTコードを変更せず、Docker内でTransfer Cubeのデモ生成・学習・評価を行う。映像および公式で保存される動作データを残す。
@@ -18,7 +20,7 @@ updated: 2026-11-04
 - 接続先：`wadaharuto@kubera.bigdata-lab`。
 - ホストGPU 5：Quadro RTX 8000、UUID `GPU-ac104ebf-b388-4675-65d2-9893921908ed`。開始前確認では使用メモリ0MiB・使用率0%。
 - 保存先：`/home/wadaharuto/research26_workspace/act_baseline_docker/`。ホーム領域の空き32Tを確認。
-- Dockerベース：`pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime`。MuJoCo 2.3.7、dm_control 1.0.14。実依存一覧は`outputs/pip-freeze.txt`へ保存予定。
+- Dockerベース：`pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime`。MuJoCo 2.3.7、dm_control 1.0.14。実依存一覧は`outputs/pip-freeze.txt`へ保存済み。
 - データパスは公式constants.pyを編集せず、コンテナ内のシンボリックリンクで解決。
 
 ## 実施状況
@@ -72,3 +74,40 @@ updated: 2026-11-04
 - `video0.mp4`をローカルの`/home/wada-lab/Univ/research26_workspace/act_baseline_docker/artifacts/act_eval_video0.mp4`へ回収。4秒位置のフレームを視覚確認し、3視点の描画を確認。
 - 学習・検証のデータ分割等は公式コードのまま。損失の値と閉ループ成功率を区別する。
 - 実行環境・依存一覧・デモ検証記録は`outputs/run-metadata.tar.gz`にまとめ、ローカルartifactsにも回収済み。
+
+## 最終結果（2026-11-04 18:35 JST確認）
+
+| 項目 | 実測結果 |
+| --- | --- |
+| 学習 | 2000 epoch完走、53分50秒 |
+| 最良checkpoint | epoch 1995、検証損失0.043501 |
+| 評価 | Temporal Ensemblingあり、seed 1000、50 rollout |
+| 成功率 | 49/50 = 98% |
+| 平均return | 692.86 |
+| 失敗 | rollout 39、return 14、最大報酬2 |
+| パイプライン終了 | exit code 0、2026-11-04 18:34:48 JST |
+| 全動画検証 | exit code 0、2026-11-04 18:35:16 JST |
+
+成功の定義は公式実装の「episode中の最大報酬が4に到達」。終了時までの保持継続を独立に判定したものではない。1学習seed・公式50試行での結果であり、複数seedや別タスクへの一般化は未評価。
+
+### 保存・検証済み成果物
+
+- デモ50件：kuberaの`/home/wadaharuto/research26_workspace/act_baseline_docker/data/sim_transfer_cube_scripted/`。各400 stepのtop画像・qpos・qvel・教師行動。全件の読み取り、形状・有限値、SHA-256を検証済み。
+- モデル：kuberaの`/home/wadaharuto/research26_workspace/act_baseline_docker/outputs/checkpoints/`。最良・最終・途中checkpoint、正規化統計、学習曲線を保持。
+- 最良モデルのSHA-256：`79cbef5f90be2754c238f0fd2131d7e44c5413f1b0bedd50eefc5b4543c1ef6b`。
+- 評価動画50本：同checkpointsの`video0.mp4`〜`video49.mp4`。全動画を最後までデコードし、各400 frame・50fps・1920×480（3視点）を確認。
+- `outputs/evaluation-validation.json`の成功件数と公式の`result_policy_best.txt`を照合し、一致を確認。
+- ローカル回収先：`/home/wada-lab/Univ/research26_workspace/act_baseline_docker/artifacts/evaluation/`。全50動画、結果、ログ、学習曲線、正規化統計、環境情報、公式ソースを回収。モデル重みと全デモHDF5はkuberaに保持。
+- ローカルの全50動画のSHA-256とサーバーの検証manifestが一致。回収した公式ソース全48ファイルも元のchecksumと一致。
+- 機械可読の概要：ローカル`act_baseline_docker/artifacts/summary.json`。一式の圧縮ファイルは同`artifacts/evaluation-artifacts.tar.gz`。
+- 実験後にGPU5の使用メモリ0MiB・使用率0%を確認。GPUを使う実験コンテナは終了済み。
+
+### 失敗例の観察
+
+rollout 39の最大報酬は2。公式報酬定義では右gripper接触かつ台と非接触の段階に相当し、左gripperへの受け渡し成功の報酬4には到達していない。動画の2秒・6秒位置を視覚確認し、6秒時点ではキューブが台上に残っている。具体的な失敗原因は、この確認だけでは断定しない。
+
+### この実験で得られた基準と次段階
+
+Docker上の公式ACTについて、デモ生成→学習→閉ループ評価→映像保存までの基準動作を確認した。後続実験では、このモデル・経験集合を参照できる。検索方策、信頼度、行動混合、HNSW・KS₂の効果は今回評価していない。
+
+評価時の実行行動配列・元の予測Chunkは保存していない。将来それらを収集する際は、今回の公式実装基準と区別した別実験として扱う。

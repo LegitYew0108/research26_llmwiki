@@ -74,7 +74,7 @@ updated: 2026-11-04
 
 ## 研究活動
 
-- [kubera GPU5：公式ACT Docker基準実験](lab/experiment/20261104_act_docker_baseline.md) — 実行状況・条件・成果物。
+- [kubera GPU5：公式ACT Docker基準実験](lab/experiment/20261104_act_docker_baseline.md) — 完了：2000 epoch学習、評価49/50成功（98%）。映像・デモ動作データ・条件・成果物を記録。
 
 - [Behavior RetrievalとSAILOR：タスク別の実験結果比較](artifacts/retrieval_results_comparison.md) — 各原論文内の既存手法比較とSAILORの検索ablation。
 
