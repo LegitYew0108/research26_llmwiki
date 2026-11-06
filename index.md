@@ -23,7 +23,7 @@ sources:
   - raw/papers/yin_2024_gsr.pdf
   - raw/papers/pfeifer_2026_darp.pdf
 
-updated: 2026-11-04
+updated: 2026-11-06
 ---
 
 # 目次
@@ -73,6 +73,8 @@ updated: 2026-11-04
 
 
 ## 研究活動
+
+- [kubera GPU2：FAISS HNSW検索実証](lab/experiment/20261106_faiss_hnsw_demo.md) — 70条件完了。100万件クラスタでRecall@10 98.13%、単発1.254ms。[実装・CSV・図・生ログ](artifacts/faiss_hnsw_demo/)。
 
 - [kubera GPU5：公式ACT Docker基準実験](lab/experiment/20261104_act_docker_baseline.md) — 完了：2000 epoch学習、評価49/50成功（98%）。映像・デモ動作データ・条件・成果物を記録。
 
@@ -218,6 +220,8 @@ updated: 2026-11-04
 - [デモを併用する実機RL：SERLの学習とデータの流れ](wiki/concepts/reinforcement_learning/demonstration_augmented_robot_rl.md)
 
 ## 日次ログ一覧
+
+- [2026-11-06](log/daily/daily_20261106.md)
 
 - [2026-11-04](log/daily/daily_20261104.md)
 
