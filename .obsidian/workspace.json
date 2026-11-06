@@ -41,30 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/sources/vector_search/malkov_2018_hnsw.md",
+                "file": "lab/research_policy/20261104_inference_time_retrieval_act.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "malkov_2018_hnsw"
-            }
-          },
-          {
-            "id": "7ddfc0fffee5161c",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "title": "20261104_inference_time_retrieval_act"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -243,10 +229,10 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "0e70bb31ff3f5332",
+  "active": "6d2500ae9da11489",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "wiki/sources/vector_search/malkov_2018_hnsw.md",
+    "conflict-files-obsidian-git.md",
     "wiki/sources/retrieval/pfeifer_2026_darp.md",
     "wiki/sources/retrieval/yin_2024_gsr.md",
     "wiki/sources/retrieval/pari_2022_vinn.md",
