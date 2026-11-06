@@ -232,6 +232,7 @@
   },
   "active": "6d2500ae9da11489",
   "lastOpenFiles": [
+    "lab/research_policy/20261104_inference_time_retrieval_act.md",
     "wiki/sources/vector_search/malkov_2018_hnsw.md",
     "conflict-files-obsidian-git.md",
     "wiki/sources/retrieval/pfeifer_2026_darp.md",
@@ -255,7 +256,6 @@
     "wiki/sources/reinforcement_learning/pi_2025_pistar06.md",
     "lab/experiment/20261104_act_docker_baseline.md",
     "log/lint/lint_20261104.md",
-    "lab/research_policy/20261104_inference_time_retrieval_act.md",
     "mind/paper/HNSW.md",
     "artifacts/sailor/speaker_notes.md",
     "artifacts/sailor/slide.png",
