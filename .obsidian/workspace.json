@@ -48,9 +48,23 @@
               "icon": "lucide-file",
               "title": "malkov_2018_hnsw"
             }
+          },
+          {
+            "id": "7ddfc0fffee5161c",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -229,15 +243,17 @@
       "marp-slides:Show Slide Preview": false
     }
   },
-  "active": "04158bba9a23cd68",
+  "active": "0e70bb31ff3f5332",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "wiki/sources/vector_search/malkov_2018_hnsw.md",
+    "wiki/sources/retrieval/pfeifer_2026_darp.md",
     "wiki/sources/retrieval/yin_2024_gsr.md",
     "wiki/sources/retrieval/pari_2022_vinn.md",
     "wiki/concepts/retrieval/inference_time_retrieval_policies.md",
     "wiki/concepts/retrieval/retrieval_based_imitation_data_selection.md",
     "wiki/concepts/retrieval/inference_time_retrieval_policies.md.tmp.91074.591bdf46c00e",
     "wiki/sources/retrieval/pfeifer_2026_darp.md.tmp.91074.6e230ccfc96d",
-    "wiki/sources/retrieval/pfeifer_2026_darp.md",
     "wiki/sources/retrieval/pfeifer_2026_darp.md.tmp.91074.1649f404a721",
     "log/daily/daily_20261104.md",
     "raw/papers/pfeifer_2026_darp.pdf",
@@ -256,14 +272,12 @@
     "mind/paper/HNSW.md",
     "artifacts/sailor/speaker_notes.md",
     "artifacts/sailor/slide.png",
-    "wiki/sources/vector_search/malkov_2018_hnsw.md",
     "mind/Questionnaire/VLA.md",
     "mind/paper/Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware.md",
     "wiki/concepts/vector_search/anns_in_image_recognition.md",
     "log/daily/daily_20261102.md",
     "wiki/concepts/vector_search/hnsw.md",
     "wiki/research.md",
-    "conflict-files-obsidian-git.md",
     "wiki/sources/vector_search/kernel_function_for_angle_testing.md",
     "wiki/sources/retrieval/nasiriany_2023_sailor.md",
     "wiki/sources/retrieval/kumar_2025_collage.md",
